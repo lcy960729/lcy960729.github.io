@@ -4542,10 +4542,14 @@ html,
   -ms-flex: 1;
   flex: 1;
   margin: 0 auto;
-  display: flex; }
+  display: flex;
+  flex-direction: row; }
   @media print {
     .page__center {
       padding-bottom: 0; } }
+  @media only screen and (max-width: 600px) {
+    .page__center {
+      flex-direction: column-reverse; } }
 
 .hide-footer .page__content {
   padding-bottom: 0; }
@@ -4683,6 +4687,12 @@ html,
   width: 150px;
   margin-top: 30px;
   margin-right: 15px; }
+  @media only screen and (max-width: 600px) {
+    .page__center .site-category {
+      margin: 0 auto;
+      width: 100%;
+      border-bottom: 1px solid #cecece;
+      padding: 0px 10px; } }
 
 .page__center .site-category ul {
   list-style: none; }
