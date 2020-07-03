@@ -1,1 +1,1 @@
-window.TEXT_SEARCH_DATA={'posts':[{'title':"Aasdfasfd",'url':"/testblog.github.io/java/2018/06/01/header-image-copy-13.html"},{'title':"백준 - 2579번 : 계단 오르기",'url':"/testblog.github.io/algorithm/2018/07/01/baekjoon-2579.html"},{'title':"Welcome",'url':"/testblog.github.io/nodejs/2018/07/01/welcome-copy-21.html"}]};
+window.TEXT_SEARCH_DATA={'posts':[{'title':"백준 - 2579번 : 계단 오르기",'url':"/testblog.github.io/algorithm/2020/07/03/baekjoon-2579.html"}]};
