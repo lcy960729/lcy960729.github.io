@@ -1,5 +1,131 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-kr"><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://lcy960729.github.io/testblog.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lcy960729.github.io/testblog.github.io/" rel="alternate" type="text/html" hreflang="ko-kr" /><updated>2020-07-03T17:39:32+09:00</updated><id>https://lcy960729.github.io/testblog.github.io/feed.xml</id><title type="html">Your Site Title</title><subtitle>Your Site Description
-</subtitle><author><name>Your Name</name></author><entry><title type="html">백준 - 2579번 : 계단 오르기</title><link href="https://lcy960729.github.io/testblog.github.io/algorithm/2020/07/03/baekjoon-2579.html" rel="alternate" type="text/html" title="백준 - 2579번 : 계단 오르기" /><published>2020-07-03T00:00:00+09:00</published><updated>2020-07-03T00:00:00+09:00</updated><id>https://lcy960729.github.io/testblog.github.io/algorithm/2020/07/03/baekjoon-2579</id><content type="html" xml:base="https://lcy960729.github.io/testblog.github.io/algorithm/2020/07/03/baekjoon-2579.html">&lt;h1 id=&quot;문제-설명&quot;&gt;문제 설명&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko"><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://lcy960729.github.io/testblog.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lcy960729.github.io/testblog.github.io/" rel="alternate" type="text/html" hreflang="ko" /><updated>2020-07-04T22:05:29+09:00</updated><id>https://lcy960729.github.io/testblog.github.io/feed.xml</id><title type="html">Your Site Title</title><subtitle>Your Site Description
+</subtitle><author><name>Your Name</name></author><entry><title type="html">백준 - 9095번 : 1, 2, 3 더하기</title><link href="https://lcy960729.github.io/testblog.github.io/algorithm/2020/07/04/baekjoon-9095.html" rel="alternate" type="text/html" title="백준 - 9095번 : 1, 2, 3 더하기" /><published>2020-07-04T00:00:00+09:00</published><updated>2020-07-04T00:00:00+09:00</updated><id>https://lcy960729.github.io/testblog.github.io/algorithm/2020/07/04/baekjoon-9095</id><content type="html" xml:base="https://lcy960729.github.io/testblog.github.io/algorithm/2020/07/04/baekjoon-9095.html">&lt;style&gt;
+    .red{
+        color: red;
+    }
+&lt;/style&gt;
+
+&lt;hr /&gt;
+&lt;h1 id=&quot;문제-설명&quot;&gt;문제 설명&lt;/h1&gt;
+&lt;h2 id=&quot;백준-9095번-계단-오르기&quot;&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/9095&quot;&gt;백준 9095번 계단 오르기&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;정수 4를 1, 2, 3의 합으로 나타내는 방법은 총 7가지가 있다.&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;1+1+1+1&lt;/li&gt;
+    &lt;li&gt;1+1+2&lt;/li&gt;
+    &lt;li&gt;1+2+1&lt;/li&gt;
+    &lt;li&gt;2+1+1&lt;/li&gt;
+    &lt;li&gt;2+2&lt;/li&gt;
+    &lt;li&gt;1+3&lt;/li&gt;
+    &lt;li&gt;3+1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;합을 나타낼 때는 수를 1개 이상 사용해야 한다.&lt;br /&gt;
+정수 n이 주어졌을 때, n을 1, 2, 3의 합으로 나타내는 방법의 수를&lt;br /&gt;
+구하는 프로그램을 작성하시오.&lt;/p&gt;
+
+&lt;h2 id=&quot;입력&quot;&gt;입력&lt;/h2&gt;
+
+&lt;p&gt;첫째 줄에 테스트 케이스의 개수 T가 주어진다. 각 테스트 케이스는 한 줄로 이루어져 있고,&lt;br /&gt;
+정수 n이 주어진다. n은 양수이며 11보다 작다.&lt;/p&gt;
+
+&lt;h2 id=&quot;제한-조건&quot;&gt;제한 조건&lt;/h2&gt;
+
+&lt;p&gt;각 테스트 케이스마다, n을 1, 2, 3의 합으로 나타내는 방법의 수를 출력한다.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h1 id=&quot;이찬영&quot;&gt;이찬영&lt;/h1&gt;
+
+&lt;h2 id=&quot;풀이-내용&quot;&gt;풀이 내용&lt;/h2&gt;
+&lt;p&gt;먼저 이번 문제를 동적 프로그래밍 방식으로 풀기 위해 재귀로 구현 할 것이며, memo라는 변수에 n을 합으로 나타내는 수를 저장할 것이다.&lt;/p&gt;
+
+&lt;p&gt;문제를 읽어보면 1, 2, 3의 합으로 나타내는 방법의 수라는 말이 있다.&lt;br /&gt;
+이 말을 생각해보며 4를 합으로 나타내는 과정을 만들어보겠다.&lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;1+3&lt;/li&gt;
+    &lt;li&gt;2+2&lt;/li&gt;
+    &lt;li&gt;3+1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;(이 경우들이 잘 이해가 안된다면 문제 설명에서의 1, 2, 3의 합으로 나타내는 방법을 생각 해보자)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;한번더 5의 경우를 생각 해보자&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;1+&lt;a class=&quot;red&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;2+&lt;a class=&quot;red&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;3+&lt;a class=&quot;red&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;설명한것과 똑같이 &lt;a class=&quot;red&quot;&gt;4, 3, 2&lt;/a&gt;를 합으로 나타낼수 있는 값을 모두 더하면 5를 나타낼 수 있는 값이 나온다. &lt;br /&gt;
+1+4에서 4는 합으로 나타낼수 있는 값이 아니므로 &lt;strong&gt;1+(1+3), 1+(2+2), 1+(3+1)&lt;/strong&gt; 과 같은 형태가 된다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;아주 재귀스러운 형태가 보이므로 재귀로 구현하겠다.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;if (n==1){...} else if (n==2){...} else if(n==3){...}&lt;/code&gt;&lt;br /&gt;
+1,2,3은 표현할 수 있는 가장 작은 단위이므로 값을 바로 리턴 해주도록 하였다.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;int ret = dp(n - 1) + dp(n - 2) + dp(n - 3);&lt;/code&gt;&lt;br /&gt;
+n이 5일때 n-1, n-2, n-3은 4, 3, 2가 된다. 이말은 (1+4), (2+3), (3+2)로 볼 수 있다.&lt;/p&gt;
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;algorithm&amp;gt;
+#include &amp;lt;cstring&amp;gt;
+&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;memo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;dp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;memoVal&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;memo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;memoVal&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;memoVal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;memoVal&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ret&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ret&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;memset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;memo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;sizeof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;memo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;memo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;이현직&quot;&gt;이현직&lt;/h1&gt;
+
+&lt;h2 id=&quot;풀이-내용-1&quot;&gt;풀이 내용&lt;/h2&gt;</content><author><name>CY</name><email>kitian616@outlook.com</email></author><category term="algorithm" /><category term="DynamicProgramming" /><category term="baekjoon" /><category term="algorithm" /><summary type="html">문제 설명 백준 9095번 계단 오르기 정수 4를 1, 2, 3의 합으로 나타내는 방법은 총 7가지가 있다. 1+1+1+1 1+1+2 1+2+1 2+1+1 2+2 1+3 3+1 합을 나타낼 때는 수를 1개 이상 사용해야 한다. 정수 n이 주어졌을 때, n을 1, 2, 3의 합으로 나타내는 방법의 수를 구하는 프로그램을 작성하시오. 입력 첫째 줄에 테스트 케이스의 개수 T가 주어진다. 각 테스트 케이스는 한 줄로 이루어져 있고, 정수 n이 주어진다. n은 양수이며 11보다 작다. 제한 조건 각 테스트 케이스마다, n을 1, 2, 3의 합으로 나타내는 방법의 수를 출력한다. 이찬영 풀이 내용 먼저 이번 문제를 동적 프로그래밍 방식으로 풀기 위해 재귀로 구현 할 것이며, memo라는 변수에 n을 합으로 나타내는 수를 저장할 것이다. 문제를 읽어보면 1, 2, 3의 합으로 나타내는 방법의 수라는 말이 있다. 이 말을 생각해보며 4를 합으로 나타내는 과정을 만들어보겠다. 1+3 2+2 3+1 (이 경우들이 잘 이해가 안된다면 문제 설명에서의 1, 2, 3의 합으로 나타내는 방법을 생각 해보자) 한번더 5의 경우를 생각 해보자 1+4 2+4 3+4 설명한것과 똑같이 4, 3, 2를 합으로 나타낼수 있는 값을 모두 더하면 5를 나타낼 수 있는 값이 나온다. 1+4에서 4는 합으로 나타낼수 있는 값이 아니므로 1+(1+3), 1+(2+2), 1+(3+1) 과 같은 형태가 된다. 아주 재귀스러운 형태가 보이므로 재귀로 구현하겠다. if (n==1){...} else if (n==2){...} else if(n==3){...} 1,2,3은 표현할 수 있는 가장 작은 단위이므로 값을 바로 리턴 해주도록 하였다. int ret = dp(n - 1) + dp(n - 2) + dp(n - 3); n이 5일때 n-1, n-2, n-3은 4, 3, 2가 된다. 이말은 (1+4), (2+3), (3+2)로 볼 수 있다. #include &amp;lt;iostream&amp;gt; #include &amp;lt;algorithm&amp;gt; #include &amp;lt;cstring&amp;gt; using namespace std; int memo[1000]; int dp(int n) { int &amp;amp;memoVal = memo[n]; if (n == 1) { return 1; } else if (n == 2) { return 2; } else if (n == 3) { return 4; } if (memoVal != -1) { return memoVal; } int ret = dp(n - 1) + dp(n - 2) + dp(n - 3); memoVal = ret; return ret; } int main() { memset(memo, -1, sizeof(memo)); int t; cin &amp;gt;&amp;gt; t; int arr[11]; for (int i = 0; i &amp;lt; t; i++) { cin &amp;gt;&amp;gt; arr[i]; memo[i] = -1; } for (int i = 0; i &amp;lt; t; i++) { cout &amp;lt;&amp;lt; dp(arr[i]) &amp;lt;&amp;lt; &quot;\n&quot;; } } 이현직 풀이 내용</summary></entry><entry><title type="html">백준 - 2579번 : 계단 오르기</title><link href="https://lcy960729.github.io/testblog.github.io/algorithm/2020/07/03/baekjoon-2579.html" rel="alternate" type="text/html" title="백준 - 2579번 : 계단 오르기" /><published>2020-07-03T00:00:00+09:00</published><updated>2020-07-03T00:00:00+09:00</updated><id>https://lcy960729.github.io/testblog.github.io/algorithm/2020/07/03/baekjoon-2579</id><content type="html" xml:base="https://lcy960729.github.io/testblog.github.io/algorithm/2020/07/03/baekjoon-2579.html">&lt;h1 id=&quot;문제-설명&quot;&gt;문제 설명&lt;/h1&gt;
 
 &lt;h2 id=&quot;백준-2579번-계단-오르기&quot;&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/2579&quot;&gt;백준 2579번 계단 오르기&lt;/a&gt;&lt;/h2&gt;
 

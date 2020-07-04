@@ -1,11 +1,10 @@
 <!DOCTYPE html><html lang="ko">
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>nodejs - Your Site Title</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>백준 - 9095번 : 1, 2, 3 더하기 - Your Site Title</title>
 
-<meta name="description" content="Your Site Description
-">
-<link rel="canonical" href="https://lcy960729.github.io/testblog.github.io/category/nodejs.html"><link rel="alternate" type="application/rss+xml" title="Your Site Title" href="/testblog.github.io/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/testblog.github.io/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/testblog.github.io/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/testblog.github.io/assets/favicon-16x16.png"><link rel="manifest" href="/testblog.github.io/assets/site.webmanifest"><link rel="mask-icon" href="/testblog.github.io/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/testblog.github.io/assets/favicon.ico">
+<meta name="description" content="문제 설명백준 9095번 계단 오르기정수 4를 1, 2, 3의 합으로 나타내는 방법은 총 7가지가 있다.    1+1+1+1    1+1+2    1+2+1    2+1+1    2+2    1+3    3+1합을 나타낼 때는 수를 1개 이상 사용해야 한다.정수 n이 주어졌을 때,...">
+<link rel="canonical" href="https://lcy960729.github.io/testblog.github.io/algorithm/2020/07/04/baekjoon-9095.html"><link rel="alternate" type="application/rss+xml" title="Your Site Title" href="/testblog.github.io/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/testblog.github.io/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/testblog.github.io/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/testblog.github.io/assets/favicon-16x16.png"><link rel="manifest" href="/testblog.github.io/assets/site.webmanifest"><link rel="mask-icon" href="/testblog.github.io/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/testblog.github.io/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/testblog.github.io/assets/browserconfig.xml">
 
@@ -255,7 +254,7 @@
 </head>
   <body>
     <div class="root" data-is-touch="false">
-      <div class="layout--page js-page-root"><div class="page__main js-page-main page__viewport cell cell--auto">
+      <div class="layout--page js-page-root"><div class="page__main js-page-main page__viewport has-aside cell cell--auto">
 
       <div class="page__main-inner"><div class="page__header d-print-none"><header class="header"><div class="main">
       <div class="header__title">
@@ -272,43 +271,202 @@
         <ul><li class="navigation__item"><a href="/testblog.github.io/">홈</a></li><li class="navigation__item"><a href="/testblog.github.io/archive.html">아카이브</a></li><li class="navigation__item"><a href="/testblog.github.io/about.html">소개</a></li><li><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></li></ul>
       </nav></div>
   </header>
-</div><!-- 카테고리 추가를 위해 page__center 추가 -->
-      <div class="page__center">
-        <div class="page__content"><div class ="main"><div class="grid grid--reverse">
+</div><div class="page__content"><div class ="main"><div class="grid grid--reverse">
 
-              <div class="col-aside d-print-none js-col-aside"></div>
+              <div class="col-aside d-print-none js-col-aside"><aside class="page__aside js-page-aside"><div class="toc-aside js-toc-root"></div></aside></div>
 
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/WebPage"><div class="article__header"><header><h1>nodejs</h1></header></div><meta itemprop="headline" content="nodejs"><meta itemprop="author" content="Your Name"/><div class="js-article-content"><div class="layout--articles"><div class="article-list items items--divided"></div></div><div class="layout--home"></div>
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>백준 - 9095번 : 1, 2, 3 더하기</h1></header><span class="split-space">&nbsp;</span>
+          <a class="edit-on-github"
+            title="Github에서 확인하기"
+            href="https://github.com/lcy960729 / testblog.github.io/tree/master/_posts/2020-07-04-baekjoon-9095.md">
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="백준 - 9095번 : 1, 2, 3 더하기"><div class="article__info clearfix"><ul class="left-col menu"><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/testblog.github.io/archive.html?tag=DynamicProgramming">DynamicProgramming</a>
+            </li><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/testblog.github.io/archive.html?tag=baekjoon">baekjoon</a>
+            </li><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/testblog.github.io/archive.html?tag=algorithm">algorithm</a>
+            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>2020년 07월 04일</span>
+            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-07-04T00:00:00+09:00">
+    <meta itemprop="keywords" content="DynamicProgramming,baekjoon,algorithm"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
-<script>/*(function () {
+<!-- end custom article top snippet -->
+<div class="article__content" itemprop="articleBody"><style>
+    .red{
+        color: red;
+    }
+</style>
 
-})();*/
+<hr />
+<h1 id="문제-설명">문제 설명</h1>
+<h2 id="백준-9095번-계단-오르기"><a href="https://www.acmicpc.net/problem/9095">백준 9095번 계단 오르기</a></h2>
+<p>정수 4를 1, 2, 3의 합으로 나타내는 방법은 총 7가지가 있다.</p>
+<ul>
+    <li>1+1+1+1</li>
+    <li>1+1+2</li>
+    <li>1+2+1</li>
+    <li>2+1+1</li>
+    <li>2+2</li>
+    <li>1+3</li>
+    <li>3+1</li>
+</ul>
+
+<p>합을 나타낼 때는 수를 1개 이상 사용해야 한다.<br />
+정수 n이 주어졌을 때, n을 1, 2, 3의 합으로 나타내는 방법의 수를<br />
+구하는 프로그램을 작성하시오.</p>
+
+<h2 id="입력">입력</h2>
+
+<p>첫째 줄에 테스트 케이스의 개수 T가 주어진다. 각 테스트 케이스는 한 줄로 이루어져 있고,<br />
+정수 n이 주어진다. n은 양수이며 11보다 작다.</p>
+
+<h2 id="제한-조건">제한 조건</h2>
+
+<p>각 테스트 케이스마다, n을 1, 2, 3의 합으로 나타내는 방법의 수를 출력한다.</p>
+
+<hr />
+<h1 id="이찬영">이찬영</h1>
+
+<h2 id="풀이-내용">풀이 내용</h2>
+<p>먼저 이번 문제를 동적 프로그래밍 방식으로 풀기 위해 재귀로 구현 할 것이며, memo라는 변수에 n을 합으로 나타내는 수를 저장할 것이다.</p>
+
+<p>문제를 읽어보면 1, 2, 3의 합으로 나타내는 방법의 수라는 말이 있다.<br />
+이 말을 생각해보며 4를 합으로 나타내는 과정을 만들어보겠다.<br /></p>
+<ul>
+    <li>1+3</li>
+    <li>2+2</li>
+    <li>3+1</li>
+</ul>
+<p><em>(이 경우들이 잘 이해가 안된다면 문제 설명에서의 1, 2, 3의 합으로 나타내는 방법을 생각 해보자)</em></p>
+
+<p>한번더 5의 경우를 생각 해보자</p>
+<ul>
+    <li>1+<a class="red">4</a></li>
+    <li>2+<a class="red">4</a></li>
+    <li>3+<a class="red">4</a></li>
+</ul>
+<p>설명한것과 똑같이 <a class="red">4, 3, 2</a>를 합으로 나타낼수 있는 값을 모두 더하면 5를 나타낼 수 있는 값이 나온다. <br />
+1+4에서 4는 합으로 나타낼수 있는 값이 아니므로 <strong>1+(1+3), 1+(2+2), 1+(3+1)</strong> 과 같은 형태가 된다.<br /></p>
+
+<p>아주 재귀스러운 형태가 보이므로 재귀로 구현하겠다.</p>
+
+<p><code class="highlighter-rouge">if (n==1){...} else if (n==2){...} else if(n==3){...}</code><br />
+1,2,3은 표현할 수 있는 가장 작은 단위이므로 값을 바로 리턴 해주도록 하였다.</p>
+
+<p><code class="highlighter-rouge">int ret = dp(n - 1) + dp(n - 2) + dp(n - 3);</code><br />
+n이 5일때 n-1, n-2, n-3은 4, 3, 2가 된다. 이말은 (1+4), (2+3), (3+2)로 볼 수 있다.</p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+#include &lt;cstring&gt;
+</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="n">memo</span><span class="p">[</span><span class="mi">1000</span><span class="p">];</span>
+
+<span class="kt">int</span> <span class="nf">dp</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="o">&amp;</span><span class="n">memoVal</span> <span class="o">=</span> <span class="n">memo</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="mi">4</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">memoVal</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">memoVal</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kt">int</span> <span class="n">ret</span> <span class="o">=</span> <span class="n">dp</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">dp</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">dp</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">3</span><span class="p">);</span>
+
+    <span class="n">memoVal</span> <span class="o">=</span> <span class="n">ret</span><span class="p">;</span>
+
+    <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">memset</span><span class="p">(</span><span class="n">memo</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">memo</span><span class="p">));</span>
+
+    <span class="kt">int</span> <span class="n">t</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">t</span><span class="p">;</span>
+
+    <span class="kt">int</span> <span class="n">arr</span><span class="p">[</span><span class="mi">11</span><span class="p">];</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">t</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="n">memo</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">t</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">dp</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h1 id="이현직">이현직</h1>
+
+<h2 id="풀이-내용-1">풀이 내용</h2>
+</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2020-07-04T00:00:00+09:00"><!-- start custom article footer snippet -->
+
+<!-- end custom article footer snippet -->
+<div class="article__subscribe"><div class="subscribe"><i class="fas fa-rss"></i> <a type="application/rss+xml" href="/testblog.github.io/feed.xml">구독하기</a></div>
+</div><div class="article__license"><div class="license">
+    <p>이 글의 저작권은 <a itemprop="license" rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">Attribution-NonCommercial 4.0 International</a> 라이센스를 따릅니다.
+      <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">
+        <img alt="Attribution-NonCommercial 4.0 International" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+      </a>
+    </p>
+  </div></div></footer>
+<div class="article__section-navigator clearfix"><div class="previous"><span>이전</span><a href="/testblog.github.io/algorithm/2020/07/03/baekjoon-2579.html">백준 - 2579번 : 계단 오르기</a></div></div></div>
+
+</div>
+
+<script>(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    $(function() {
+      var $this ,$scroll;
+      var $articleContent = $('.js-article-content');
+      var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+      var scroll = hasSidebar ? '.js-page-main' : 'html, body';
+      $scroll = $(scroll);
+
+      $articleContent.find('.highlight').each(function() {
+        $this = $(this);
+        $this.attr('data-lang', $this.find('code').attr('data-lang'));
+      });
+      $articleContent.find('h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]').each(function() {
+        $this = $(this);
+        $this.append($('<a class="anchor d-print-none" aria-hidden="true"></a>').html('<i class="fas fa-anchor"></i>'));
+      });
+      $articleContent.on('click', '.anchor', function() {
+        $scroll.scrollToAnchor('#' + $(this).parent().attr('id'), 400);
+      });
+    });
+  });
+})();
 </script>
-
-
-
 </div><section class="page__comments d-print-none"></section></article><!-- start custom main bottom snippet -->
 
 <!-- end custom main bottom snippet -->
 </div>
-            </div></div><!-- 카테고리 추가를 위해 div와 category.html 추가 -->
-        </div>
-
-<header class="site-category" >
-  <ul class="entry-meta inline-list">
-    <h1>Categories</h1>
-    <hr>
-    
-      
-      <li><a href="/testblog.github.io/category/algorithm.html" class="tag">
-      <span class="term">algorithm</span>
-      <span class="count">(2)</span>
-      </a></li>
-    
-  </ul>
-</header></div><div class="page__footer d-print-none">
+            </div></div></div><div class="page__footer d-print-none">
 <footer class="footer py-4 js-page-footer">
   <div class="main"><div itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Your Name"><meta itemprop="url" content="https://lcy960729.github.io/"><meta itemprop="description" content="I am an amazing person."><div class="footer__author-links"><div class="author-links">
@@ -841,6 +999,68 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
 /*(function () {
 
 })();*/
+</script><script>
+  /* toc must before affix, since affix need to konw toc' height. */(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  var TOC_SELECTOR = window.TEXT_VARIABLES.site.toc.selectors;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $window = $(window);
+    var $articleContent = $('.js-article-content');
+    var $tocRoot = $('.js-toc-root'), $col2 = $('.js-col-aside');
+    var toc;
+    var tocDisabled = false;
+    var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+    var hasToc = $articleContent.find(TOC_SELECTOR).length > 0;
+
+    function disabled() {
+      return $col2.css('display') === 'none' || !hasToc;
+    }
+
+    tocDisabled = disabled();
+
+    toc = $tocRoot.toc({
+      selectors: TOC_SELECTOR,
+      container: $articleContent,
+      scrollTarget: hasSidebar ? '.js-page-main' : null,
+      scroller: hasSidebar ? '.js-page-main' : null,
+      disabled: tocDisabled
+    });
+
+    $window.on('resize', window.throttle(function() {
+      tocDisabled = disabled();
+      toc && toc.setOptions({
+        disabled: tocDisabled
+      });
+    }, 100));
+
+  });
+})();
+(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $window = $(window), $pageFooter = $('.js-page-footer');
+    var $pageAside = $('.js-page-aside');
+    var affix;
+    var tocDisabled = false;
+    var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+
+    affix = $pageAside.affix({
+      offsetBottom: $pageFooter.outerHeight(),
+      scrollTarget: hasSidebar ? '.js-page-main' : null,
+      scroller: hasSidebar ? '.js-page-main' : null,
+      scroll: hasSidebar ? $('.js-page-main').children() : null,
+      disabled: tocDisabled
+    });
+
+    $window.on('resize', window.throttle(function() {
+      affix && affix.setOptions({
+        disabled: tocDisabled
+      });
+    }, 100));
+
+    window.pageAsideAffix = affix;
+  });
+})();
 </script>
     </div>
     <script>(function () {
