@@ -453,7 +453,25 @@ n이 5일때 n-1, n-2, n-3은 4, 3, 2가 된다. 이말은 (1+4), (2+3), (3+2)�
   });
 })();
 </script>
-</div><section class="page__comments d-print-none"></section></article><!-- start custom main bottom snippet -->
+</div><section class="page__comments d-print-none"><!-- fix text color in the input textarea of gitalk -->
+	<style type="text/css">
+		.gitalk-wrapper .gt-header-textarea {
+			color: #333 !important;
+		}
+	</style><div class="gitalk-wrapper" id="js-gitalk-container"></div><script>
+		window.Lazyload.css('https://unpkg.com/gitalk@1.2.2/dist/gitalk.css');
+		window.Lazyload.js('https://unpkg.com/gitalk@1.2.2/dist/gitalk.min.js', function() {
+			var gitalk = new Gitalk({
+				clientID: '01d2e03b7c76897f67e8',
+				clientSecret: 'cd232f3cfd8f69557d94f96de97ea4a5c41c44df',
+				repo: 'lcy960729.github.io',
+				owner: 'lcy960729',
+				admin: ['lcy960729'],
+				id: 'page-about'
+			});
+			gitalk.render('js-gitalk-container');
+		});
+	</script></section></article><!-- start custom main bottom snippet -->
 
 <!-- end custom main bottom snippet -->
 </div>
