@@ -1,1 +1,1 @@
-window.TEXT_SEARCH_DATA={'posts':[{'title':"백준 - 2579번 : 계단 오르기",'url':"/algorithm/2020/07/03/baekjoon-2579.html"},{'title':"백준 - 9095번 : 1, 2, 3 더하기",'url':"/algorithm/2020/07/04/baekjoon-9095.html"}]};
+window.TEXT_SEARCH_DATA={'posts':[{'title':"백준 - 2579번 : 계단 오르기",'url':"/algorithm/2020/07/03/baekjoon-2579.html"},{'title':"백준 - 9095번 : 1, 2, 3 더하기",'url':"/algorithm/2020/07/04/baekjoon-9095.html"},{'title':"수 찾기",'url':"/algorithm/2020/07/22/baekjoon-1920.html"}]};

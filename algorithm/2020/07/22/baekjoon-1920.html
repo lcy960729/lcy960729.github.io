@@ -1,10 +1,10 @@
 <!DOCTYPE html><html lang="ko">
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>백준 - 9095번 : 1, 2, 3 더하기 - Cy`s Tech Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>수 찾기 - Cy`s Tech Blog</title>
 
-<meta name="description" content="문제 설명백준 9095번 계단 오르기정수 4를 1, 2, 3의 합으로 나타내는 방법은 총 7가지가 있다.    1+1+1+1    1+1+2    1+2+1    2+1+1    2+2    1+3    3+1합을 나타낼 때는 수를 1개 이상 사용해야 한다.정수 n이 주어졌을 때,...">
-<link rel="canonical" href="https://lcy960729.github.io/algorithm/2020/07/04/baekjoon-9095.html"><link rel="alternate" type="application/rss+xml" title="Cy`s Tech Blog" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
+<meta name="description" content="문제 설명수 찾기N개의 정수 A[1], A[2], …, A[N]이 주어져 있을 때, 이 안에 X라는 정수가 존재하는지 알아내는 프로그램을 작성하시오.입력첫째 줄에 자연수 N(1≤N≤100,000)이 주어진다. 다음 줄에는 N개의 정수 A[1], A[2], …, A[N]이 주어진다....">
+<link rel="canonical" href="https://lcy960729.github.io/algorithm/2020/07/22/baekjoon-1920.html"><link rel="alternate" type="application/rss+xml" title="Cy`s Tech Blog" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/assets/browserconfig.xml">
 
@@ -276,22 +276,22 @@
 
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>백준 - 9095번 : 1, 2, 3 더하기</h1></header><span class="split-space">&nbsp;</span>
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>수 찾기</h1></header><span class="split-space">&nbsp;</span>
           <a class="edit-on-github"
             title="Github에서 확인하기"
-            href="https://github.com/lcy960729 / lcy960729.github.io/tree/master/_posts/2020-07-04-baekjoon-9095.md">
-            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="백준 - 9095번 : 1, 2, 3 더하기"><div class="article__info clearfix"><ul class="left-col menu"><li>
+            href="https://github.com/lcy960729 / lcy960729.github.io/tree/master/_posts/2020-07-22-baekjoon-1920.md">
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="수 찾기"><div class="article__info clearfix"><ul class="left-col menu"><li>
               <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=DynamicProgramming">DynamicProgramming</a>
+                href="/archive.html?tag=BinaraySearch">BinaraySearch</a>
             </li><li>
               <a class="button button--secondary button--pill button--sm"
                 href="/archive.html?tag=baekjoon">baekjoon</a>
             </li><li>
               <a class="button button--secondary button--pill button--sm"
                 href="/archive.html?tag=algorithm">algorithm</a>
-            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>2020년 07월 04일</span>
-            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-07-04T00:00:00+09:00">
-    <meta itemprop="keywords" content="DynamicProgramming,baekjoon,algorithm"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>2020년 07월 22일</span>
+            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-07-22T00:00:00+09:00">
+    <meta itemprop="keywords" content="BinaraySearch,baekjoon,algorithm"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
 <div class="article__content" itemprop="articleBody"><style>
@@ -301,119 +301,88 @@
 </style>
 
 <h1 id="문제-설명">문제 설명</h1>
-<h2 id="백준-9095번-계단-오르기"><a href="https://www.acmicpc.net/problem/9095">백준 9095번 계단 오르기</a></h2>
-<p>정수 4를 1, 2, 3의 합으로 나타내는 방법은 총 7가지가 있다.</p>
-<ul>
-    <li>1+1+1+1</li>
-    <li>1+1+2</li>
-    <li>1+2+1</li>
-    <li>2+1+1</li>
-    <li>2+2</li>
-    <li>1+3</li>
-    <li>3+1</li>
-</ul>
-
-<p>합을 나타낼 때는 수를 1개 이상 사용해야 한다.<br />
-정수 n이 주어졌을 때, n을 1, 2, 3의 합으로 나타내는 방법의 수를<br />
-구하는 프로그램을 작성하시오.</p>
+<h2 id="수-찾기"><a href="https://www.acmicpc.net/problem/1920">수 찾기</a></h2>
+<p>N개의 정수 A[1], A[2], …, A[N]이 주어져 있을 때, 이 안에 X라는 정수가 존재하는지 알아내는 프로그램을 작성하시오.</p>
 
 <h2 id="입력">입력</h2>
 
-<p>첫째 줄에 테스트 케이스의 개수 T가 주어진다. 각 테스트 케이스는 한 줄로 이루어져 있고,<br />
-정수 n이 주어진다. n은 양수이며 11보다 작다.</p>
+<p>첫째 줄에 자연수 N(1≤N≤100,000)이 주어진다. 다음 줄에는 N개의 정수 A[1], A[2], …, A[N]이 주어진다. 다음 줄에는 M(1≤M≤100,000)이 주어진다. 다음 줄에는 M개의 수들이 주어지는데, 이 수들이 A안에 존재하는지 알아내면 된다. 모든 정수의 범위는 -231 보다 크거나 같고 231보다 작다.</p>
 
-<h2 id="제한-조건">제한 조건</h2>
+<h2 id="출력">출력</h2>
 
-<p>각 테스트 케이스마다, n을 1, 2, 3의 합으로 나타내는 방법의 수를 출력한다.</p>
+<p>M개의 줄에 답을 출력한다. 존재하면 1을, 존재하지 않으면 0을 출력한다.</p>
 
 <hr />
 <h1 id="풀이-내용">풀이 내용</h1>
 
-<p>먼저 이번 문제를 동적 프로그래밍 방식으로 풀기 위해 재귀로 구현 할 것이며, memo라는 변수에 n을 합으로 나타내는 수를 저장할 것이다.</p>
+<p>이분 탐색을 하기위해선 정렬된 값들이 필요하다.<br />
+받은 값을 정렬 후 시작점과 끝점을 설정해준다.<br />
+<code class="highlighter-rouge">begin = 0; end = n;</code><br />
+다음으로 중간점을 설정해준다.<br />
+<code class="highlighter-rouge">mid = begin + end &gt;&gt; 1</code><br /></p>
 
-<p>문제를 읽어보면 1, 2, 3의 합으로 나타내는 방법의 수라는 말이 있다.<br />
-이 말을 생각해보며 4를 합으로 나타내는 과정을 만들어보겠다.<br /></p>
-<ul>
-    <li>1+3</li>
-    <li>2+2</li>
-    <li>3+1</li>
-</ul>
-<p><em>(이 경우들이 잘 이해가 안된다면 문제 설명에서의 1, 2, 3의 합으로 나타내는 방법을 생각 해보자)</em></p>
+<p>찾을 값이 mid 값보다 작으면 end값을 mid로 바꿔주고 mid 값보다 크면 begin값을 mid로 바꿔준다.<br /></p>
 
-<p>한번더 5의 경우를 생각 해보자</p>
-<ul>
-    <li>1+<a class="red">4</a></li>
-    <li>2+<a class="red">4</a></li>
-    <li>3+<a class="red">4</a></li>
-</ul>
-<p>설명한것과 똑같이 <a class="red">4, 3, 2</a>를 합으로 나타낼수 있는 값을 모두 더하면 5를 나타낼 수 있는 값이 나온다. <br />
-1+4에서 4는 합으로 나타낼수 있는 값이 아니므로 <strong>1+(1+3), 1+(2+2), 1+(3+1)</strong> 과 같은 형태가 된다.<br /></p>
-
-<p>아주 재귀스러운 형태가 보이므로 재귀로 구현하겠다.</p>
-
-<p><code class="highlighter-rouge">if (n==1){...} else if (n==2){...} else if(n==3){...}</code><br />
-1,2,3은 표현할 수 있는 가장 작은 단위이므로 값을 바로 리턴 해주도록 하였다.</p>
-
-<p><code class="highlighter-rouge">int ret = dp(n - 1) + dp(n - 2) + dp(n - 3);</code><br />
-n이 5일때 n-1, n-2, n-3은 4, 3, 2가 된다. 이말은 (1+4), (2+3), (3+2)로 볼 수 있다.</p>
+<p>시작값과 끝값의 차이가 2이상 날때 mid 값이 바뀌게 됨으로 <code class="highlighter-rouge">begin + 1 &lt; end</code> 까지 수행한다.<br />
+(ex. begin = 4, end = 5이면 mid가 항상 4가 됨)</p>
 <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
 #include &lt;algorithm&gt;
-#include &lt;cstring&gt;
 </span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
-<span class="kt">int</span> <span class="n">memo</span><span class="p">[</span><span class="mi">1000</span><span class="p">];</span>
-
-<span class="kt">int</span> <span class="nf">dp</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="kt">bool</span> <span class="nf">check</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">num</span><span class="p">)</span>
 <span class="p">{</span>
-    <span class="kt">int</span> <span class="o">&amp;</span><span class="n">memoVal</span> <span class="o">=</span> <span class="n">memo</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>
-
-    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="k">return</span> <span class="mi">2</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="k">return</span> <span class="mi">4</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="k">if</span> <span class="p">(</span><span class="n">memoVal</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="k">return</span> <span class="n">memoVal</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="kt">int</span> <span class="n">ret</span> <span class="o">=</span> <span class="n">dp</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">dp</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">dp</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">3</span><span class="p">);</span>
-
-    <span class="n">memoVal</span> <span class="o">=</span> <span class="n">ret</span><span class="p">;</span>
-
-    <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="n">num</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
 <span class="p">{</span>
-    <span class="n">memset</span><span class="p">(</span><span class="n">memo</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">memo</span><span class="p">));</span>
+<span class="cp">#ifdef LOCAL
+</span>    <span class="n">freopen</span><span class="p">(</span><span class="s">"input.txt"</span><span class="p">,</span> <span class="s">"r"</span><span class="p">,</span> <span class="n">stdin</span><span class="p">);</span>
+<span class="cp">#endif
+</span>
+    <span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span>
+    <span class="n">cout</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span>
+    <span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
 
-    <span class="kt">int</span> <span class="n">t</span><span class="p">;</span>
-    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">t</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">arr</span><span class="p">[</span><span class="mi">100001</span><span class="p">];</span>
 
-    <span class="kt">int</span> <span class="n">arr</span><span class="p">[</span><span class="mi">11</span><span class="p">];</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">t</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-        <span class="n">memo</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
     <span class="p">}</span>
 
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">t</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="n">sort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">arr</span> <span class="o">+</span> <span class="n">n</span><span class="p">,</span> <span class="n">less</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">());</span>
+
+    <span class="kt">int</span> <span class="n">m</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">m</span><span class="p">;</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">dp</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">num</span><span class="p">;</span>
+        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">num</span><span class="p">;</span>
+
+        <span class="kt">int</span> <span class="n">begin</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">begin</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="n">end</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">begin</span> <span class="o">+</span> <span class="n">end</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">check</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">mid</span><span class="p">],</span> <span class="n">num</span><span class="p">))</span>
+                <span class="n">begin</span> <span class="o">=</span> <span class="n">mid</span><span class="p">;</span>
+            <span class="k">else</span>
+                <span class="n">end</span> <span class="o">=</span> <span class="n">mid</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">begin</span><span class="p">]</span> <span class="o">==</span> <span class="n">num</span><span class="p">)</span>
+            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+        <span class="k">else</span>
+            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="mi">0</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></div>
-</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2020-07-04T00:00:00+09:00"><!-- start custom article footer snippet -->
+</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2020-07-22T00:00:00+09:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
 <div class="article__subscribe"><div class="subscribe"><i class="fas fa-rss"></i> <a type="application/rss+xml" href="/feed.xml">구독하기</a></div>
@@ -424,7 +393,7 @@ n이 5일때 n-1, n-2, n-3은 4, 3, 2가 된다. 이말은 (1+4), (2+3), (3+2)�
       </a>
     </p>
   </div></div></footer>
-<div class="article__section-navigator clearfix"><div class="previous"><span>이전</span><a href="/algorithm/2020/07/03/baekjoon-2579.html">백준 - 2579번 : 계단 오르기</a></div><div class="next"><span>다음</span><a href="/algorithm/2020/07/22/baekjoon-1920.html">수 찾기</a></div></div></div>
+<div class="article__section-navigator clearfix"><div class="previous"><span>이전</span><a href="/algorithm/2020/07/04/baekjoon-9095.html">백준 - 9095번 : 1, 2, 3 더하기</a></div></div></div>
 
 </div>
 
@@ -467,7 +436,7 @@ n이 5일때 n-1, n-2, n-3은 4, 3, 2가 된다. 이말은 (1+4), (2+3), (3+2)�
 				repo: 'lcy960729.github.io',
 				owner: 'lcy960729',
 				admin: ['lcy960729'],
-				id: 'algorithm-baekjoon-9095'
+				id: 'algorithm-baekjoon-1920'
 			});
 			gitalk.render('js-gitalk-container');
 		});
