@@ -1,3 +1,1 @@
-User-agent: *
-Allow: /
 Sitemap: https://lcy960729.github.io/sitemap.xml
