@@ -1,10 +1,10 @@
 <!DOCTYPE html><html lang="en">
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>algorithm - CY의 개발 블로그</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Spring Boot Controller Test - CY의 개발 블로그</title>
 
-<meta name="description" content="">
-<link rel="canonical" href="https://lcy960729.github.io/category/algorithm.html"><link rel="alternate" type="application/rss+xml" title="CY의 개발 블로그" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
+<meta name="description" content="2020-12-13 :: Spring Boot Controller TestSpring Boot에서 컨트롤러 테스트를 위해 여러 방법을 찾아보았다. 그중 하나를 설명하겠다.먼저 테스트 클래스 어노테이션이다      @RunWith(SpringRunner.class)    JUnit ...">
+<link rel="canonical" href="https://lcy960729.github.io/wordbook-project/2020/12/13/Spring-Boot-Controller-Test.html"><link rel="alternate" type="application/rss+xml" title="CY의 개발 블로그" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/assets/browserconfig.xml">
 
@@ -254,7 +254,7 @@
 </head>
   <body>
     <div class="root" data-is-touch="false">
-      <div class="layout--page js-page-root"><div class="page__main js-page-main page__viewport cell cell--auto">
+      <div class="layout--page js-page-root"><div class="page__main js-page-main page__viewport has-aside cell cell--auto">
 
       <div class="page__main-inner"><div class="page__header d-print-none"><header class="header"><div class="main">
       <div class="header__title">
@@ -270,152 +270,186 @@
         <ul><li class="navigation__item"><a href="/">Home</a></li><li class="navigation__item"><a href="/archive.html">Archive</a></li><li class="navigation__item"><a href="/about.html">About</a></li><li><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></li></ul>
       </nav></div>
   </header>
-</div><!-- 카테고리 추가를 위해 page__center 추가 -->
-      <div class="page__center">
-        <div class="page__content"><div class ="main"><div class="grid grid--reverse">
+</div><div class="page__content"><div class ="main"><div class="grid grid--reverse">
 
-              <div class="col-aside d-print-none js-col-aside"></div>
+              <div class="col-aside d-print-none js-col-aside"><aside class="page__aside js-page-aside"><div class="toc-aside js-toc-root"></div></aside></div>
 
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/WebPage"><div class="article__header"><header><h1>algorithm</h1></header></div><meta itemprop="headline" content="algorithm"><meta itemprop="author" content="Lee Chan Young"/><div class="js-article-content"><div class="layout--articles"><div class="article-list items items--divided"><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/algorithm/2020/07/22/baekjoon-1920.html"><h2 itemprop="headline" class="item__header">백준 - 1920번 : 수 찾기</h2></a></header>
-          <div class="item__description"><div class="article__content" itemprop="description articleBody">문제 설명
-수 찾기
-N개의 정수 A[1], A[2], …, A[N]이 주어져 있을 때, 이 안에 X라는 정수가 존재하는지 알아내는 프로그램을 작성하시오.
-
-입력
-
-첫째 줄에 자연수 N(1≤N≤100,000)이 주어진다. 다음 줄에는 N개의 정수 A[1], A[2], …, A[N]이 주어진다. 다음 줄에는 M(1≤M≤100,000)이 주어진다. 다음 줄에는 M개의 수들이 주어지는데, 이 수들이 A안에 존재하는지 알아내면 된다. 모든 정수의 범위는 -231 보다 크거나 같고 231보다 작다.
-
-출력
-
-M개의 줄에 답을 출력한다. 존재하면 1을, 존재하지 않으면 0을 출력한다.
-
-
-풀이 내용
-
-이분 탐색을 하기위해선 정...</div><p><a href="/algorithm/2020/07/22/baekjoon-1920.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Spring Boot Controller Test</h1></header><span class="split-space">&nbsp;</span>
+          <a class="edit-on-github"
+            title="Edit on Github"
+            href="https://github.com/lcy960729/lcy960729.github.io/tree/master/_posts/WordBookProject/2020-12-13-Spring-Boot-Controller-Test.md">
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="Spring Boot Controller Test"><div class="article__info clearfix"><ul class="left-col menu"><li>
               <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=BinaraySearch">BinaraySearch</a>
+                href="/archive.html?tag=WordBookProject">WordBookProject</a>
             </li><li>
               <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=baekjoon">baekjoon</a>
+                href="/archive.html?tag=SpringBoot">SpringBoot</a>
             </li><li>
               <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=algorithm">algorithm</a>
-            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jul 22, 2020</span>
-            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-07-22T00:00:00+09:00">
-    <meta itemprop="keywords" content="BinaraySearch,baekjoon,algorithm"></div>
-      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/algorithm/2020/07/04/baekjoon-9095.html"><h2 itemprop="headline" class="item__header">백준 - 9095번 : 1, 2, 3 더하기</h2></a></header>
-          <div class="item__description"><div class="article__content" itemprop="description articleBody">문제 설명
-백준 9095번 계단 오르기
-정수 4를 1, 2, 3의 합으로 나타내는 방법은 총 7가지가 있다.
-
-    1+1+1+1
-    1+1+2
-    1+2+1
-    2+1+1
-    2+2
-    1+3
-    3+1
-
-
-합을 나타낼 때는 수를 1개 이상 사용해야 한다.
-정수 n이 주어졌을 때, n을 1, 2, 3의 합으로 나타내는 방법의 수를
-구하는 프로그램을 작성하시오.
-
-입력
-
-첫째 줄에 테스트 케이스의 개수 T가 주어진다. 각 테스트 케이스는 한 줄로 이루어져 있고,
-정수 n이 주어진다. n은 양수이며 11보다 작다.
-
-제한 조건
-
-각 테스트 케이스마다, n을 1, 2, 3의 합으로 나타내는 방법...</div><p><a href="/algorithm/2020/07/04/baekjoon-9095.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=DynamicProgramming">DynamicProgramming</a>
+                href="/archive.html?tag=TestCode">TestCode</a>
             </li><li>
               <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=baekjoon">baekjoon</a>
+                href="/archive.html?tag=MVC">MVC</a>
             </li><li>
               <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=algorithm">algorithm</a>
-            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jul 04, 2020</span>
-            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-07-04T00:00:00+09:00">
-    <meta itemprop="keywords" content="DynamicProgramming,baekjoon,algorithm"></div>
-      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/algorithm/2020/07/03/baekjoon-2579.html"><h2 itemprop="headline" class="item__header">백준 - 2579번 : 계단 오르기</h2></a></header>
-          <div class="item__description"><div class="article__content" itemprop="description articleBody">문제 설명
-
-백준 2579번 계단 오르기
-
-전체적인 문제 설명은 위에 링크에서 확인하고 중요한 조건들만 확인 해보겠다.
-
-
-
-
-  계단은 한 번에 한 계단 또는 두 계단씩 오를 수 있다.
-  연속된 세 개의 계단을 모두 밟을 수 없다.
-  마지막 도착 계단은 반드시 밟아야한다.
-  시작할때 첫번째 계단부터 밟을 필요는 없다. 두번째 계단부터 밟을 수도 있다.
-  계단을 밟으면 쓰여진 점수 얻게 된다. 얻을 수 있는 점수의 최대값을 구해야한다.
-
-
-입력
-
-첫번째는 계단의 수, 두번째 줄은 계단의 쓰여진 점수가 주어진다.
-
-제한 조건
-
-제한 조건으로는 계단의 개수는 300이하의 자연수이고, 계단에 쓰여 있는 점수는 1...</div><p><a href="/algorithm/2020/07/03/baekjoon-2579.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=DynamicProgramming">DynamicProgramming</a>
+                href="/archive.html?tag=Junit">Junit</a>
             </li><li>
               <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=baekjoon">baekjoon</a>
-            </li><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=algorithm">algorithm</a>
-            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jul 03, 2020</span>
-            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-07-03T00:00:00+09:00">
-    <meta itemprop="keywords" content="DynamicProgramming,baekjoon,algorithm"></div>
-      </article></div></div><div class="layout--home"></div>
+                href="/archive.html?tag=Mockito">Mockito</a>
+            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Dec 13, 2020</span>
+            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-12-13T00:00:00+09:00">
+    <meta itemprop="keywords" content="WordBookProject,SpringBoot,TestCode,MVC,Junit,Mockito"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
-<script>/*(function () {
+<!-- end custom article top snippet -->
+<div class="article__content" itemprop="articleBody"><h1 id="2020-12-13--spring-boot-controller-test">2020-12-13 :: Spring Boot Controller Test</h1>
 
-})();*/
+<p>Spring Boot에서 컨트롤러 테스트를 위해 여러 방법을 찾아보았다. 그중 하나를 설명하겠다.</p>
+
+<p>먼저 테스트 클래스 어노테이션이다</p>
+
+<ol>
+  <li>
+    <p>@RunWith(SpringRunner.class)</p>
+
+    <p>JUnit 프레임워크가 테스트 실행시 SpringRunner.class를 같이 실행하라는 의미</p>
+  </li>
+  <li>
+    <p>@WebMvcTest(controllers = ?)</p>
+
+    <p>컨트롤러 레이어를 테스트 하기위한 어노테이션. 컨트롤러 레이어에 선언된 bean만 가져옴</p>
+
+    <p>Service 레이어의 빈들은 받아오지 못함으로 @MockBean으로 가짜 서비스를 만들어 주어야함</p>
+
+    <p>@SpringBootTest는 전체 프로그램의 bean을 가져옴. 통합 테스트를 진행할때 적합.</p>
+  </li>
+</ol>
+
+<p>다음은 작성해본 테스트 코드 예제 이다</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@RunWith</span><span class="o">(</span><span class="nc">SpringRunner</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+<span class="nd">@WebMvcTest</span><span class="o">(</span><span class="n">controllers</span> <span class="o">=</span> <span class="nc">UserController</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserControllerTest</span> <span class="o">{</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="nc">MockMvc</span> <span class="n">mockMvc</span><span class="o">;</span>
+
+    <span class="nd">@MockBean</span>
+    <span class="kd">private</span> <span class="nc">UserService</span> <span class="n">userService</span><span class="o">;</span>
+
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">userDTOJson</span><span class="o">;</span>
+
+    <span class="nd">@Before</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setUp</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">JsonProcessingException</span> <span class="o">{</span>
+        <span class="nc">UserDTO</span> <span class="n">userDTO</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">UserDTO</span><span class="o">();</span>
+        <span class="n">userDTO</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="s">"lcy"</span><span class="o">);</span>
+        <span class="n">userDTO</span><span class="o">.</span><span class="na">setUserId</span><span class="o">(</span><span class="s">"admin"</span><span class="o">);</span>
+        <span class="n">userDTO</span><span class="o">.</span><span class="na">setPw</span><span class="o">(</span><span class="s">"admin"</span><span class="o">);</span>
+        <span class="n">userDTO</span><span class="o">.</span><span class="na">setAge</span><span class="o">(</span><span class="mi">25</span><span class="o">);</span>
+
+        <span class="nc">ObjectMapper</span> <span class="n">objectMapper</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ObjectMapper</span><span class="o">();</span>
+
+        <span class="n">userDTOJson</span> <span class="o">=</span> <span class="n">objectMapper</span><span class="o">.</span><span class="na">writeValueAsString</span><span class="o">(</span><span class="n">userDTO</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">createUser_locationIsNotNull</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+        <span class="c1">//given</span>
+        <span class="n">given</span><span class="o">(</span><span class="n">userService</span><span class="o">.</span><span class="na">createUser</span><span class="o">(</span><span class="n">any</span><span class="o">(</span><span class="nc">UserDTO</span><span class="o">.</span><span class="na">class</span><span class="o">))).</span><span class="na">willReturn</span><span class="o">(</span><span class="mi">0L</span><span class="o">);</span>
+
+        <span class="c1">//when</span>
+        <span class="nc">ResultActions</span> <span class="n">resultActions</span> <span class="o">=</span> <span class="n">mockMvc</span><span class="o">.</span><span class="na">perform</span><span class="o">(</span>
+                <span class="n">post</span><span class="o">(</span><span class="s">"/user"</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">contentType</span><span class="o">(</span><span class="nc">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">content</span><span class="o">(</span><span class="n">userDTOJson</span><span class="o">)</span>
+        <span class="o">);</span>
+
+        <span class="c1">//then</span>
+        <span class="n">resultActions</span>
+                <span class="o">.</span><span class="na">andDo</span><span class="o">(</span><span class="n">print</span><span class="o">())</span>
+                <span class="o">.</span><span class="na">andExpect</span><span class="o">(</span><span class="n">status</span><span class="o">().</span><span class="na">isOk</span><span class="o">())</span>
+                <span class="o">.</span><span class="na">andExpect</span><span class="o">(</span><span class="n">header</span><span class="o">().</span><span class="na">exists</span><span class="o">(</span><span class="s">"location"</span><span class="o">));</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testCreateUser</span><span class="o">()</span> <span class="o">{</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>@MockMvc는 스프링 mvc 동작을 재현할 수 있는 클래스이다</p>
+
+<p>@MockBean은 실제로 구현한 객체가 아닌 가짜 객체이다. 현재 UserController는 UserService와 의존성이 있으므로 UserController에 대해서만 단위 테스트를 하기 위해선 가짜 UserService를 만들어준후 테스트 해야한다.</p>
+
+<p>만약 컨트롤러 단위 테스트에서 실제 UserService의 객체를 이용한 테스트가 진행되면 UserService가 제대로 동작하는지 같이 확인하게 됨으로 컨트롤러와 서비스 모두 테스트를 하게 된다. 이렇게 의존성이 생긴 테스트는 잘못된것이므로 테스트 코드를 수정할 필요가 있다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">createUser_locationIsNotNull</code> 은 유저를 생성하고 결과값으로 location 헤더에 값이 있는지를 확인한다.</p>
+
+<p>테스트 코드가 어떻게 돌아가는지는 알았지만 어떤 상황에 어떤식으로, 또 어디까지 테스트를 해야하는지 아직 감이 잡히지 않는다. 많은 예제를 보고 익히도록 해야겠다.</p>
+</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2020-12-13T00:00:00+09:00"><!-- start custom article footer snippet -->
+
+<!-- end custom article footer snippet -->
+<div class="article__subscribe"><div class="subscribe"><i class="fas fa-rss"></i> <a type="application/rss+xml" href="/feed.xml">Subscribe</a></div>
+</div><div class="article__license"><div class="license">
+    <p>This work is licensed under a <a itemprop="license" rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">Attribution-NonCommercial 4.0 International</a> license.
+      <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">
+        <img alt="Attribution-NonCommercial 4.0 International" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+      </a>
+    </p>
+  </div></div></footer>
+<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/wordbook-project/2020/12/01/%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD-%EB%B6%84%EC%84%9D-%EC%A0%95%EB%A6%AC.html">요구사항 분석 정리</a></div><div class="next"><span>NEXT</span><a href="/wordbook-project/2020/12/13/Spring-Boot-Service-Test.html">Spring Boot Service Test</a></div></div></div>
+
+</div>
+
+<script>(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    $(function() {
+      var $this ,$scroll;
+      var $articleContent = $('.js-article-content');
+      var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+      var scroll = hasSidebar ? '.js-page-main' : 'html, body';
+      $scroll = $(scroll);
+
+      $articleContent.find('.highlight').each(function() {
+        $this = $(this);
+        $this.attr('data-lang', $this.find('code').attr('data-lang'));
+      });
+      $articleContent.find('h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]').each(function() {
+        $this = $(this);
+        $this.append($('<a class="anchor d-print-none" aria-hidden="true"></a>').html('<i class="fas fa-anchor"></i>'));
+      });
+      $articleContent.on('click', '.anchor', function() {
+        $scroll.scrollToAnchor('#' + $(this).parent().attr('id'), 400);
+      });
+    });
+  });
+})();
 </script>
-
-
-
-</div><section class="page__comments d-print-none"></section></article><!-- start custom main bottom snippet -->
+</div><section class="page__comments d-print-none"><!-- fix text color in the input textarea of gitalk -->
+	<style type="text/css">
+		.gitalk-wrapper .gt-header-textarea {
+			color: #333 !important;
+		}
+	</style><div class="gitalk-wrapper" id="js-gitalk-container"></div><script>
+		window.Lazyload.css('https://unpkg.com/gitalk@1.2.2/dist/gitalk.css');
+		window.Lazyload.js('https://unpkg.com/gitalk@1.2.2/dist/gitalk.min.js', function() {
+			var gitalk = new Gitalk({
+				clientID: '01d2e03b7c76897f67e8',
+				clientSecret: 'cd232f3cfd8f69557d94f96de97ea4a5c41c44df',
+				repo: 'lcy960729.github.io',
+				owner: 'lcy960729',
+				admin: ['lcy960729'],
+				id: 'Spring Boot Controller Test'
+			});
+			gitalk.render('js-gitalk-container');
+		});
+	</script></section></article><!-- start custom main bottom snippet -->
 
 <!-- end custom main bottom snippet -->
 </div>
-            </div></div><!-- 카테고리 추가를 위해 div와 category.html 추가 -->
-        </div>
-
-<header class="site-category" >
-  <ul class="entry-meta inline-list">
-    <h1>Categories</h1>
-    <hr>
-    
-      
-      <li><a href="/category/algorithm.html" class="tag">
-      <span class="term">algorithm</span>
-      <span class="count">(3)</span>
-      </a></li>
-    
-      
-      <li><a href="/category/wordbook-project.html" class="tag">
-      <span class="term">wordbook-project</span>
-      <span class="count">(13)</span>
-      </a></li>
-    
-  </ul>
-</header></div><div class="page__footer d-print-none">
+            </div></div></div><div class="page__footer d-print-none">
 <footer class="footer py-4 js-page-footer">
   <div class="main"><div itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lee Chan Young"><meta itemprop="url" content="https://lcy960729.github.io/"><meta itemprop="description" content="Lee ChanYoung"><div class="footer__author-links"><div class="author-links">
@@ -886,6 +920,68 @@ window.Lazyload.js(SOURCES.jquery, function() {
 /*(function () {
 
 })();*/
+</script><script>
+  /* toc must before affix, since affix need to konw toc' height. */(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  var TOC_SELECTOR = window.TEXT_VARIABLES.site.toc.selectors;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $window = $(window);
+    var $articleContent = $('.js-article-content');
+    var $tocRoot = $('.js-toc-root'), $col2 = $('.js-col-aside');
+    var toc;
+    var tocDisabled = false;
+    var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+    var hasToc = $articleContent.find(TOC_SELECTOR).length > 0;
+
+    function disabled() {
+      return $col2.css('display') === 'none' || !hasToc;
+    }
+
+    tocDisabled = disabled();
+
+    toc = $tocRoot.toc({
+      selectors: TOC_SELECTOR,
+      container: $articleContent,
+      scrollTarget: hasSidebar ? '.js-page-main' : null,
+      scroller: hasSidebar ? '.js-page-main' : null,
+      disabled: tocDisabled
+    });
+
+    $window.on('resize', window.throttle(function() {
+      tocDisabled = disabled();
+      toc && toc.setOptions({
+        disabled: tocDisabled
+      });
+    }, 100));
+
+  });
+})();
+(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $window = $(window), $pageFooter = $('.js-page-footer');
+    var $pageAside = $('.js-page-aside');
+    var affix;
+    var tocDisabled = false;
+    var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+
+    affix = $pageAside.affix({
+      offsetBottom: $pageFooter.outerHeight(),
+      scrollTarget: hasSidebar ? '.js-page-main' : null,
+      scroller: hasSidebar ? '.js-page-main' : null,
+      scroll: hasSidebar ? $('.js-page-main').children() : null,
+      disabled: tocDisabled
+    });
+
+    $window.on('resize', window.throttle(function() {
+      affix && affix.setOptions({
+        disabled: tocDisabled
+      });
+    }, 100));
+
+    window.pageAsideAffix = affix;
+  });
+})();
 </script>
     </div>
     <script>(function () {

@@ -1,10 +1,10 @@
 <!DOCTYPE html><html lang="en">
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>algorithm - CY의 개발 블로그</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>단어장 프로젝트 - 2 - CY의 개발 블로그</title>
 
 <meta name="description" content="">
-<link rel="canonical" href="https://lcy960729.github.io/category/algorithm.html"><link rel="alternate" type="application/rss+xml" title="CY의 개발 블로그" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
+<link rel="canonical" href="https://lcy960729.github.io/category/wordbook-project/page2/wordbook-project.html"><link rel="alternate" type="application/rss+xml" title="CY의 개발 블로그" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/assets/browserconfig.xml">
 
@@ -278,110 +278,128 @@
 
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/WebPage"><div class="article__header"><header><h1>algorithm</h1></header></div><meta itemprop="headline" content="algorithm"><meta itemprop="author" content="Lee Chan Young"/><div class="js-article-content"><div class="layout--articles"><div class="article-list items items--divided"><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/algorithm/2020/07/22/baekjoon-1920.html"><h2 itemprop="headline" class="item__header">백준 - 1920번 : 수 찾기</h2></a></header>
-          <div class="item__description"><div class="article__content" itemprop="description articleBody">문제 설명
-수 찾기
-N개의 정수 A[1], A[2], …, A[N]이 주어져 있을 때, 이 안에 X라는 정수가 존재하는지 알아내는 프로그램을 작성하시오.
+<article itemscope itemtype="http://schema.org/WebPage"><div class="article__header"><header><h1>단어장 프로젝트 - 2</h1></header></div><meta itemprop="headline" content="단어장 프로젝트 - 2"><meta itemprop="author" content="Lee Chan Young"/><div class="js-article-content"><div class="layout--articles"><div class="article-list items items--divided"><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
+          <header><a href="/wordbook-project/2020/01/15/Collection-Object-Null-%EC%B2%98%EB%A6%AC.html"><h2 itemprop="headline" class="item__header">Collection Object Null 처리</h2></a></header>
+          <div class="item__description"><div class="article__content" itemprop="description articleBody">2020-01-15 :: Collection Object Null 처리
 
-입력
+Collection은 맵핑할때나 객체를 받아올때나 null 때문에 문제가 많았다. (내가 잘 처리한 방법을 모르는건가??)
 
-첫째 줄에 자연수 N(1≤N≤100,000)이 주어진다. 다음 줄에는 N개의 정수 A[1], A[2], …, A[N]이 주어진다. 다음 줄에는 M(1≤M≤100,000)이 주어진다. 다음 줄에는 M개의 수들이 주어지는데, 이 수들이 A안에 존재하는지 알아내면 된다. 모든 정수의 범위는 -231 보다 크거나 같고 231보다 작다.
+그래서 일단은 내 프로젝트에서 약속으로 Entity에서 사용되는 Collection객체는 final로 정의하고
 
-출력
+DTO에서는 final로 정의하지않고 맵핑할때 새로 만든 Collection 객체로 set하도록 하였다.
 
-M개의 줄에 답을 출력한다. 존재하면 1을, 존재하지 않으면 0을 출력한다.
-
-
-풀이 내용
-
-이분 탐색을 하기위해선 정...</div><p><a href="/algorithm/2020/07/22/baekjoon-1920.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
+null로 인해 Business로직에서 에러가 나지 않도록 좋은 방법을 생각해봐야겠다.</div><p><a href="/wordbook-project/2020/01/15/Collection-Object-Null-%EC%B2%98%EB%A6%AC.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
               <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=BinaraySearch">BinaraySearch</a>
-            </li><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=baekjoon">baekjoon</a>
-            </li><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=algorithm">algorithm</a>
-            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jul 22, 2020</span>
-            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-07-22T00:00:00+09:00">
-    <meta itemprop="keywords" content="BinaraySearch,baekjoon,algorithm"></div>
+                href="/archive.html?tag=WordBookProject">WordBookProject</a>
+            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jan 15, 2020</span>
+            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-01-15T00:00:00+09:00">
+    <meta itemprop="keywords" content="WordBookProject"></div>
       </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/algorithm/2020/07/04/baekjoon-9095.html"><h2 itemprop="headline" class="item__header">백준 - 9095번 : 1, 2, 3 더하기</h2></a></header>
-          <div class="item__description"><div class="article__content" itemprop="description articleBody">문제 설명
-백준 9095번 계단 오르기
-정수 4를 1, 2, 3의 합으로 나타내는 방법은 총 7가지가 있다.
+          <header><a href="/wordbook-project/2020/01/13/%EC%BB%A8%ED%8A%B8%EB%A1%A4%EB%9F%AC%EC%9D%98-%EB%A9%94%EC%86%8C%EB%93%9C-%EB%A7%88%EB%8B%A4-%EB%B0%98%ED%99%98%EA%B0%92%EC%97%90-%EB%8C%80%ED%95%9C-%EC%83%9D%EA%B0%81.html"><h2 itemprop="headline" class="item__header">컨트롤러의 메소드 마다 반환값에 대한 생각</h2></a></header>
+          <div class="item__description"><div class="article__content" itemprop="description articleBody">2020-01-13 :: 컨트롤러의 메소드 마다 반환값에 대한 생각
 
-    1+1+1+1
-    1+1+2
-    1+2+1
-    2+1+1
-    2+2
-    1+3
-    3+1
+User 도메인 구현을 통해 생각해 본 것들
 
+컨트롤러는 메소드마다 반환값이 존재할 것이다. RestApi에서는 반환되는 도메인은 현재 상태를 나타내는것이며 다음 상태로의 정보를 가지고 있을 것이다. 이러한 생각을 가지고 기본적인 CRUD에서 반환되는 상태들이 어떤 다음 상태를 가져야하는지 정리해보겠다.
 
-합을 나타낼 때는 수를 1개 이상 사용해야 한다.
-정수 n이 주어졌을 때, n을 1, 2, 3의 합으로 나타내는 방법의 수를
-구하는 프로그램을 작성하시오.
+(다음 상태로 가는 종류는 프로젝트마다 다를것이다. 내가 진행하는 단어장 어플리케이션에서 다음 상태에 대한 생각은 지극히 내가 원하는대로 만든것이다.)
 
-입력
+Create
 
-첫째 줄에 테스트 케이스의 개수 T가 주어진다. 각 테스트 케이스는 한 줄로 이루어져 있고,
-정수 n이 주어진다. n은 양수이며 11보다 작다.
-
-제한 조건
-
-각 테스트 케이스마다, n을 1, 2, 3의 합으로 나타내는 방법...</div><p><a href="/algorithm/2020/07/04/baekjoon-9095.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
+생성 메소드의 반환 상태는 현재 만든어진 나의 도메인 상태일 것이다. 예를 ...</div><p><a href="/wordbook-project/2020/01/13/%EC%BB%A8%ED%8A%B8%EB%A1%A4%EB%9F%AC%EC%9D%98-%EB%A9%94%EC%86%8C%EB%93%9C-%EB%A7%88%EB%8B%A4-%EB%B0%98%ED%99%98%EA%B0%92%EC%97%90-%EB%8C%80%ED%95%9C-%EC%83%9D%EA%B0%81.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
               <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=DynamicProgramming">DynamicProgramming</a>
+                href="/archive.html?tag=WordBookProject">WordBookProject</a>
             </li><li>
               <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=baekjoon">baekjoon</a>
+                href="/archive.html?tag=RestAPI">RestAPI</a>
             </li><li>
               <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=algorithm">algorithm</a>
-            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jul 04, 2020</span>
-            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-07-04T00:00:00+09:00">
-    <meta itemprop="keywords" content="DynamicProgramming,baekjoon,algorithm"></div>
+                href="/archive.html?tag=HATEOAS">HATEOAS</a>
+            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jan 13, 2020</span>
+            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-01-13T00:00:00+09:00">
+    <meta itemprop="keywords" content="WordBookProject,RestAPI,HATEOAS"></div>
       </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/algorithm/2020/07/03/baekjoon-2579.html"><h2 itemprop="headline" class="item__header">백준 - 2579번 : 계단 오르기</h2></a></header>
-          <div class="item__description"><div class="article__content" itemprop="description articleBody">문제 설명
+          <header><a href="/wordbook-project/2020/01/13/Mapper-Test-Code-%EB%B0%8F-%EC%83%9D%EA%B0%81.html"><h2 itemprop="headline" class="item__header">Mapper Test Code 및 생각</h2></a></header>
+          <div class="item__description"><div class="article__content" itemprop="description articleBody">2020-01-13 :: Mapper Test Code 및 생각
 
-백준 2579번 계단 오르기
+하루 전에 생각했던 Mapper Test code를 작성해보았다. 커스텀한 맵핑 규칙에 대해 테스트를  동작 하였고 전체적인 맵핑 메소드를 테스트 하였다. 아래는 작성해본 코드이다.
 
-전체적인 문제 설명은 위에 링크에서 확인하고 중요한 조건들만 확인 해보겠다.
+테스트 코드 작성하면서 입력이 Null로 들어왔을때에 대한 생각인데 Null일때 에러를 내는것이 좋은지 유연하게 Blank 값을 넣어주는게 좋은지 생각해봐야겠다.
 
-
-
-
-  계단은 한 번에 한 계단 또는 두 계단씩 오를 수 있다.
-  연속된 세 개의 계단을 모두 밟을 수 없다.
-  마지막 도착 계단은 반드시 밟아야한다.
-  시작할때 첫번째 계단부터 밟을 필요는 없다. 두번째 계단부터 밟을 수도 있다.
-  계단을 밟으면 쓰여진 점수 얻게 된다. 얻을 수 있는 점수의 최대값을 구해야한다.
-
-
-입력
-
-첫번째는 계단의 수, 두번째 줄은 계단의 쓰여진 점수가 주어진다.
-
-제한 조건
-
-제한 조건으로는 계단의 개수는 300이하의 자연수이고, 계단에 쓰여 있는 점수는 1...</div><p><a href="/algorithm/2020/07/03/baekjoon-2579.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
+또한 Jpa Entity 내 맵핑하는 변수가 Collection 객체일 경우를 생각해서 모두 final 변수로 두어 null값이 들어가지 않게 초기화하였다. 이 방법이 문제가 될만한 점이 있는지 생각해봐야겠...</div><p><a href="/wordbook-project/2020/01/13/Mapper-Test-Code-%EB%B0%8F-%EC%83%9D%EA%B0%81.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
               <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=DynamicProgramming">DynamicProgramming</a>
+                href="/archive.html?tag=WordBookProject">WordBookProject</a>
             </li><li>
               <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=baekjoon">baekjoon</a>
+                href="/archive.html?tag=TestCode">TestCode</a>
+            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jan 13, 2020</span>
+            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-01-13T00:00:00+09:00">
+    <meta itemprop="keywords" content="WordBookProject,TestCode"></div>
+      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
+          <header><a href="/wordbook-project/2020/01/12/%EC%84%A4%EA%B3%84-%EB%B0%8F-%EA%B5%AC%ED%98%84%EC%8B%9C-%EA%B0%81-%EB%8B%A8%EA%B3%84%EC%97%90%EC%84%9C-%EC%83%9D%EA%B0%81%ED%95%B4%EB%B4%90%EC%95%BC%ED%95%A0%EA%B2%83%EB%93%A4-%EC%A0%95%EB%A6%AC.html"><h2 itemprop="headline" class="item__header">설계 및 구현시 각 단계에서 생각해봐야할것들 정리</h2></a></header>
+          <div class="item__description"><div class="article__content" itemprop="description articleBody">2020-01-12 :: 설계 및 구현시 각 단계에서 생각해봐야할것들 정리
+
+레이어및 컴포넌트 설계 구현시 생각해 봐야할 것들
+
+컨트롤러 레이어
+
+
+  url 패턴 설계
+  현재 상태에서 갈 수 있는 다음 상태 설계
+  반환 DTO 구현 (hateoas 적용)
+  반환 header 구현
+  반환 body 구현
+
+
+서비스 레이어
+
+
+  Mapper 구현
+  비즈니스 로직 구현
+  최대한 한 서비스는 한 동작만 하도록 구현
+
+
+레퍼지토리
+
+아직 직접 작성한 쿼리가 없음
+
+Mapper
+
+
+  맵핑이 안되는 필드가 없는지 확인
+  맵핑될 필요가 없다면 꼭 무시하는 맵핑 어노테이션을 달아주자
+  Collection에 대한 ...</div><p><a href="/wordbook-project/2020/01/12/%EC%84%A4%EA%B3%84-%EB%B0%8F-%EA%B5%AC%ED%98%84%EC%8B%9C-%EA%B0%81-%EB%8B%A8%EA%B3%84%EC%97%90%EC%84%9C-%EC%83%9D%EA%B0%81%ED%95%B4%EB%B4%90%EC%95%BC%ED%95%A0%EA%B2%83%EB%93%A4-%EC%A0%95%EB%A6%AC.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=WordBookProject">WordBookProject</a>
+            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jan 12, 2020</span>
+            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-01-12T00:00:00+09:00">
+    <meta itemprop="keywords" content="WordBookProject"></div>
+      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
+          <header><a href="/wordbook-project/2020/01/11/%EB%8B%A8%EC%96%B4%EC%9E%A5-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%9E%AC%EA%B5%AC%EC%84%B1.html"><h2 itemprop="headline" class="item__header">단어장 어플리케이션 ERD 정리</h2></a></header>
+          <div class="item__description"><div class="article__content" itemprop="description articleBody">2020-01-11 :: 단어장 도메인 재구성
+
+기본에 설계된 도메인들의 관계를 머리로만 생각하니 점점 복잡해져서 좀더 명확히 하기 위해 ERD 작성.</div><p><a href="/wordbook-project/2020/01/11/%EB%8B%A8%EC%96%B4%EC%9E%A5-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%9E%AC%EA%B5%AC%EC%84%B1.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=WordBookProject">WordBookProject</a>
             </li><li>
               <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=algorithm">algorithm</a>
-            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jul 03, 2020</span>
-            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-07-03T00:00:00+09:00">
-    <meta itemprop="keywords" content="DynamicProgramming,baekjoon,algorithm"></div>
-      </article></div></div><div class="layout--home"></div>
+                href="/archive.html?tag=ERD">ERD</a>
+            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jan 11, 2020</span>
+            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-01-11T00:00:00+09:00">
+    <meta itemprop="keywords" content="WordBookProject,ERD"></div>
+      </article></div></div><div class="layout--home"><div class="pagination"><p>13 post articles, 2 pages.</p>
+    <div class="pagination__menu">
+      <ul class="menu menu--nowrap"><li><a class="button button--secondary button--circle" href="/category/wordbook-project.html">
+            <i class="fas fa-angle-left"></i>
+          </a></li><li>
+              <a class="button button--secondary button--circle" href="/category/wordbook-project.html"><span>1</span></a>
+            </li><li>
+              <div class="button button--primary button--circle focus"><span>2</span></div>
+            </li><li><div class="button button--secondary button--circle disabled">
+            <i class="fas fa-angle-right"></i>
+          </div></li></ul>
+    </div>
+  </div></div>
 
 <script>/*(function () {
 

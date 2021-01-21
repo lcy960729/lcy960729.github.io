@@ -1,10 +1,10 @@
 <!DOCTYPE html><html lang="en">
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>백준 - 1920번 : 수 찾기 - CY의 개발 블로그</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Spring Boot Controller Layer ErrorHandling And Validation Check - CY의 개발 블로그</title>
 
-<meta name="description" content="문제 설명수 찾기N개의 정수 A[1], A[2], …, A[N]이 주어져 있을 때, 이 안에 X라는 정수가 존재하는지 알아내는 프로그램을 작성하시오.입력첫째 줄에 자연수 N(1≤N≤100,000)이 주어진다. 다음 줄에는 N개의 정수 A[1], A[2], …, A[N]이 주어진다....">
-<link rel="canonical" href="https://lcy960729.github.io/algorithm/2020/07/22/baekjoon-1920.html"><link rel="alternate" type="application/rss+xml" title="CY의 개발 블로그" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
+<meta name="description" content="2020-12-16 :: Spring Boot Controller Layer ErrorHandling And Validation CheckSpring Boot ErrorHandling에 대해서 알아 보겠다. 컨트롤러 단에서 발생하는 에러들을 처리해야할 일이 많아 진다. 그때 해당 ...">
+<link rel="canonical" href="https://lcy960729.github.io/wordbook-project/2020/12/16/Spring-Boot-Controller-Layer-ErrorHandling-And-Validation-Check.html"><link rel="alternate" type="application/rss+xml" title="CY의 개발 블로그" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/assets/browserconfig.xml">
 
@@ -276,113 +276,185 @@
 
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>백준 - 1920번 : 수 찾기</h1></header><span class="split-space">&nbsp;</span>
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Spring Boot Controller Layer ErrorHandling And Validation Check</h1></header><span class="split-space">&nbsp;</span>
           <a class="edit-on-github"
             title="Edit on Github"
-            href="https://github.com/lcy960729/lcy960729.github.io/tree/master/_posts/Algorithm/2020-07-22-baekjoon-1920.md">
-            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="백준 - 1920번 : 수 찾기"><div class="article__info clearfix"><ul class="left-col menu"><li>
+            href="https://github.com/lcy960729/lcy960729.github.io/tree/master/_posts/WordBookProject/2020-12-16-Spring-Boot-Controller-Layer-ErrorHandling-And-Validation-Check.md">
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="Spring Boot Controller Layer ErrorHandling And Validation Check"><div class="article__info clearfix"><ul class="left-col menu"><li>
               <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=BinaraySearch">BinaraySearch</a>
+                href="/archive.html?tag=WordBookProject">WordBookProject</a>
             </li><li>
               <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=baekjoon">baekjoon</a>
+                href="/archive.html?tag=SpringBoot">SpringBoot</a>
             </li><li>
               <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=algorithm">algorithm</a>
-            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jul 22, 2020</span>
-            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-07-22T00:00:00+09:00">
-    <meta itemprop="keywords" content="BinaraySearch,baekjoon,algorithm"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+                href="/archive.html?tag=Validation">Validation</a>
+            </li><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=ErrorHandling">ErrorHandling</a>
+            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Dec 16, 2020</span>
+            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-12-16T00:00:00+09:00">
+    <meta itemprop="keywords" content="WordBookProject,SpringBoot,Validation,ErrorHandling"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
-<div class="article__content" itemprop="articleBody"><style>
-    .red{
-        color: red;
-    }
-</style>
+<div class="article__content" itemprop="articleBody"><h1 id="2020-12-16--spring-boot-controller-layer-errorhandling-and-validation-check">2020-12-16 :: Spring Boot Controller Layer ErrorHandling And Validation Check</h1>
 
-<h1 id="문제-설명">문제 설명</h1>
-<h2 id="수-찾기"><a href="https://www.acmicpc.net/problem/1920">수 찾기</a></h2>
-<p>N개의 정수 A[1], A[2], …, A[N]이 주어져 있을 때, 이 안에 X라는 정수가 존재하는지 알아내는 프로그램을 작성하시오.</p>
+<p>Spring Boot ErrorHandling에 대해서 알아 보겠다. 컨트롤러 단에서 발생하는 에러들을 처리해야할 일이 많아 진다. 그때 해당 컨트롤러 안에서 발생하는 에러들을 핸들링 하겠다는것이 @ExceptionHandler(‘exception.class’)이다. 해당 어노테이션을 붙인 함수를 컨트롤러 안에 선언하면 어노테이션에 추가한 exception에 대해서 핸들러 함수가 처리를 해준다. 코드를 확인 해 보자</p>
 
-<h2 id="입력">입력</h2>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@RestController</span><span class="o">(</span><span class="s">"/api/v1"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserController</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="nc">UserService</span> <span class="n">userService</span><span class="o">;</span>
 
-<p>첫째 줄에 자연수 N(1≤N≤100,000)이 주어진다. 다음 줄에는 N개의 정수 A[1], A[2], …, A[N]이 주어진다. 다음 줄에는 M(1≤M≤100,000)이 주어진다. 다음 줄에는 M개의 수들이 주어지는데, 이 수들이 A안에 존재하는지 알아내면 된다. 모든 정수의 범위는 -231 보다 크거나 같고 231보다 작다.</p>
+    <span class="kd">public</span> <span class="nf">UserController</span><span class="o">(</span><span class="nc">UserService</span> <span class="n">userService</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">userService</span> <span class="o">=</span> <span class="n">userService</span><span class="o">;</span>
+    <span class="o">}</span>
 
-<h2 id="출력">출력</h2>
+    <span class="nd">@PostMapping</span><span class="o">(</span><span class="n">path</span> <span class="o">=</span> <span class="s">"/user"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="nc">ResponseEntity</span><span class="o">&lt;</span><span class="nc">Object</span><span class="o">&gt;</span> <span class="nf">createUser</span><span class="o">(</span><span class="nd">@Valid</span> <span class="nd">@RequestBody</span> <span class="nc">UserDTO</span> <span class="n">createUserDTOJson</span><span class="o">)</span> <span class="o">{</span>
+            <span class="nc">Long</span> <span class="n">id</span> <span class="o">=</span> <span class="n">userService</span><span class="o">.</span><span class="na">createUser</span><span class="o">(</span><span class="n">createUserDTOJson</span><span class="o">);</span>
 
-<p>M개의 줄에 답을 출력한다. 존재하면 1을, 존재하지 않으면 0을 출력한다.</p>
+            <span class="nc">HttpHeaders</span> <span class="n">httpHeaders</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HttpHeaders</span><span class="o">();</span>
+            <span class="n">httpHeaders</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"location"</span><span class="o">,</span> <span class="nc">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">id</span><span class="o">));</span>
+
+            <span class="k">return</span> <span class="k">new</span> <span class="nc">ResponseEntity</span><span class="o">&lt;&gt;(</span><span class="n">httpHeaders</span><span class="o">,</span> <span class="nc">HttpStatus</span><span class="o">.</span><span class="na">OK</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@ExceptionHandler</span><span class="o">(</span><span class="nc">MethodArgumentNotValidException</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="nc">ResponseEntity</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="nf">ValidationExceptionHandle</span><span class="o">(</span><span class="nc">MethodArgumentNotValidException</span> <span class="n">methodArgumentNotValidException</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">BindingResult</span> <span class="n">bindingResult</span> <span class="o">=</span> <span class="n">methodArgumentNotValidException</span><span class="o">.</span><span class="na">getBindingResult</span><span class="o">();</span>
+        <span class="k">for</span> <span class="o">(</span><span class="nc">ObjectError</span> <span class="n">objectError</span> <span class="o">:</span> <span class="n">bindingResult</span><span class="o">.</span><span class="na">getAllErrors</span><span class="o">()){</span>
+            <span class="n">logger</span><span class="o">.</span><span class="na">error</span><span class="o">(</span><span class="n">objectError</span><span class="o">.</span><span class="na">getDefaultMessage</span><span class="o">());</span>
+        <span class="o">}</span>
+
+        <span class="k">return</span> <span class="k">new</span> <span class="nc">ResponseEntity</span><span class="o">&lt;&gt;(</span><span class="nc">HttpStatus</span><span class="o">.</span><span class="na">UNPROCESSABLE_ENTITY</span><span class="o">);</span>
+    <span class="o">}</span>
+</code></pre></div></div>
+
+<p>위와 같은 코드가 있을때 UserControllerd에서 발생하는 MethodArgumentNotValidException에 대해서 @ExceptionHandler 어노테이션이 붙은 ValidationExceptionHandle 함수가 처리하게 된다.</p>
+
+<p>더 나아가서 우리는 여러 컨트롤러들이 동일한 예외를 낸다면 위처럼 에러를 처리하기엔 많은 중복 코드가 발생하게 된다. 이런 문제를 해결하기 위해 우리는 전역 컨트롤러에서 발생하는 동일한 에러를 처리하는 클래스를 만들고 이 클래스에서 모든 에러를 처리하도록 구현할 수 있다. 아래의 코드를 보자.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//유저 컨트롤러</span>
+<span class="nd">@RestController</span><span class="o">(</span><span class="s">"/api/v1"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserController</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="nc">UserService</span> <span class="n">userService</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nf">UserController</span><span class="o">(</span><span class="nc">UserService</span> <span class="n">userService</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">userService</span> <span class="o">=</span> <span class="n">userService</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="nd">@PostMapping</span><span class="o">(</span><span class="n">path</span> <span class="o">=</span> <span class="s">"/user"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="nc">ResponseEntity</span><span class="o">&lt;</span><span class="nc">Object</span><span class="o">&gt;</span> <span class="nf">createUser</span><span class="o">(</span><span class="nd">@Valid</span> <span class="nd">@RequestBody</span> <span class="nc">UserDTO</span> <span class="n">createUserDTOJson</span><span class="o">)</span> <span class="o">{</span>
+            <span class="nc">Long</span> <span class="n">id</span> <span class="o">=</span> <span class="n">userService</span><span class="o">.</span><span class="na">createUser</span><span class="o">(</span><span class="n">createUserDTOJson</span><span class="o">);</span>
+
+            <span class="nc">HttpHeaders</span> <span class="n">httpHeaders</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HttpHeaders</span><span class="o">();</span>
+            <span class="n">httpHeaders</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"location"</span><span class="o">,</span> <span class="nc">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">id</span><span class="o">));</span>
+
+            <span class="k">return</span> <span class="k">new</span> <span class="nc">ResponseEntity</span><span class="o">&lt;&gt;(</span><span class="n">httpHeaders</span><span class="o">,</span> <span class="nc">HttpStatus</span><span class="o">.</span><span class="na">OK</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">//RestController에서 발생하는 모든 에러를 담당하는 클래스 -------------------------------------------------------------------------------</span>
+<span class="nd">@RestControllerAdvice</span><span class="o">(</span><span class="n">annotations</span> <span class="o">=</span> <span class="nc">RestController</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">RestControllerExceptionHandler</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">Logger</span> <span class="n">logger</span> <span class="o">=</span> 
+				<span class="nc">LoggerFactory</span><span class="o">.</span><span class="na">getLogger</span><span class="o">(</span><span class="nc">UserExceptionController</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+
+    <span class="nd">@ExceptionHandler</span><span class="o">(</span><span class="nc">MethodArgumentNotValidException</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="nc">ResponseEntity</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="nf">ValidationExceptionHandle</span><span class="o">(</span><span class="nc">MethodArgumentNotValidException</span> <span class="n">methodArgumentNotValidException</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">BindingResult</span> <span class="n">bindingResult</span> <span class="o">=</span> <span class="n">methodArgumentNotValidException</span><span class="o">.</span><span class="na">getBindingResult</span><span class="o">();</span>
+        <span class="k">for</span> <span class="o">(</span><span class="nc">ObjectError</span> <span class="n">objectError</span> <span class="o">:</span> <span class="n">bindingResult</span><span class="o">.</span><span class="na">getAllErrors</span><span class="o">()){</span>
+            <span class="n">logger</span><span class="o">.</span><span class="na">error</span><span class="o">(</span><span class="n">objectError</span><span class="o">.</span><span class="na">getDefaultMessage</span><span class="o">());</span>
+        <span class="o">}</span>
+
+        <span class="k">return</span> <span class="k">new</span> <span class="nc">ResponseEntity</span><span class="o">&lt;&gt;(</span><span class="nc">HttpStatus</span><span class="o">.</span><span class="na">UNPROCESSABLE_ENTITY</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>위에서 처리한 에러는 VaildException으로 파라메타들의 값이 유효하게 들어왔는지를 확인한다. 이러한 에러는 여러 컨트롤러에서 발생할 수 있으며 각 컨트롤러마다 만들 필요없이 한번에 처리하도록 만드는것이 좋다. 먼저 @ControllerAdvice (annotations = ‘class’) 어노테이션을 이용하여  (annotations = ‘class’)에서 선언한 어노테이션들을 가진 클래스들의 에러를 전역으로 관리한다. 에러를 핸들링 하는 부분은 위와 같다.</p>
+
+<p>추가 적으로 객체에 대한 유효성 검증에 대해서 알아보자.</p>
+
+<p>유효성 검증 라이브러리는 <code class="language-plaintext highlighter-rouge">spring-boot-starter-validation</code>를 사용하였다. 간단하게 유효성을 검증할 Entity나 DTO에 아래와 같이 @Null이나 @NotBlank와 같이 해당하는 어노테이션을 작성해주면 된다. 이후 위에 코드 처럼 유효성 검증할 변수 앞에 @Vaild를 작성해주면 된다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//어떤 변수에 대해서 유효성을 체크할건지 선언하는 부분 @Valid</span>
+<span class="kd">public</span> <span class="nc">ResponseEntity</span><span class="o">&lt;</span><span class="nc">Object</span><span class="o">&gt;</span> <span class="nf">createUser</span><span class="o">(**</span><span class="nd">@Valid</span><span class="o">**</span> <span class="nd">@RequestBody</span> <span class="nc">UserDTO</span> <span class="n">createUserDTOJson</span><span class="o">)</span>
+
+<span class="c1">//어떻게 체크할건지 선언하는 부분 @Null, @NotBlank, @Min(value = 2, message = "so young...") 등...</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserDTO</span> <span class="o">{</span>
+    <span class="o">*</span><span class="nd">@Null</span><span class="o">*</span>
+    <span class="kd">private</span> <span class="nc">Long</span> <span class="n">id</span><span class="o">;</span>
+
+    <span class="nd">@NotBlank</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">userId</span><span class="o">;</span>
+
+    <span class="nd">@NotBlank</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">pw</span><span class="o">;</span>
+
+    <span class="nd">@NotBlank</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+
+    <span class="nd">@Min</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="mi">2</span><span class="o">,</span> <span class="n">message</span> <span class="o">=</span> <span class="s">"so young..."</span><span class="o">)</span>
+    <span class="kd">private</span> <span class="nc">Integer</span> <span class="n">age</span><span class="o">;</span>
+<span class="o">}</span>
+
+</code></pre></div></div>
+
+<p>마지막으로 제대로 동작하는지 확인 하기위해 아래와 같은 테스트 코드를 작성.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Test</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">createUser_ValidationExceptionTest</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+    <span class="c1">//given</span>
+    <span class="n">userDTO</span><span class="o">.</span><span class="na">setUserId</span><span class="o">(</span><span class="kc">null</span><span class="o">);</span>
+    <span class="n">userDTO</span><span class="o">.</span><span class="na">setPw</span><span class="o">(</span><span class="s">""</span><span class="o">);</span>
+    <span class="n">userDTO</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="kc">null</span><span class="o">);</span>
+    <span class="n">userDTO</span><span class="o">.</span><span class="na">setAge</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span> <span class="c1">//Min Age 2</span>
+    <span class="nc">String</span> <span class="n">userDTOJson</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ObjectMapper</span><span class="o">().</span><span class="na">writeValueAsString</span><span class="o">(</span><span class="n">userDTO</span><span class="o">);</span>
+
+    <span class="n">given</span><span class="o">(</span><span class="n">userService</span><span class="o">.</span><span class="na">createUser</span><span class="o">(</span><span class="n">any</span><span class="o">(</span><span class="nc">UserDTO</span><span class="o">.</span><span class="na">class</span><span class="o">))).</span><span class="na">willReturn</span><span class="o">(</span><span class="mi">0L</span><span class="o">);</span>
+
+    <span class="c1">//when</span>
+    <span class="nc">ResultActions</span> <span class="n">resultActions</span> <span class="o">=</span> <span class="n">mockMvc</span><span class="o">.</span><span class="na">perform</span><span class="o">(</span>
+            <span class="n">post</span><span class="o">(</span><span class="s">"/user"</span><span class="o">)</span>
+                    <span class="o">.</span><span class="na">contentType</span><span class="o">(</span><span class="nc">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON</span><span class="o">)</span>
+                    <span class="o">.</span><span class="na">content</span><span class="o">(</span><span class="n">userDTOJson</span><span class="o">)</span>
+    <span class="o">);</span>
+
+    <span class="c1">//then</span>
+    <span class="n">resultActions</span>
+            <span class="o">.</span><span class="na">andDo</span><span class="o">(</span><span class="n">print</span><span class="o">())</span>
+            <span class="o">.</span><span class="na">andExpect</span><span class="o">(</span><span class="n">status</span><span class="o">().</span><span class="na">isUnprocessableEntity</span><span class="o">());</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>실행 결과</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">2020</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">17</span> <span class="mo">02</span><span class="o">:</span><span class="mi">59</span><span class="o">:</span><span class="mf">44.935</span> <span class="no">ERROR</span> <span class="mi">12088</span> <span class="o">---</span> <span class="o">[</span>    <span class="nc">Test</span> <span class="n">worker</span><span class="o">]</span> <span class="n">c</span><span class="o">.</span><span class="na">e</span><span class="o">.</span><span class="na">s</span><span class="o">.</span><span class="na">e</span><span class="o">.</span><span class="na">RestControllerExceptionHandler</span>   <span class="o">:</span> <span class="n">must</span> <span class="n">not</span> <span class="n">be</span> <span class="n">blank</span>
+<span class="mi">2020</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">17</span> <span class="mo">02</span><span class="o">:</span><span class="mi">59</span><span class="o">:</span><span class="mf">44.936</span> <span class="no">ERROR</span> <span class="mi">12088</span> <span class="o">---</span> <span class="o">[</span>    <span class="nc">Test</span> <span class="n">worker</span><span class="o">]</span> <span class="n">c</span><span class="o">.</span><span class="na">e</span><span class="o">.</span><span class="na">s</span><span class="o">.</span><span class="na">e</span><span class="o">.</span><span class="na">RestControllerExceptionHandler</span>   <span class="o">:</span> <span class="n">must</span> <span class="n">not</span> <span class="n">be</span> <span class="n">blank</span>
+<span class="mi">2020</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">17</span> <span class="mo">02</span><span class="o">:</span><span class="mi">59</span><span class="o">:</span><span class="mf">44.936</span> <span class="no">ERROR</span> <span class="mi">12088</span> <span class="o">---</span> <span class="o">[</span>    <span class="nc">Test</span> <span class="n">worker</span><span class="o">]</span> <span class="n">c</span><span class="o">.</span><span class="na">e</span><span class="o">.</span><span class="na">s</span><span class="o">.</span><span class="na">e</span><span class="o">.</span><span class="na">RestControllerExceptionHandler</span>   <span class="o">:</span> <span class="n">too</span> <span class="n">young</span><span class="o">...</span>
+<span class="mi">2020</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">17</span> <span class="mo">02</span><span class="o">:</span><span class="mi">59</span><span class="o">:</span><span class="mf">44.936</span> <span class="no">ERROR</span> <span class="mi">12088</span> <span class="o">---</span> <span class="o">[</span>    <span class="nc">Test</span> <span class="n">worker</span><span class="o">]</span> <span class="n">c</span><span class="o">.</span><span class="na">e</span><span class="o">.</span><span class="na">s</span><span class="o">.</span><span class="na">e</span><span class="o">.</span><span class="na">RestControllerExceptionHandler</span>   <span class="o">:</span> <span class="n">must</span> <span class="n">not</span> <span class="n">be</span> <span class="n">blank</span>
+<span class="o">...</span>
+<span class="no">BUILD</span> <span class="no">SUCCESSFUL</span> <span class="n">in</span> <span class="mi">6</span><span class="n">s</span>
+</code></pre></div></div>
+
+<p>유효성 검사에서 에러를 발생했기 때문에 controller에서 422(unprocessableEntity)에러를 반환하여 정삭적으로 유효성 검사가 되는지 테스트 하였다.</p>
 
 <hr />
-<h1 id="풀이-내용">풀이 내용</h1>
 
-<p>이분 탐색을 하기위해선 정렬된 값들이 필요하다.<br />
-받은 값을 정렬 후 시작점과 끝점을 설정해준다.<br />
-<code class="language-plaintext highlighter-rouge">begin = 0; end = n;</code><br />
-다음으로 중간점을 설정해준다.<br />
-<code class="language-plaintext highlighter-rouge">mid = begin + end &gt;&gt; 1</code><br /></p>
+<p>Vaild 체크 어노테이션이나 @RestControllerAdvice의 옵션들은 문서를 참고하자</p>
 
-<p>찾을 값이 mid 값보다 작으면 end값을 mid로 바꿔주고 mid 값보다 크면 begin값을 mid로 바꿔준다.<br /></p>
+<table>
+  <tbody>
+    <tr>
+      <td>[Java Bean Validation Basics</td>
+      <td>Baeldung](https://www.baeldung.com/javax-validation)</td>
+    </tr>
+  </tbody>
+</table>
 
-<p>시작값과 끝값의 차이가 2이상 날때 mid 값이 바뀌게 됨으로 <code class="language-plaintext highlighter-rouge">begin + 1 &lt; end</code> 까지 수행한다.<br />
-(ex. begin = 4, end = 5이면 mid가 항상 4가 됨)</p>
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
-#include &lt;algorithm&gt;
-</span>
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-
-<span class="kt">bool</span> <span class="nf">check</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">num</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="k">return</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="n">num</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="cp">#ifdef LOCAL
-</span>    <span class="n">freopen</span><span class="p">(</span><span class="s">"input.txt"</span><span class="p">,</span> <span class="s">"r"</span><span class="p">,</span> <span class="n">stdin</span><span class="p">);</span>
-<span class="cp">#endif
-</span>
-    <span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span>
-    <span class="n">cout</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span>
-    <span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
-
-    <span class="kt">int</span> <span class="n">arr</span><span class="p">[</span><span class="mi">100001</span><span class="p">];</span>
-
-    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
-    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
-
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-    <span class="p">}</span>
-
-    <span class="n">sort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">arr</span> <span class="o">+</span> <span class="n">n</span><span class="p">,</span> <span class="n">less</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">());</span>
-
-    <span class="kt">int</span> <span class="n">m</span><span class="p">;</span>
-    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">m</span><span class="p">;</span>
-
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">num</span><span class="p">;</span>
-        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">num</span><span class="p">;</span>
-
-        <span class="kt">int</span> <span class="n">begin</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
-        <span class="k">while</span> <span class="p">(</span><span class="n">begin</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="n">end</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">begin</span> <span class="o">+</span> <span class="n">end</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">;</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">check</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">mid</span><span class="p">],</span> <span class="n">num</span><span class="p">))</span>
-                <span class="n">begin</span> <span class="o">=</span> <span class="n">mid</span><span class="p">;</span>
-            <span class="k">else</span>
-                <span class="n">end</span> <span class="o">=</span> <span class="n">mid</span><span class="p">;</span>
-        <span class="p">}</span>
-
-        <span class="k">if</span> <span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">begin</span><span class="p">]</span> <span class="o">==</span> <span class="n">num</span><span class="p">)</span>
-            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-        <span class="k">else</span>
-            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="mi">0</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
-</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2020-07-22T00:00:00+09:00"><!-- start custom article footer snippet -->
+<p><a href="https://javadoc.io/doc/org.springframework/spring-web/5.1.1.RELEASE/org/springframework/web/bind/annotation/RestControllerAdvice.html#annotations--">RestControllerAdvice - spring-web 5.1.1.RELEASE javadoc</a></p>
+</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2020-12-16T00:00:00+09:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
 <div class="article__subscribe"><div class="subscribe"><i class="fas fa-rss"></i> <a type="application/rss+xml" href="/feed.xml">Subscribe</a></div>
@@ -393,7 +465,7 @@
       </a>
     </p>
   </div></div></footer>
-<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/algorithm/2020/07/04/baekjoon-9095.html">백준 - 9095번 : 1, 2, 3 더하기</a></div><div class="next"><span>NEXT</span><a href="/wordbook-project/2020/12/01/%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD-%EB%B6%84%EC%84%9D-%EC%A0%95%EB%A6%AC.html">요구사항 분석 정리</a></div></div></div>
+<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/wordbook-project/2020/12/14/Spring-Boot-JPA-Test.html">Spring Boot JPA Test</a></div><div class="next"><span>NEXT</span><a href="/wordbook-project/2020/12/29/Service-Layer-Validator-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EB%AC%B8%EC%A0%9C%EC%A0%90.html">Service Layer Validator 테스트 문제점</a></div></div></div>
 
 </div>
 
@@ -436,7 +508,7 @@
 				repo: 'lcy960729.github.io',
 				owner: 'lcy960729',
 				admin: ['lcy960729'],
-				id: 'algorithm-baekjoon-1920'
+				id: 'Spring Boot Controller Layer ErrorHandling And Validation Check'
 			});
 			gitalk.render('js-gitalk-container');
 		});
