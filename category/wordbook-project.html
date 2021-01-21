@@ -301,20 +301,26 @@
           <header><a href="/wordbook-project/2021/01/17/%EB%8F%84%EB%A9%94%EC%9D%B8-%EA%B8%B0%EB%8A%A5%EB%93%A4-%EA%B5%AC%ED%98%84-%EC%99%84%EB%A3%8C.html"><h2 itemprop="headline" class="item__header">도메인 기능들 구현 완료</h2></a></header>
           <div class="item__description"><div class="article__content" itemprop="description articleBody">2021-01-17 :: 도메인 기능들 구현 완료
 
-모든 도메인에 대해서 Create, Update, Get 메소드가 동일 함으로 Create 메소드의 반환값으로만 설명을 하겠다.
+모든 도메인에 대해서 Create, Update, Get 메소드의 반환 값이 동일 함으로 Create 메소드의 반환값으로만 설명을 하겠다.
+
+
 1. User 도메인
 
-2. UserWordBook 도메인
+먼저 유저이다. 일단 아직 Spring security를 사용하지 않았기 때문에 세션이 존재하지는 않는다.
 
-3. Word Of UserWordBook 도메인
+추가, 수정, 조회가 가능하다.
 
-그룹과 관련하여 그룹 관리자와 그룹 사용자로 나뉘게 된다. 그룹 관리자와 그룹 사용자의 기능은 나누어서 구현하였으며 그룹 참여 기능을 구현하게 되면 이후에 다른 권한에 대한 결과값 구현 내용을 추가 하겠다.
+1. create
 
-4. StudyGroup 도메인
+Request
 
-5. StudyGroupWordBook 도메인
+POST http://localhost:8080/api/v1/users
 
-6. Word Of StudyGrou...</div><p><a href="/wordbook-project/2021/01/17/%EB%8F%84%EB%A9%94%EC%9D%B8-%EA%B8%B0%EB%8A%A5%EB%93%A4-%EA%B5%AC%ED%98%84-%EC%99%84%EB%A3%8C.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
+Body : 
+{
+    "email": "testEmail@test.com",
+    "pw": "testPw",
+    "name": "testNa...</div><p><a href="/wordbook-project/2021/01/17/%EB%8F%84%EB%A9%94%EC%9D%B8-%EA%B8%B0%EB%8A%A5%EB%93%A4-%EA%B5%AC%ED%98%84-%EC%99%84%EB%A3%8C.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
               <a class="button button--secondary button--pill button--sm"
                 href="/archive.html?tag=WordBookProject">WordBookProject</a>
             </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jan 17, 2021</span>
