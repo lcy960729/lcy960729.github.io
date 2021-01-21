@@ -1,4 +1,68 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://lcy960729.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lcy960729.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2021-01-21T22:23:54+09:00</updated><id>https://lcy960729.github.io/feed.xml</id><title type="html">CY의 개발 블로그</title><subtitle></subtitle><author><name>Lee Chan Young</name><email>lcy960729@gmail.com</email></author><entry><title type="html">백준 - 1920번 : 수 찾기</title><link href="https://lcy960729.github.io/algorithm/2020/07/22/baekjoon-1920.html" rel="alternate" type="text/html" title="백준 - 1920번 : 수 찾기" /><published>2020-07-22T00:00:00+09:00</published><updated>2020-07-22T00:00:00+09:00</updated><id>https://lcy960729.github.io/algorithm/2020/07/22/baekjoon-1920</id><content type="html" xml:base="https://lcy960729.github.io/algorithm/2020/07/22/baekjoon-1920.html">&lt;style&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://lcy960729.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lcy960729.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2021-01-21T22:28:44+09:00</updated><id>https://lcy960729.github.io/feed.xml</id><title type="html">CY의 개발 블로그</title><subtitle></subtitle><author><name>Lee Chan Young</name><email>lcy960729@gmail.com</email></author><entry><title type="html">단어장 어플리케이션 요구사항 분석 정리</title><link href="https://lcy960729.github.io/wordbook-project/2020/12/01/%EB%8B%A8%EC%96%B4%EC%9E%A5-%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD-%EB%B6%84%EC%84%9D-%EC%A0%95%EB%A6%AC.html" rel="alternate" type="text/html" title="단어장 어플리케이션 요구사항 분석 정리" /><published>2020-12-01T00:00:00+09:00</published><updated>2020-12-01T00:00:00+09:00</updated><id>https://lcy960729.github.io/wordbook-project/2020/12/01/%EB%8B%A8%EC%96%B4%EC%9E%A5-%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD-%EB%B6%84%EC%84%9D-%EC%A0%95%EB%A6%AC</id><content type="html" xml:base="https://lcy960729.github.io/wordbook-project/2020/12/01/%EB%8B%A8%EC%96%B4%EC%9E%A5-%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD-%EB%B6%84%EC%84%9D-%EC%A0%95%EB%A6%AC.html">&lt;h1 id=&quot;2020-12-01--단어장-어플리케이션-요구사항-분석-정리&quot;&gt;2020-12-01 :: 단어장 어플리케이션 요구사항 분석 정리&lt;/h1&gt;
+
+&lt;h2 id=&quot;사용자-기능&quot;&gt;사용자 기능&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;개인 사용자
+    &lt;ul&gt;
+      &lt;li&gt;개인 사용자는 개인 단어장들을 관리&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;그룹 사용자
+    &lt;ul&gt;
+      &lt;li&gt;여러 개인 사용자들이 참여하여 단어장들을 관리&lt;/li&gt;
+      &lt;li&gt;그룹 사용자가 테스트를 추가하면 참여한 모든 그룹이 테스트를 수행&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;커뮤니티-기능&quot;&gt;커뮤니티 기능&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;암기법 공유 (자신이 커스텀한 테스트 방식을 공유)
+    &lt;ul&gt;
+      &lt;li&gt;암기법 공유시 테스트 설정만 공유할껀지 단어장 모두를 공유할 것인지?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;단어장 공유 (자신이 등록한 단어장 공유)&lt;/li&gt;
+  &lt;li&gt;커뮤니티의 모든 게시글은 추가, 수정, 삭제, 추천, 댓글 기능을 제공&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;단어장-기능&quot;&gt;단어장 기능&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;사용자가 지정한 단어장에 원하는 단어를 정리&lt;/li&gt;
+  &lt;li&gt;개인과 그룹은 여러 단어장 관리할 수 있음&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;단어-기능&quot;&gt;단어 기능&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;사용자가 임의로 단어와 뜻을 추가&lt;/li&gt;
+  &lt;li&gt;브라우저나 앱 내에서 블록 지정하여 단어를 추가&lt;/li&gt;
+  &lt;li&gt;단어와 연관된 사진을 첨부 가능&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;테스트-기능&quot;&gt;테스트 기능&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;단어장 단위로 테스트&lt;/li&gt;
+  &lt;li&gt;모든 단어장으로 테스트&lt;/li&gt;
+  &lt;li&gt;테스트 전체 시간 설정&lt;/li&gt;
+  &lt;li&gt;단어 마다 패스할 시간 설정&lt;/li&gt;
+  &lt;li&gt;뜻 또는 스펠링 테스트&lt;/li&gt;
+  &lt;li&gt;객관식(4지 선다), 주관식 (답 작성) 테스트&lt;/li&gt;
+  &lt;li&gt;원하는 시간대에 테스트 알림 설정&lt;/li&gt;
+  &lt;li&gt;커스텀한 테스트 방식을 저장&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;알림-기능&quot;&gt;알림 기능&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;설정한 시간대 테스트를 위한 푸시 알림&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;</content><author><name>CY</name><email>lcy960729@gmail.com</email></author><category term="wordbook-project" /><category term="WordBookProject" /><category term="SRS" /><summary type="html">2020-12-01 :: 단어장 어플리케이션 요구사항 분석 정리 사용자 기능 개인 사용자 개인 사용자는 개인 단어장들을 관리 그룹 사용자 여러 개인 사용자들이 참여하여 단어장들을 관리 그룹 사용자가 테스트를 추가하면 참여한 모든 그룹이 테스트를 수행 커뮤니티 기능 암기법 공유 (자신이 커스텀한 테스트 방식을 공유) 암기법 공유시 테스트 설정만 공유할껀지 단어장 모두를 공유할 것인지? 단어장 공유 (자신이 등록한 단어장 공유) 커뮤니티의 모든 게시글은 추가, 수정, 삭제, 추천, 댓글 기능을 제공 단어장 기능 사용자가 지정한 단어장에 원하는 단어를 정리 개인과 그룹은 여러 단어장 관리할 수 있음 단어 기능 사용자가 임의로 단어와 뜻을 추가 브라우저나 앱 내에서 블록 지정하여 단어를 추가 단어와 연관된 사진을 첨부 가능 테스트 기능 단어장 단위로 테스트 모든 단어장으로 테스트 테스트 전체 시간 설정 단어 마다 패스할 시간 설정 뜻 또는 스펠링 테스트 객관식(4지 선다), 주관식 (답 작성) 테스트 원하는 시간대에 테스트 알림 설정 커스텀한 테스트 방식을 저장 알림 기능 설정한 시간대 테스트를 위한 푸시 알림</summary></entry><entry><title type="html">백준 - 1920번 : 수 찾기</title><link href="https://lcy960729.github.io/algorithm/2020/07/22/baekjoon-1920.html" rel="alternate" type="text/html" title="백준 - 1920번 : 수 찾기" /><published>2020-07-22T00:00:00+09:00</published><updated>2020-07-22T00:00:00+09:00</updated><id>https://lcy960729.github.io/algorithm/2020/07/22/baekjoon-1920</id><content type="html" xml:base="https://lcy960729.github.io/algorithm/2020/07/22/baekjoon-1920.html">&lt;style&gt;
     .red{
         color: red;
     }
