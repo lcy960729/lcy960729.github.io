@@ -1,10 +1,10 @@
 <!DOCTYPE html><html lang="en">
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>도메인 기능들 구현 완료 - CY의 개발 블로그</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>설계 및 구현시 각 단계에서 생각해봐야할것들 정리 - CY의 개발 블로그</title>
 
-<meta name="description" content="2020-01-17 :: 도메인 기능들 구현 완료모든 도메인에 대해서 Create, Update, Get 메소드가 동일 함으로 Create 메소드의 반환값으로만 설명을 하겠다.1. User 도메인2. UserWordBook 도메인3. Word Of UserWordBook 도메인그룹...">
-<link rel="canonical" href="https://lcy960729.github.io/wordbook-project/2020/01/17/%EB%8F%84%EB%A9%94%EC%9D%B8-%EA%B8%B0%EB%8A%A5%EB%93%A4-%EA%B5%AC%ED%98%84-%EC%99%84%EB%A3%8C.html"><link rel="alternate" type="application/rss+xml" title="CY의 개발 블로그" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
+<meta name="description" content="2021-01-12 :: 설계 및 구현시 각 단계에서 생각해봐야할것들 정리레이어및 컴포넌트 설계 구현시 생각해 봐야할 것들컨트롤러 레이어  url 패턴 설계  현재 상태에서 갈 수 있는 다음 상태 설계  반환 DTO 구현 (hateoas 적용)  반환 header 구현  반환 bo...">
+<link rel="canonical" href="https://lcy960729.github.io/wordbook-project/2021/01/12/%EC%84%A4%EA%B3%84-%EB%B0%8F-%EA%B5%AC%ED%98%84%EC%8B%9C-%EA%B0%81-%EB%8B%A8%EA%B3%84%EC%97%90%EC%84%9C-%EC%83%9D%EA%B0%81%ED%95%B4%EB%B4%90%EC%95%BC%ED%95%A0%EA%B2%83%EB%93%A4-%EC%A0%95%EB%A6%AC.html"><link rel="alternate" type="application/rss+xml" title="CY의 개발 블로그" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/assets/browserconfig.xml">
 
@@ -276,43 +276,123 @@
 
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>도메인 기능들 구현 완료</h1></header><span class="split-space">&nbsp;</span>
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>설계 및 구현시 각 단계에서 생각해봐야할것들 정리</h1></header><span class="split-space">&nbsp;</span>
           <a class="edit-on-github"
             title="Edit on Github"
-            href="https://github.com/lcy960729/lcy960729.github.io/tree/master/_posts/WordBookProject/2020-01-17-도메인-기능들-구현-완료.md">
-            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="도메인 기능들 구현 완료"><div class="article__info clearfix"><ul class="left-col menu"><li>
+            href="https://github.com/lcy960729/lcy960729.github.io/tree/master/_posts/WordBookProject/2021-01-12-설계-및-구현시-각-단계에서-생각해봐야할것들-정리.md">
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="설계 및 구현시 각 단계에서 생각해봐야할것들 정리"><div class="article__info clearfix"><ul class="left-col menu"><li>
               <a class="button button--secondary button--pill button--sm"
                 href="/archive.html?tag=WordBookProject">WordBookProject</a>
-            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jan 17, 2020</span>
-            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-01-17T00:00:00+09:00">
+            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jan 12, 2021</span>
+            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2021-01-12T00:00:00+09:00">
     <meta itemprop="keywords" content="WordBookProject"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
-<div class="article__content" itemprop="articleBody"><h1 id="2020-01-17--도메인-기능들-구현-완료">2020-01-17 :: 도메인 기능들 구현 완료</h1>
+<div class="article__content" itemprop="articleBody"><h1 id="2021-01-12--설계-및-구현시-각-단계에서-생각해봐야할것들-정리">2021-01-12 :: 설계 및 구현시 각 단계에서 생각해봐야할것들 정리</h1>
 
-<p>모든 도메인에 대해서 Create, Update, Get 메소드가 동일 함으로 Create 메소드의 반환값으로만 설명을 하겠다.<br />
-<a href="/assets/innerPosts/2020-01-17-도메인-기능들-구현-완료/1-User-도메인.md">1. User 도메인</a></p>
+<h2 id="레이어및-컴포넌트-설계-구현시-생각해-봐야할-것들">레이어및 컴포넌트 설계 구현시 생각해 봐야할 것들</h2>
 
-<p><a href="/assets/innerPosts/2020-01-17-도메인-기능들-구현-완료/2-UserWordBook-도메인.md">2. UserWordBook 도메인</a></p>
+<h3 id="컨트롤러-레이어">컨트롤러 레이어</h3>
 
-<p><a href="/assets/innerPosts/2020-01-17-도메인-기능들-구현-완료/3-Word-Of-UserWordBook-도메인.md">3. Word Of UserWordBook 도메인</a></p>
+<ol>
+  <li>url 패턴 설계</li>
+  <li>현재 상태에서 갈 수 있는 다음 상태 설계</li>
+  <li>반환 DTO 구현 (hateoas 적용)</li>
+  <li>반환 header 구현</li>
+  <li>반환 body 구현</li>
+</ol>
 
-<p>그룹과 관련하여 그룹 관리자와 그룹 사용자로 나뉘게 된다. 그룹 관리자와 그룹 사용자의 기능은 나누어서 구현하였으며 그룹 참여 기능을 구현하게 되면 이후에 다른 권한에 대한 결과값 구현 내용을 추가 하겠다.</p>
+<h3 id="서비스-레이어">서비스 레이어</h3>
 
-<p><a href="/assets/innerPosts/2020-01-17-도메인-기능들-구현-완료/4-StudyGroup-도메인.md">4. StudyGroup 도메인</a></p>
+<ol>
+  <li>Mapper 구현</li>
+  <li>비즈니스 로직 구현</li>
+  <li>최대한 한 서비스는 한 동작만 하도록 구현</li>
+</ol>
 
-<p><a href="/assets/innerPosts/2020-01-17-도메인-기능들-구현-완료/5-StudyGroupWordBook-도메인.md">5. StudyGroupWordBook 도메인</a></p>
+<h3 id="레퍼지토리">레퍼지토리</h3>
 
-<p><a href="/assets/innerPosts/2020-01-17-도메인-기능들-구현-완료/6-Word-Of-StudyGroupWordBook-도메인.md">6. Word Of StudyGroupWordBook 도메인</a></p>
+<p><del>아직 직접 작성한 쿼리가 없음</del></p>
 
-<p>현재까지 개발된 내용으로 대략적인 단어장의 기능은 모두 동작하게 됐다. 하지만 부족한 점과 생각해야할것들을 정리 해보겠다.</p>
+<h3 id="mapper">Mapper</h3>
 
-<p>첫번째는 먼저 개발만 달려오다보니 API 명세에 대한 내용을 잊고 있었다. 현재 API 반환값은 self -description 이 없기 때문에 완벽한 Rest Api라고 부를수 없다.</p>
+<ol>
+  <li>맵핑이 안되는 필드가 없는지 확인</li>
+  <li>맵핑될 필요가 없다면 꼭 무시하는 맵핑 어노테이션을 달아주자</li>
+  <li>Collection에 대한 맵핑은 꼭 직접 확실히 구현.</li>
+  <li>Object to Object는 해당 객체에 필요한것에 맞게 놓치는 필드가 없도록 구현</li>
+</ol>
 
-<p>두번째는 테스트 코드 수정 문제 이다. 테스트 코드를 먼저 작성하게 되면서 오류가 발생하는 부분이 줄어드는것은 좋은 점이라 생각하지만 서비스의 구조가 바뀌거나 했을때 수정해야하는 부분이 생각보다 많았다. 다음 부턴 테스트 코드를 작성할때도 조금 더 큰 그림을 보고 당장에 돌아가는 코드보단 잘 설계된 코드로 방향을 맞추어 최대한 수정하는 일이 적어지도록 노력 해봐야겠다.</p>
+<h3 id="validator">Validator</h3>
 
-<p>부족한 점 두가지 모두 그룹 참여 기능을 구현한 후 조금씩 수정해 나가도록 해보겠다.</p>
-</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2020-01-17T00:00:00+09:00"><!-- start custom article footer snippet -->
+<p>해당 변수가 서비스했을때 동작 가능할 임계값을 생각하자.</p>
+
+<p>필요하다면 정규식도 사용해보자.</p>
+
+<h2 id="테스트-코드-작성시-생각해봐야할-것들">테스트 코드 작성시 생각해봐야할 것들</h2>
+
+<blockquote>
+  <p>위에 내용을 참고하여 설계한 내용을 테스트 코드로 먼저 작성 이후 테스트 코드를 따라가면서 구현</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>**주의**
+
+유닛 테스트는 전체 흐름을 동작한 결과물이 아님.
+내가 원하는 입력에 대한 예상 결과값만 나오는걸 유닛 테스트라고 생각.
+
+예를 들어
+controller를 테스트 하는데 service 동작이 제대로 수행되는지는 알 필요 없음.
+controller를 테스트 하는데 mapper가 제대로 동작하는지 알 필요 없음.
+controller를 테스트 하는데 validator가 제대로 동작하는지 알 필요 없음.
+
+우리는 의존있는 객체를 가짜 객체로 만든 후 mock 객체가 올바른 결과를 던져주도록 구현하고
+해당 레이어에서 동작하는 코드만 테스트하면 됨.
+(처음에는 자꾸 의존된 객체의 동작을 생각하는데 그렇게 생각하지 않으려고 노력해야함)
+</code></pre></div></div>
+
+<h3 id="현재까지-프로젝트-진행하면서-해야할-유닛-테스트-목록-정리">현재까지 프로젝트 진행하면서 해야할 유닛 테스트 목록 정리</h3>
+
+<ol>
+  <li>
+    <p>controllerTest</p>
+
+    <p>컨트롤러에서 테스트 해야할것은 해당 url로 api 요청시 어떤 값을 반환할지만 확인 (서비스, 벨리데이터 등등 어떻게 동작하는지 확인할 필요 x)</p>
+  </li>
+  <li>
+    <p>serviceTest</p>
+
+    <p>입력에 대한 비즈니스 로직이 제대로 동작하는지 확인(db에 잘 저장했는지 확인할 필요 x)</p>
+
+    <p>비즈니스 로직이 에러를 반환하는 경우도 생각해야함.</p>
+
+    <p>(예를 들어 만약 객체가 레퍼지토리에서 받아온 값이 없다면 에러처리 같은 경우)</p>
+  </li>
+  <li>
+    <p>repositoryTest</p>
+
+    <p>db에 원하는 요청대로 저장이 되는지 확인</p>
+  </li>
+  <li>
+    <p>exceptionHandlerTest</p>
+
+    <p>api 요청 후 동작 중 에러가 발생했을때 에러를 처리하고 원하는 결과값을 반환하는지 확인하면 됨</p>
+  </li>
+  <li>
+    <p>mapperTest</p>
+
+    <p>단순히 mapper가 제대로 맵핑 되는지 확인</p>
+  </li>
+  <li>
+    <p>validatorTest</p>
+
+    <p>내가 만든 유효성 검증 어노테이션이나 기본적으로 구현된 검증 어노테이션이 제대로 동작하는지 확인</p>
+  </li>
+</ol>
+
+<hr />
+
+<p>단순히 프로젝트를 진행하면서 느낀 내 생각이므로 정답이라고 할순 없음. 테스트를 더 편하게 짜기위해 극단적인 유닛테스트로만 진행하는것이 아닌 통합테스트로도 진행할 수 있음. 사람마다 생각하는 방향이 다르기 때문에 혼자하는 프로젝트가 아니라면 팀원과 생각을 맞춘 후 진행하면 될것같음.</p>
+</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2021-01-12T00:00:00+09:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
 <div class="article__subscribe"><div class="subscribe"><i class="fas fa-rss"></i> <a type="application/rss+xml" href="/feed.xml">Subscribe</a></div>
@@ -323,7 +403,7 @@
       </a>
     </p>
   </div></div></footer>
-<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/wordbook-project/2020/01/15/Collection-Object-Null-%EC%B2%98%EB%A6%AC.html">Collection Object Null 처리</a></div><div class="next"><span>NEXT</span><a href="/wordbook-project/2020/01/18/%EC%9D%98%EC%A1%B4%ED%95%98%EB%8A%94-%EA%B0%9D%EC%B2%B4%EC%97%90-%EB%8C%80%ED%95%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%BD%94%EB%93%9C-%EA%B3%A0%EC%B0%B0.html">의존하는 객체에 대한 테스트 코드 고찰</a></div></div></div>
+<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/wordbook-project/2021/01/11/%EB%8B%A8%EC%96%B4%EC%9E%A5-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%9E%AC%EA%B5%AC%EC%84%B1.html">단어장 어플리케이션 ERD 정리</a></div><div class="next"><span>NEXT</span><a href="/wordbook-project/2021/01/13/Mapper-Test-Code-%EB%B0%8F-%EC%83%9D%EA%B0%81.html">Mapper Test Code 및 생각</a></div></div></div>
 
 </div>
 
@@ -366,7 +446,7 @@
 				repo: 'lcy960729.github.io',
 				owner: 'lcy960729',
 				admin: ['lcy960729'],
-				id: '도메인 기능들 구현 완료'
+				id: '설계 및 구현시 각 단계에서 생각해봐야할것들 정리'
 			});
 			gitalk.render('js-gitalk-container');
 		});

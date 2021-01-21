@@ -328,7 +328,7 @@
 
 <p>문제점은 테스트 코드를 작성할때 발생한다. 서비스 레이어에서 유닛 테스트를 진행하게 되면 @Valid가 트리거 되지않는다. 이유로는 mvc테스트가 아니므로 DispatcherServlet이 없기 때문이다(아래 사진은 유효성 검증이 어떤식으로 이루어지는지 디버깅해본 사진이다). 그렇기 때문에 서비스레이어에서 유효성 검사를 완전히 하기 위해서는 통합 테스트로 진행을 하던가 유효성 검사부분을 직접 작성해야한다.</p>
 
-<p><img src="/assets/images/2020-12-29-Service-Layer-Validator-테스트-문제점/Untitled.png" alt="실행되는 구조.png" /></p>
+<p><img src="/assets/images/2021-12-29-Service-Layer-Validator-테스트-문제점/Validation_동작순서.png" alt="Validation 실행순서.png" /></p>
 
 <p>이 부분에서 많은 시간을 투자했는데 디버깅해보면서 따라가봤으면 금방 해결할 수 있는 문제였다. 안되는걸 하려고하니 시간만 날리는 문제가 발생했는데 다른 방법을 찾아봐야겠다.</p>
 </div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2020-12-29T00:00:00+09:00"><!-- start custom article footer snippet -->
@@ -342,7 +342,7 @@
       </a>
     </p>
   </div></div></footer>
-<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/wordbook-project/2020/12/16/Spring-Boot-Controller-Layer-ErrorHandling-And-Validation-Check.html">Spring Boot Controller Layer ErrorHandling And Validation Check</a></div></div></div>
+<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/wordbook-project/2020/12/16/Spring-Boot-Controller-Layer-ErrorHandling-And-Validation-Check.html">Spring Boot Controller Layer ErrorHandling And Validation Check</a></div><div class="next"><span>NEXT</span><a href="/wordbook-project/2021/01/11/%EB%8B%A8%EC%96%B4%EC%9E%A5-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%9E%AC%EA%B5%AC%EC%84%B1.html">단어장 어플리케이션 ERD 정리</a></div></div></div>
 
 </div>
 

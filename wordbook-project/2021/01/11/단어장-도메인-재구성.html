@@ -1,10 +1,10 @@
 <!DOCTYPE html><html lang="en">
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Mapper Test Code 및 생각 - CY의 개발 블로그</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>단어장 어플리케이션 ERD 정리 - CY의 개발 블로그</title>
 
-<meta name="description" content="2020-01-13 :: Mapper Test Code 및 생각하루 전에 생각했던 Mapper Test code를 작성해보았다. 커스텀한 맵핑 규칙에 대해 테스트를  동작 하였고 전체적인 맵핑 메소드를 테스트 하였다. 아래는 작성해본 코드이다.테스트 코드 작성하면서 입력이 Null...">
-<link rel="canonical" href="https://lcy960729.github.io/wordbook-project/2020/01/13/Mapper-Test-Code-%EB%B0%8F-%EC%83%9D%EA%B0%81.html"><link rel="alternate" type="application/rss+xml" title="CY의 개발 블로그" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
+<meta name="description" content="2021-01-11 :: 단어장 도메인 재구성기본에 설계된 도메인들의 관계를 머리로만 생각하니 점점 복잡해져서 좀더 명확히 하기 위해 ERD 작성.">
+<link rel="canonical" href="https://lcy960729.github.io/wordbook-project/2021/01/11/%EB%8B%A8%EC%96%B4%EC%9E%A5-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%9E%AC%EA%B5%AC%EC%84%B1.html"><link rel="alternate" type="application/rss+xml" title="CY의 개발 블로그" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/assets/browserconfig.xml">
 
@@ -276,168 +276,27 @@
 
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Mapper Test Code 및 생각</h1></header><span class="split-space">&nbsp;</span>
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>단어장 어플리케이션 ERD 정리</h1></header><span class="split-space">&nbsp;</span>
           <a class="edit-on-github"
             title="Edit on Github"
-            href="https://github.com/lcy960729/lcy960729.github.io/tree/master/_posts/WordBookProject/2020-01-13-Mapper-Test-Code-및-생각.md">
-            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="Mapper Test Code 및 생각"><div class="article__info clearfix"><ul class="left-col menu"><li>
+            href="https://github.com/lcy960729/lcy960729.github.io/tree/master/_posts/WordBookProject/2021-01-11-단어장-도메인-재구성.md">
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="단어장 어플리케이션 ERD 정리"><div class="article__info clearfix"><ul class="left-col menu"><li>
               <a class="button button--secondary button--pill button--sm"
                 href="/archive.html?tag=WordBookProject">WordBookProject</a>
             </li><li>
               <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=TestCode">TestCode</a>
-            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jan 13, 2020</span>
-            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-01-13T00:00:00+09:00">
-    <meta itemprop="keywords" content="WordBookProject,TestCode"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+                href="/archive.html?tag=ERD">ERD</a>
+            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jan 11, 2021</span>
+            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2021-01-11T00:00:00+09:00">
+    <meta itemprop="keywords" content="WordBookProject,ERD"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
-<div class="article__content" itemprop="articleBody"><h1 id="2020-01-13--mapper-test-code-및-생각">2020-01-13 :: Mapper Test Code 및 생각</h1>
+<div class="article__content" itemprop="articleBody"><h1 id="2021-01-11--단어장-도메인-재구성">2021-01-11 :: 단어장 도메인 재구성</h1>
 
-<p>하루 전에 생각했던 Mapper Test code를 작성해보았다. 커스텀한 맵핑 규칙에 대해 테스트를  동작 하였고 전체적인 맵핑 메소드를 테스트 하였다. 아래는 작성해본 코드이다.</p>
+<p>기본에 설계된 도메인들의 관계를 머리로만 생각하니 점점 복잡해져서 좀더 명확히 하기 위해 ERD 작성.</p>
 
-<p>테스트 코드 작성하면서 입력이 Null로 들어왔을때에 대한 생각인데 Null일때 에러를 내는것이 좋은지 유연하게 Blank 값을 넣어주는게 좋은지 생각해봐야겠다.</p>
-
-<p>또한 Jpa Entity 내 맵핑하는 변수가 Collection 객체일 경우를 생각해서 모두 final 변수로 두어 null값이 들어가지 않게 초기화하였다. 이 방법이 문제가 될만한 점이 있는지 생각해봐야겠다…</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@SpringBootTest</span><span class="o">(</span><span class="n">classes</span> <span class="o">=</span> <span class="o">{</span><span class="nc">DomainFactory</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="nc">ObjectMapper</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="nc">UserMapperImpl</span><span class="o">.</span><span class="na">class</span><span class="o">})</span>
-<span class="kd">class</span> <span class="nc">UserMapperTest</span> <span class="o">{</span>
-
-    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">Logger</span> <span class="n">logger</span> <span class="o">=</span> <span class="nc">LoggerFactory</span><span class="o">.</span><span class="na">getLogger</span><span class="o">(</span><span class="nc">UserMapperTest</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
-
-    <span class="nd">@Autowired</span>
-    <span class="kd">private</span> <span class="nc">DomainFactory</span> <span class="n">domainFactory</span><span class="o">;</span>
-
-    <span class="nd">@Autowired</span>
-    <span class="kd">private</span> <span class="nc">ObjectMapper</span> <span class="n">objectMapper</span><span class="o">;</span>
-
-    <span class="nd">@Autowired</span>
-    <span class="kd">private</span> <span class="nc">UserMapper</span> <span class="n">userMapper</span><span class="o">;</span>
-
-    <span class="nd">@Test</span>
-    <span class="nd">@DisplayName</span><span class="o">(</span><span class="s">"createUserDTOToEntity 맵핑이 정삭적으로 동작 하는 테스트"</span><span class="o">)</span>
-    <span class="kt">void</span> <span class="nf">createUserDTOToEntity</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">JsonProcessingException</span> <span class="o">{</span>
-        <span class="c1">//given</span>
-        <span class="nc">CreateUserRequestDTO</span> <span class="n">createUserRequestDTO</span> <span class="o">=</span> <span class="nc">CreateUserRequestDTO</span><span class="o">.</span><span class="na">builder</span><span class="o">()</span>
-                <span class="o">.</span><span class="na">name</span><span class="o">(</span><span class="s">"testName"</span><span class="o">)</span>
-                <span class="o">.</span><span class="na">email</span><span class="o">(</span><span class="s">"testEmail"</span><span class="o">)</span>
-                <span class="o">.</span><span class="na">pw</span><span class="o">(</span><span class="s">"testPw"</span><span class="o">)</span>
-                <span class="o">.</span><span class="na">build</span><span class="o">();</span>
-
-        <span class="c1">//when</span>
-        <span class="nc">User</span> <span class="n">user</span> <span class="o">=</span> <span class="n">userMapper</span><span class="o">.</span><span class="na">createUserDTOToEntity</span><span class="o">(</span><span class="n">createUserRequestDTO</span><span class="o">);</span>
-
-        <span class="c1">//then</span>
-        <span class="n">logger</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="n">objectMapper</span><span class="o">.</span><span class="na">writeValueAsString</span><span class="o">(</span><span class="n">user</span><span class="o">));</span>
-
-        <span class="n">assertThat</span><span class="o">(</span><span class="n">user</span><span class="o">.</span><span class="na">getName</span><span class="o">()).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="n">createUserRequestDTO</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
-        <span class="n">assertThat</span><span class="o">(</span><span class="n">user</span><span class="o">.</span><span class="na">getEmail</span><span class="o">()).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="n">createUserRequestDTO</span><span class="o">.</span><span class="na">getEmail</span><span class="o">());</span>
-    <span class="o">}</span>
-
-    <span class="nd">@Test</span>
-    <span class="nd">@DisplayName</span><span class="o">(</span><span class="s">"userToUserDetailDTO 맵핑이 정삭적으로 동작 하는 테스트"</span><span class="o">)</span>
-    <span class="kt">void</span> <span class="nf">entityToUserDetailDTO</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">JsonProcessingException</span> <span class="o">{</span>
-        <span class="c1">//given</span>
-        <span class="kt">long</span> <span class="n">userId</span> <span class="o">=</span> <span class="mi">0L</span><span class="o">;</span>
-        <span class="nc">User</span> <span class="n">user</span> <span class="o">=</span> <span class="n">domainFactory</span><span class="o">.</span><span class="na">createUser</span><span class="o">(</span><span class="n">userId</span><span class="o">);</span>
-
-        <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span>
-        <span class="nc">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">length</span><span class="o">).</span><span class="na">forEach</span><span class="o">((</span><span class="n">i</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span>
-            <span class="nc">StudyGroup</span> <span class="n">studyGroup</span> <span class="o">=</span> <span class="n">domainFactory</span><span class="o">.</span><span class="na">createStudyGroup</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
-            <span class="nc">UserWordBook</span> <span class="n">userWordBook</span> <span class="o">=</span> <span class="n">domainFactory</span><span class="o">.</span><span class="na">createUserWordBook</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
-
-            <span class="nc">Study</span> <span class="n">study</span> <span class="o">=</span> <span class="nc">Study</span><span class="o">.</span><span class="na">builder</span><span class="o">()</span>
-                    <span class="o">.</span><span class="na">id</span><span class="o">((</span><span class="kt">long</span><span class="o">)</span> <span class="n">i</span><span class="o">)</span>
-                    <span class="o">.</span><span class="na">studyGroup</span><span class="o">(</span><span class="n">studyGroup</span><span class="o">)</span>
-                    <span class="o">.</span><span class="na">user</span><span class="o">(</span><span class="n">user</span><span class="o">)</span>
-                    <span class="o">.</span><span class="na">build</span><span class="o">();</span>
-
-            <span class="n">user</span><span class="o">.</span><span class="na">joinToStudy</span><span class="o">(</span><span class="n">study</span><span class="o">);</span>
-            <span class="n">user</span><span class="o">.</span><span class="na">getUserWordBookList</span><span class="o">().</span><span class="na">add</span><span class="o">(</span><span class="n">userWordBook</span><span class="o">);</span>
-        <span class="o">});</span>
-
-        <span class="c1">//when</span>
-        <span class="nc">UserDetailResponseDTO</span> <span class="n">userDetailResponseDTO</span> <span class="o">=</span> <span class="n">userMapper</span><span class="o">.</span><span class="na">entityToUserDetailDTO</span><span class="o">(</span><span class="n">user</span><span class="o">);</span>
-
-        <span class="c1">//then</span>
-        <span class="n">logger</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="n">objectMapper</span><span class="o">.</span><span class="na">writeValueAsString</span><span class="o">(</span><span class="n">userDetailResponseDTO</span><span class="o">));</span>
-
-        <span class="n">assertThat</span><span class="o">(</span><span class="n">userDetailResponseDTO</span><span class="o">.</span><span class="na">getId</span><span class="o">()).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="n">user</span><span class="o">.</span><span class="na">getId</span><span class="o">());</span>
-        <span class="n">assertThat</span><span class="o">(</span><span class="n">userDetailResponseDTO</span><span class="o">.</span><span class="na">getEmail</span><span class="o">()).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="n">user</span><span class="o">.</span><span class="na">getEmail</span><span class="o">());</span>
-        <span class="n">assertThat</span><span class="o">(</span><span class="n">userDetailResponseDTO</span><span class="o">.</span><span class="na">getName</span><span class="o">()).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="n">user</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
-
-        <span class="nc">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">length</span><span class="o">).</span><span class="na">forEach</span><span class="o">((</span><span class="n">i</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span>
-            <span class="nc">UserDetailResponseDTO</span><span class="o">.</span><span class="na">StudyGroupDTO</span> <span class="n">studyGroupDTO</span> <span class="o">=</span> <span class="n">userDetailResponseDTO</span><span class="o">.</span><span class="na">getStudyGroupList</span><span class="o">().</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
-            <span class="nc">StudyGroup</span> <span class="n">studyGroup</span> <span class="o">=</span> <span class="n">user</span><span class="o">.</span><span class="na">getStudyList</span><span class="o">().</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">).</span><span class="na">getStudyGroup</span><span class="o">();</span>
-
-            <span class="n">assertThat</span><span class="o">(</span><span class="n">studyGroupDTO</span><span class="o">.</span><span class="na">getId</span><span class="o">()).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="n">studyGroup</span><span class="o">.</span><span class="na">getId</span><span class="o">());</span>
-            <span class="n">assertThat</span><span class="o">(</span><span class="n">studyGroupDTO</span><span class="o">.</span><span class="na">getName</span><span class="o">()).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="n">studyGroup</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
-
-            <span class="nc">UserDetailResponseDTO</span><span class="o">.</span><span class="na">WordBookDTO</span> <span class="n">wordBookDTO</span> <span class="o">=</span> <span class="n">userDetailResponseDTO</span><span class="o">.</span><span class="na">getWordBookDTOList</span><span class="o">().</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
-            <span class="nc">UserWordBook</span> <span class="n">userWordBook</span> <span class="o">=</span> <span class="n">user</span><span class="o">.</span><span class="na">getUserWordBookList</span><span class="o">().</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
-
-            <span class="n">assertThat</span><span class="o">(</span><span class="n">wordBookDTO</span><span class="o">.</span><span class="na">getId</span><span class="o">()).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="n">userWordBook</span><span class="o">.</span><span class="na">getId</span><span class="o">());</span>
-            <span class="n">assertThat</span><span class="o">(</span><span class="n">wordBookDTO</span><span class="o">.</span><span class="na">getName</span><span class="o">()).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="n">userWordBook</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
-        <span class="o">});</span>
-    <span class="o">}</span>
-
-    <span class="nd">@Test</span>
-    <span class="nd">@DisplayName</span><span class="o">(</span><span class="s">"User를 StudyGroupDTOList 맵핑이 정삭적으로 동작 하는 테스트"</span><span class="o">)</span>
-    <span class="kt">void</span> <span class="nf">mapToStudyGroupDTOList</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
-        <span class="c1">//given</span>
-        <span class="nc">User</span> <span class="n">user</span> <span class="o">=</span> <span class="n">domainFactory</span><span class="o">.</span><span class="na">createUser</span><span class="o">(</span><span class="mi">0L</span><span class="o">);</span>
-
-        <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
-        <span class="nc">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">length</span><span class="o">).</span><span class="na">forEach</span><span class="o">((</span><span class="n">i</span><span class="o">)</span> <span class="o">-&gt;{</span>
-            <span class="nc">StudyGroup</span> <span class="n">studyGroup</span> <span class="o">=</span> <span class="n">domainFactory</span><span class="o">.</span><span class="na">createStudyGroup</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
-
-            <span class="nc">Study</span> <span class="n">study</span> <span class="o">=</span> <span class="nc">Study</span><span class="o">.</span><span class="na">builder</span><span class="o">()</span>
-                    <span class="o">.</span><span class="na">id</span><span class="o">((</span><span class="kt">long</span><span class="o">)</span><span class="n">i</span><span class="o">)</span>
-                    <span class="o">.</span><span class="na">user</span><span class="o">(</span><span class="n">user</span><span class="o">)</span>
-                    <span class="o">.</span><span class="na">studyGroup</span><span class="o">(</span><span class="n">studyGroup</span><span class="o">)</span>
-                    <span class="o">.</span><span class="na">build</span><span class="o">();</span>
-
-            <span class="n">user</span><span class="o">.</span><span class="na">getStudyList</span><span class="o">().</span><span class="na">add</span><span class="o">(</span><span class="n">study</span><span class="o">);</span>
-        <span class="o">});</span>
-
-        <span class="c1">//when</span>
-        <span class="nc">List</span><span class="o">&lt;</span><span class="nc">UserDetailResponseDTO</span><span class="o">.</span><span class="na">StudyGroupDTO</span><span class="o">&gt;</span> <span class="n">studyGroupDTOList</span> <span class="o">=</span> <span class="n">userMapper</span><span class="o">.</span><span class="na">mapToStudyGroupDTOList</span><span class="o">(</span><span class="n">user</span><span class="o">);</span>
-
-        <span class="c1">//then</span>
-        <span class="nc">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">length</span><span class="o">).</span><span class="na">forEach</span><span class="o">((</span><span class="n">i</span><span class="o">)</span> <span class="o">-&gt;{</span>
-            <span class="nc">UserDetailResponseDTO</span><span class="o">.</span><span class="na">StudyGroupDTO</span> <span class="n">studyGroupDTO</span> <span class="o">=</span> <span class="n">studyGroupDTOList</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
-            <span class="nc">StudyGroup</span> <span class="n">studyGroup</span> <span class="o">=</span> <span class="n">user</span><span class="o">.</span><span class="na">getStudyList</span><span class="o">().</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">).</span><span class="na">getStudyGroup</span><span class="o">();</span>
-
-            <span class="n">assertThat</span><span class="o">(</span><span class="n">studyGroupDTO</span><span class="o">.</span><span class="na">getId</span><span class="o">()).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="n">studyGroup</span><span class="o">.</span><span class="na">getId</span><span class="o">());</span>
-            <span class="n">assertThat</span><span class="o">(</span><span class="n">studyGroupDTO</span><span class="o">.</span><span class="na">getName</span><span class="o">()).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="n">studyGroup</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
-        <span class="o">});</span>
-    <span class="o">}</span>
-
-    <span class="nd">@Test</span>
-    <span class="nd">@DisplayName</span><span class="o">(</span><span class="s">"userWordBookList를 userWordBookDTOList로 맵핑이 정삭적으로 동작 하는 테스트"</span><span class="o">)</span>
-    <span class="kt">void</span> <span class="nf">mapToWordBookDTOList</span><span class="o">()</span> <span class="o">{</span>
-        <span class="c1">//given</span>
-        <span class="nc">List</span><span class="o">&lt;</span><span class="nc">UserWordBook</span><span class="o">&gt;</span> <span class="n">userWordBookList</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
-
-        <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
-        <span class="nc">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">length</span><span class="o">).</span><span class="na">forEach</span><span class="o">((</span><span class="n">i</span><span class="o">)</span> <span class="o">-&gt;{</span>
-            <span class="n">userWordBookList</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">domainFactory</span><span class="o">.</span><span class="na">createUserWordBook</span><span class="o">(</span><span class="n">i</span><span class="o">));</span>
-        <span class="o">});</span>
-
-        <span class="c1">//when</span>
-        <span class="nc">List</span><span class="o">&lt;</span><span class="nc">UserDetailResponseDTO</span><span class="o">.</span><span class="na">WordBookDTO</span><span class="o">&gt;</span> <span class="n">wordBookDTOList</span> <span class="o">=</span> <span class="n">userMapper</span><span class="o">.</span><span class="na">mapToWordBookDTOList</span><span class="o">(</span><span class="n">userWordBookList</span><span class="o">);</span>
-
-        <span class="c1">//then</span>
-        <span class="nc">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">length</span><span class="o">).</span><span class="na">forEach</span><span class="o">((</span><span class="n">i</span><span class="o">)</span> <span class="o">-&gt;{</span>
-            <span class="nc">UserDetailResponseDTO</span><span class="o">.</span><span class="na">WordBookDTO</span> <span class="n">wordBookDTO</span> <span class="o">=</span> <span class="n">wordBookDTOList</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
-            <span class="nc">UserWordBook</span> <span class="n">userWordBook</span> <span class="o">=</span> <span class="n">userWordBookList</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
-
-            <span class="n">assertThat</span><span class="o">(</span><span class="n">wordBookDTO</span><span class="o">.</span><span class="na">getId</span><span class="o">()).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="n">userWordBook</span><span class="o">.</span><span class="na">getId</span><span class="o">());</span>
-            <span class="n">assertThat</span><span class="o">(</span><span class="n">wordBookDTO</span><span class="o">.</span><span class="na">getName</span><span class="o">()).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="n">userWordBook</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
-        <span class="o">});</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
-</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2020-01-13T00:00:00+09:00"><!-- start custom article footer snippet -->
+<p><img src="/assets/images/2021-01-11-단어장-도메인-재구성/ERD.png" alt="ERD.png" /></p>
+</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2021-01-11T00:00:00+09:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
 <div class="article__subscribe"><div class="subscribe"><i class="fas fa-rss"></i> <a type="application/rss+xml" href="/feed.xml">Subscribe</a></div>
@@ -448,7 +307,7 @@
       </a>
     </p>
   </div></div></footer>
-<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/wordbook-project/2020/01/12/%EC%84%A4%EA%B3%84-%EB%B0%8F-%EA%B5%AC%ED%98%84%EC%8B%9C-%EA%B0%81-%EB%8B%A8%EA%B3%84%EC%97%90%EC%84%9C-%EC%83%9D%EA%B0%81%ED%95%B4%EB%B4%90%EC%95%BC%ED%95%A0%EA%B2%83%EB%93%A4-%EC%A0%95%EB%A6%AC.html">설계 및 구현시 각 단계에서 생각해봐야할것들 정리</a></div><div class="next"><span>NEXT</span><a href="/wordbook-project/2020/01/13/%EC%BB%A8%ED%8A%B8%EB%A1%A4%EB%9F%AC%EC%9D%98-%EB%A9%94%EC%86%8C%EB%93%9C-%EB%A7%88%EB%8B%A4-%EB%B0%98%ED%99%98%EA%B0%92%EC%97%90-%EB%8C%80%ED%95%9C-%EC%83%9D%EA%B0%81.html">컨트롤러의 메소드 마다 반환값에 대한 생각</a></div></div></div>
+<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/wordbook-project/2020/12/29/Service-Layer-Validator-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EB%AC%B8%EC%A0%9C%EC%A0%90.html">Service Layer Validator 테스트 문제점</a></div><div class="next"><span>NEXT</span><a href="/wordbook-project/2021/01/12/%EC%84%A4%EA%B3%84-%EB%B0%8F-%EA%B5%AC%ED%98%84%EC%8B%9C-%EA%B0%81-%EB%8B%A8%EA%B3%84%EC%97%90%EC%84%9C-%EC%83%9D%EA%B0%81%ED%95%B4%EB%B4%90%EC%95%BC%ED%95%A0%EA%B2%83%EB%93%A4-%EC%A0%95%EB%A6%AC.html">설계 및 구현시 각 단계에서 생각해봐야할것들 정리</a></div></div></div>
 
 </div>
 
@@ -491,7 +350,7 @@
 				repo: 'lcy960729.github.io',
 				owner: 'lcy960729',
 				admin: ['lcy960729'],
-				id: 'Mapper Test Code 및 생각'
+				id: '단어장 어플리케이션 ERD 정리'
 			});
 			gitalk.render('js-gitalk-container');
 		});
