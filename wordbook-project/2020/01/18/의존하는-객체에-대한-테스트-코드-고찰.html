@@ -299,51 +299,51 @@
 
 <p>간단하게 예를 들면 아래가 mapper 클래스를 mock 객체로 둔 이전의 테스트 코드이다.</p>
 
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">@Test</span><span class="w">
-    </span><span class="err">void</span><span class="w"> </span><span class="err">getDetailDTOById()</span><span class="w"> </span><span class="err">throws</span><span class="w"> </span><span class="err">Exception</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="err">//given</span><span class="w">
-        </span><span class="err">Long</span><span class="w"> </span><span class="err">id</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="mi">0</span><span class="err">L;</span><span class="w">
-        </span><span class="err">User</span><span class="w"> </span><span class="err">user</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">User.builder()</span><span class="w">
-                </span><span class="err">.id(id)</span><span class="w">
-                </span><span class="err">.name(</span><span class="s2">"testName"</span><span class="err">)</span><span class="w">
-                </span><span class="err">.pw(</span><span class="s2">"testPw"</span><span class="err">)</span><span class="w">
-                </span><span class="err">.email(</span><span class="s2">"0L"</span><span class="err">)</span><span class="w">
-                </span><span class="err">.build();</span><span class="w">
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Test</span>
+    <span class="kt">void</span> <span class="nf">getDetailDTOById</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+        <span class="c1">//given</span>
+        <span class="nc">Long</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">0L</span><span class="o">;</span>
+        <span class="nc">User</span> <span class="n">user</span> <span class="o">=</span> <span class="nc">User</span><span class="o">.</span><span class="na">builder</span><span class="o">()</span>
+                <span class="o">.</span><span class="na">id</span><span class="o">(</span><span class="n">id</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">name</span><span class="o">(</span><span class="s">"testName"</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">pw</span><span class="o">(</span><span class="s">"testPw"</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">email</span><span class="o">(</span><span class="s">"0L"</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">build</span><span class="o">();</span>
 
-        </span><span class="err">UserDetailDTO</span><span class="w"> </span><span class="err">userDetailDTOTemp</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">UserDetailDTO.builder()</span><span class="w">
-                </span><span class="err">.id(id)</span><span class="w">
-                </span><span class="err">.name(</span><span class="s2">"testName"</span><span class="err">)</span><span class="w">
-                </span><span class="err">.build();</span><span class="w">
+        <span class="nc">UserDetailDTO</span> <span class="n">userDetailDTOTemp</span> <span class="o">=</span> <span class="nc">UserDetailDTO</span><span class="o">.</span><span class="na">builder</span><span class="o">()</span>
+                <span class="o">.</span><span class="na">id</span><span class="o">(</span><span class="n">id</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">name</span><span class="o">(</span><span class="s">"testName"</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">build</span><span class="o">();</span>
 
-        </span><span class="err">given(userRepository.findById(id)).willReturn(Optional.of(user));</span><span class="w">
-        </span><span class="err">given(userToUserDetailDtoMapper.entityToUserDetailDTO(any(User.class))).willReturn(userDetailDTOTemp);</span><span class="w">
+        <span class="n">given</span><span class="o">(</span><span class="n">userRepository</span><span class="o">.</span><span class="na">findById</span><span class="o">(</span><span class="n">id</span><span class="o">)).</span><span class="na">willReturn</span><span class="o">(</span><span class="nc">Optional</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">user</span><span class="o">));</span>
+        <span class="n">given</span><span class="o">(</span><span class="n">userToUserDetailDtoMapper</span><span class="o">.</span><span class="na">entityToUserDetailDTO</span><span class="o">(</span><span class="n">any</span><span class="o">(</span><span class="nc">User</span><span class="o">.</span><span class="na">class</span><span class="o">))).</span><span class="na">willReturn</span><span class="o">(</span><span class="n">userDetailDTOTemp</span><span class="o">);</span>
 
-        </span><span class="err">//when</span><span class="w">
-        </span><span class="err">UserDetailDTO</span><span class="w"> </span><span class="err">userDetailDTO</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">getUserService.getDetailDTOById(id);</span><span class="w">
+        <span class="c1">//when</span>
+        <span class="nc">UserDetailDTO</span> <span class="n">userDetailDTO</span> <span class="o">=</span> <span class="n">getUserService</span><span class="o">.</span><span class="na">getDetailDTOById</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
 
-        </span><span class="err">//then</span><span class="w">
-        </span><span class="err">assertThat(userDetailDTO).isNotNull();</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
+        <span class="c1">//then</span>
+        <span class="n">assertThat</span><span class="o">(</span><span class="n">userDetailDTO</span><span class="o">).</span><span class="na">isNotNull</span><span class="o">();</span>
+    <span class="o">}</span>
+</code></pre></div></div>
 
 <p>아래 코드가 mapper 테스트 코드를 먼저 작성하고 정상적으로 동작된다는 가정하에 mapper 클래스를 mock이 아닌 구현 객체를 사용한것이다. 많은 양의 코드가 줄어들게 되었으며  다른 테스트 코드에서 중복되는 코드들을 줄일 수 있었다.</p>
 
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">@Test</span><span class="w">
-    </span><span class="err">@DisplayName(</span><span class="s2">"아이디로 UserDetailDTO를 반환하는 테스트"</span><span class="err">)</span><span class="w">
-    </span><span class="err">void</span><span class="w"> </span><span class="err">getDetailDTOById()</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="err">//given</span><span class="w">
-        </span><span class="err">GetUserService</span><span class="w"> </span><span class="err">getUserService</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">new</span><span class="w"> </span><span class="err">GetUserService(userRepository</span><span class="p">,</span><span class="w"> </span><span class="err">userToUserDetailDtoMapper);</span><span class="w">
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Test</span>
+    <span class="nd">@DisplayName</span><span class="o">(</span><span class="s">"아이디로 UserDetailDTO를 반환하는 테스트"</span><span class="o">)</span>
+    <span class="kt">void</span> <span class="nf">getDetailDTOById</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">//given</span>
+        <span class="nc">GetUserService</span> <span class="n">getUserService</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">GetUserService</span><span class="o">(</span><span class="n">userRepository</span><span class="o">,</span> <span class="n">userToUserDetailDtoMapper</span><span class="o">);</span>
 
-        </span><span class="err">long</span><span class="w"> </span><span class="err">userId</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="mi">0</span><span class="err">L;</span><span class="w">
-        </span><span class="err">given(userRepository.findById(anyLong())).willReturn(Optional.of(DomainFactory.createUser(userId)));</span><span class="w">
+        <span class="kt">long</span> <span class="n">userId</span> <span class="o">=</span> <span class="mi">0L</span><span class="o">;</span>
+        <span class="n">given</span><span class="o">(</span><span class="n">userRepository</span><span class="o">.</span><span class="na">findById</span><span class="o">(</span><span class="n">anyLong</span><span class="o">())).</span><span class="na">willReturn</span><span class="o">(</span><span class="nc">Optional</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="nc">DomainFactory</span><span class="o">.</span><span class="na">createUser</span><span class="o">(</span><span class="n">userId</span><span class="o">)));</span>
 
-        </span><span class="err">//when</span><span class="w">
-        </span><span class="err">UserDetailDTO</span><span class="w"> </span><span class="err">userDetailDTO</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">getUserService.getDetailDTOById(userId);</span><span class="w">
+        <span class="c1">//when</span>
+        <span class="nc">UserDetailDTO</span> <span class="n">userDetailDTO</span> <span class="o">=</span> <span class="n">getUserService</span><span class="o">.</span><span class="na">getDetailDTOById</span><span class="o">(</span><span class="n">userId</span><span class="o">);</span>
 
-        </span><span class="err">//then</span><span class="w">
-        </span><span class="err">assertThat(userDetailDTO).isNotNull();</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
+        <span class="c1">//then</span>
+        <span class="n">assertThat</span><span class="o">(</span><span class="n">userDetailDTO</span><span class="o">).</span><span class="na">isNotNull</span><span class="o">();</span>
+    <span class="o">}</span>
+</code></pre></div></div>
 
 <hr />
 
@@ -363,7 +363,7 @@
       </a>
     </p>
   </div></div></footer>
-<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/wordbook-project/2020/01/17/%EB%8F%84%EB%A9%94%EC%9D%B8-%EA%B8%B0%EB%8A%A5%EB%93%A4-%EA%B5%AC%ED%98%84-%EC%99%84%EB%A3%8C.html">도메인 기능들 구현 완료</a></div><div class="next"><span>NEXT</span><a href="/algorithm/2020/07/03/baekjoon-2579.html">백준 - 2579번 : 계단 오르기</a></div></div></div>
+<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/2020/01/17/%EB%8F%84%EB%A9%94%EC%9D%B8-%EA%B8%B0%EB%8A%A5%EB%93%A4-%EA%B5%AC%ED%98%84-%EC%99%84%EB%A3%8C-6-Word-Of-StudyGroupWordBook-%EB%8F%84%EB%A9%94%EC%9D%B8.html">도메인 기능들 구현 완료/6 Word Of Studygroupwordbook 도메인</a></div><div class="next"><span>NEXT</span><a href="/algorithm/2020/07/03/baekjoon-2579.html">백준 - 2579번 : 계단 오르기</a></div></div></div>
 
 </div>
 

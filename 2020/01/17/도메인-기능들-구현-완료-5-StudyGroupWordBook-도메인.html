@@ -1,10 +1,10 @@
 <!DOCTYPE html><html lang="en">
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Service Layer Validator 테스트 문제점 - CY의 개발 블로그</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>도메인 기능들 구현 완료/5 Studygroupwordbook 도메인 - CY의 개발 블로그</title>
 
-<meta name="description" content="2020-12-29 :: Service Layer Validator 테스트 문제점Spring Boot에서 spring validator는 컨트롤러에서만 동작을 한다. 이유로는 spring mvc에는 서비스 레이어라는것이 존재하지 않는다. 서비스 어노테이션은 그저 단순한 빈의 형태이...">
-<link rel="canonical" href="https://lcy960729.github.io/wordbook-project/2020/12/29/Service-Layer-Validator-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EB%AC%B8%EC%A0%9C%EC%A0%90.html"><link rel="alternate" type="application/rss+xml" title="CY의 개발 블로그" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
+<meta name="description" content="5. StudyGroupWordBook 도메인그룹에서 사용하는 단어장이다. 유저 단어장과 기능은 동일 하다.추가, 수정, 삭제, 조회가 가능하다  CreateRequestPOST http://localhost:8080/api/v1/users/1/study-groups/6/wordb...">
+<link rel="canonical" href="https://lcy960729.github.io/2020/01/17/%EB%8F%84%EB%A9%94%EC%9D%B8-%EA%B8%B0%EB%8A%A5%EB%93%A4-%EA%B5%AC%ED%98%84-%EC%99%84%EB%A3%8C-5-StudyGroupWordBook-%EB%8F%84%EB%A9%94%EC%9D%B8.html"><link rel="alternate" type="application/rss+xml" title="CY의 개발 블로그" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/assets/browserconfig.xml">
 
@@ -276,62 +276,63 @@
 
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Service Layer Validator 테스트 문제점</h1></header><span class="split-space">&nbsp;</span>
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>도메인 기능들 구현 완료/5 Studygroupwordbook 도메인</h1></header><span class="split-space">&nbsp;</span>
           <a class="edit-on-github"
             title="Edit on Github"
-            href="https://github.com/lcy960729/lcy960729.github.io/tree/master/_posts/WordBookProject/2020-12-29-Service-Layer-Validator-테스트-문제점.md">
-            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="Service Layer Validator 테스트 문제점"><div class="article__info clearfix"><ul class="left-col menu"><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=WordBookProject">WordBookProject</a>
-            </li><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=SpringBoot">SpringBoot</a>
-            </li><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=TestCode">TestCode</a>
-            </li><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=Junit">Junit</a>
-            </li><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=SpringBootDataJPA">SpringBootDataJPA</a>
-            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Dec 29, 2020</span>
-            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-12-29T00:00:00+09:00">
-    <meta itemprop="keywords" content="WordBookProject,SpringBoot,TestCode,Junit,SpringBootDataJPA"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+            href="https://github.com/lcy960729/lcy960729.github.io/tree/master/_posts/WordBookProject/2020-01-17-도메인-기능들-구현-완료/5-StudyGroupWordBook-도메인.md">
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="도메인 기능들 구현 완료/5 Studygroupwordbook 도메인"><div class="article__info clearfix"><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Jan 17, 2020</span>
+            </li></ul></div><meta itemprop="author" content="Lee Chan Young"/><meta itemprop="datePublished" content="2020-01-17T00:00:00+09:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
-<div class="article__content" itemprop="articleBody"><h1 id="2020-12-29--service-layer-validator-테스트-문제점">2020-12-29 :: Service Layer Validator 테스트 문제점</h1>
+<div class="article__content" itemprop="articleBody"><h1 id="5-studygroupwordbook-도메인">5. StudyGroupWordBook 도메인</h1>
 
-<p>Spring Boot에서 spring validator는 컨트롤러에서만 동작을 한다. 이유로는 spring mvc에는 서비스 레이어라는것이 존재하지 않는다. 서비스 어노테이션은 그저 단순한 빈의 형태이며 컨트롤러 레이어에서 validator가 동작할 수 있는 이유는 Handler 메소드에서 사용할 인수를 처리하기 전에 유효성 검사를 수행하는 ModelAttributeMethodProcessor가 있기때문이다. 그렇기 때문에  validator가 서비스 레이어에서도 동작을 할수 있도록 하기위해 아래 코드와 같이 서비스 클래스 위에 @Validated라는 어노테이션을 추가해준다.</p>
+<p>그룹에서 사용하는 단어장이다. 유저 단어장과 기능은 동일 하다.</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Service</span>
-<span class="nd">@Validated</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">CreateUserWordBookService</span> <span class="o">{</span>
+<p>추가, 수정, 삭제, 조회가 가능하다</p>
 
-    <span class="kd">private</span> <span class="kd">final</span> <span class="nc">UserWordBookRepository</span> <span class="n">userWordBookRepository</span><span class="o">;</span>
+<ol>
+  <li>Create</li>
+</ol>
 
-    <span class="kd">private</span> <span class="kd">final</span> <span class="nc">ModelMapper</span> <span class="n">modelMapper</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ModelMapper</span><span class="o">();</span>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">Request</span><span class="w">
 
-    <span class="kd">public</span> <span class="nf">CreateUserWordBookService</span><span class="o">(</span><span class="nc">UserWordBookRepository</span> <span class="n">userWordBookRepository</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">this</span><span class="o">.</span><span class="na">userWordBookRepository</span> <span class="o">=</span> <span class="n">userWordBookRepository</span><span class="o">;</span>
-    <span class="o">}</span>
+</span><span class="err">POST</span><span class="w"> </span><span class="err">http://localhost:</span><span class="mi">8080</span><span class="err">/api/v</span><span class="mi">1</span><span class="err">/users/</span><span class="mi">1</span><span class="err">/study-groups/</span><span class="mi">6</span><span class="err">/wordbooks</span><span class="w">
+</span><span class="err">Body</span><span class="w"> </span><span class="err">:</span><span class="w"> 
+</span><span class="p">{</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testWordBook"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 
-    <span class="kd">public</span> <span class="nc">Long</span> <span class="nf">create</span><span class="o">(</span><span class="nd">@Valid</span> <span class="nc">UserWordBookRequestDTO</span><span class="o">.</span><span class="na">Create</span> <span class="n">createUserWordBookDTO</span><span class="o">)</span> <span class="o">{</span>
-        <span class="nc">UserWordBook</span> <span class="n">userWordBook</span> <span class="o">=</span> <span class="n">modelMapper</span><span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="n">createUserWordBookDTO</span><span class="o">,</span> <span class="nc">UserWordBook</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">Response</span><span class="w">
 
-        <span class="n">userWordBook</span> <span class="o">=</span> <span class="n">userWordBookRepository</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">userWordBook</span><span class="o">);</span>
+</span><span class="err">status</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">Created(</span><span class="mi">201</span><span class="err">)</span><span class="w">
+</span><span class="err">Body</span><span class="w"> </span><span class="err">:</span><span class="w"> 
+</span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"isUsing"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testWordBook"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"_links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"self"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:8080/api/v1/users/1/study-groups/6/wordbooks/10"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"update_studyGroupWordBook"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:8080/api/v1/users/1/study-groups/6/wordbooks/10"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"delete_StudyGroupWordBook"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:8080/api/v1/users/1/study-groups/6/wordbooks/10"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"add_word"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:8080/api/v1/users/1/study-groups/6/wordbooks/10"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"get_studyGroup"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:8080/api/v1/users/1/study-groups/6"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 
-        <span class="k">return</span> <span class="n">userWordBook</span><span class="o">.</span><span class="na">getId</span><span class="o">();</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>문제점은 테스트 코드를 작성할때 발생한다. 서비스 레이어에서 유닛 테스트를 진행하게 되면 @Valid가 트리거 되지않는다. 이유로는 mvc테스트가 아니므로 DispatcherServlet이 없기 때문이다(아래 사진은 유효성 검증이 어떤식으로 이루어지는지 디버깅해본 사진이다). 그렇기 때문에 서비스레이어에서 유효성 검사를 완전히 하기 위해서는 통합 테스트로 진행을 하던가 유효성 검사부분을 직접 작성해야한다.</p>
-
-<p><img src="/assets/images/2020-12-29-Service-Layer-Validator-테스트-문제점/Untitled.png" alt="실행되는 구조.png" /></p>
-
-<p>이 부분에서 많은 시간을 투자했는데 디버깅해보면서 따라가봤으면 금방 해결할 수 있는 문제였다. 안되는걸 하려고하니 시간만 날리는 문제가 발생했는데 다른 방법을 찾아봐야겠다.</p>
-</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2020-12-29T00:00:00+09:00"><!-- start custom article footer snippet -->
+<p>그룹 단어장은 그룹 관리자만 생성할 수 있으며 관리자에게는  update_studyGroupWordBook, delete_StudyGroupWordBook 상태로 갈 수 있는 링크가 반환된다.  이외 add_word, get_studyGroup은 모든 그룹 참여자에게 반환 한다.</p>
+</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2020-01-17T00:00:00+09:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
 <div class="article__subscribe"><div class="subscribe"><i class="fas fa-rss"></i> <a type="application/rss+xml" href="/feed.xml">Subscribe</a></div>
@@ -342,7 +343,7 @@
       </a>
     </p>
   </div></div></footer>
-<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/wordbook-project/2020/12/16/Spring-Boot-Controller-Layer-ErrorHandling-And-Validation-Check.html">Spring Boot Controller Layer ErrorHandling And Validation Check</a></div></div></div>
+<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/2020/01/17/%EB%8F%84%EB%A9%94%EC%9D%B8-%EA%B8%B0%EB%8A%A5%EB%93%A4-%EA%B5%AC%ED%98%84-%EC%99%84%EB%A3%8C-4-StudyGroup-%EB%8F%84%EB%A9%94%EC%9D%B8.html">도메인 기능들 구현 완료/4 Studygroup 도메인</a></div><div class="next"><span>NEXT</span><a href="/2020/01/17/%EB%8F%84%EB%A9%94%EC%9D%B8-%EA%B8%B0%EB%8A%A5%EB%93%A4-%EA%B5%AC%ED%98%84-%EC%99%84%EB%A3%8C-6-Word-Of-StudyGroupWordBook-%EB%8F%84%EB%A9%94%EC%9D%B8.html">도메인 기능들 구현 완료/6 Word Of Studygroupwordbook 도메인</a></div></div></div>
 
 </div>
 
@@ -371,25 +372,7 @@
   });
 })();
 </script>
-</div><section class="page__comments d-print-none"><!-- fix text color in the input textarea of gitalk -->
-	<style type="text/css">
-		.gitalk-wrapper .gt-header-textarea {
-			color: #333 !important;
-		}
-	</style><div class="gitalk-wrapper" id="js-gitalk-container"></div><script>
-		window.Lazyload.css('https://unpkg.com/gitalk@1.2.2/dist/gitalk.css');
-		window.Lazyload.js('https://unpkg.com/gitalk@1.2.2/dist/gitalk.min.js', function() {
-			var gitalk = new Gitalk({
-				clientID: '01d2e03b7c76897f67e8',
-				clientSecret: 'cd232f3cfd8f69557d94f96de97ea4a5c41c44df',
-				repo: 'lcy960729.github.io',
-				owner: 'lcy960729',
-				admin: ['lcy960729'],
-				id: 'Service Layer Validator 테스트 문제점'
-			});
-			gitalk.render('js-gitalk-container');
-		});
-	</script></section></article><!-- start custom main bottom snippet -->
+</div><section class="page__comments d-print-none"></section></article><!-- start custom main bottom snippet -->
 
 <!-- end custom main bottom snippet -->
 </div>

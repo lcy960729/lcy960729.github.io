@@ -330,139 +330,203 @@
             </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-01-18T00:00:00+09:00">
     <meta itemprop="keywords" content="WordBookProject,TestCode"></div>
       </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/wordbook-project/2020/01/17/%EB%8F%84%EB%A9%94%EC%9D%B8-%EA%B8%B0%EB%8A%A5%EB%93%A4-%EA%B5%AC%ED%98%84-%EC%99%84%EB%A3%8C.html"><h2 itemprop="headline" class="item__header">도메인 기능들 구현 완료</h2></a></header>
-          <div class="item__description"><div class="article__content" itemprop="description articleBody">2020-01-17 :: 도메인 기능들 구현 완료
+          <header><a href="/2020/01/17/%EB%8F%84%EB%A9%94%EC%9D%B8-%EA%B8%B0%EB%8A%A5%EB%93%A4-%EA%B5%AC%ED%98%84-%EC%99%84%EB%A3%8C-6-Word-Of-StudyGroupWordBook-%EB%8F%84%EB%A9%94%EC%9D%B8.html"><h2 itemprop="headline" class="item__header">도메인 기능들 구현 완료/6 Word Of Studygroupwordbook 도메인</h2></a></header>
+          <div class="item__description"><div class="article__content" itemprop="description articleBody">6. Word Of StudyGroupWordBook 도메인
 
-모든 도메인에 대해서 Create, Update, Get 메소드가 동일 함으로 Create 메소드의 반환값으로만 설명을 하겠다.
+그룹 단어장의 단어이다. 유저 단어장의 단어 기능과 동일 하다.
 
-1. User 도메인
+추가, 수정, 삭제, 조회가 가능하다
 
-2. UserWordBook 도메인
 
-3. Word Of UserWordBook 도메인
+  Create
 
-그룹과 관련하여 그룹 관리자와 그룹 사용자로 나뉘게 된다. 그룹 관리자와 그룹 사용자의 기능은 나누어서 구현하였으며 그룹 참여 기능을 구현하게 되면 이후에 다른 권한에 대한 결과값 구현 내용을 추가 하겠다.
 
-4. StudyGroup 도메인
+Request
 
-5. StudyGroupWordBook 도메인
+POST http://localhost:8080/api/v1/users/1/study-groups/6/wordbooks/10
+Body : 
+{
+    "voca": "apple",
+    "meaning": "사과"
+}
 
-6. Word Of StudyGro...</div><p><a href="/wordbook-project/2020/01/17/%EB%8F%84%EB%A9%94%EC%9D%B8-%EA%B8%B0%EB%8A%A5%EB%93%A4-%EA%B5%AC%ED%98%84-%EC%99%84%EB%A3%8C.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=WordBookProject">WordBookProject</a>
-            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jan 17, 2020</span>
-            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-01-17T00:00:00+09:00">
-    <meta itemprop="keywords" content="WordBookProject"></div>
+
+Response
+
+status : Created(201)
+Body : 
+{
+    "id": 11,
+    "voca": "apple",
+    "meaning": "사과",
+    "_lin...</div><p><a href="/2020/01/17/%EB%8F%84%EB%A9%94%EC%9D%B8-%EA%B8%B0%EB%8A%A5%EB%93%A4-%EA%B5%AC%ED%98%84-%EC%99%84%EB%A3%8C-6-Word-Of-StudyGroupWordBook-%EB%8F%84%EB%A9%94%EC%9D%B8.html">Read more</a></p></div><div class="article__info clearfix"><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Jan 17, 2020</span>
+            </li></ul></div><meta itemprop="author" content="Lee Chan Young"/><meta itemprop="datePublished" content="2020-01-17T00:00:00+09:00"></div>
       </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/wordbook-project/2020/01/15/Collection-Object-Null-%EC%B2%98%EB%A6%AC.html"><h2 itemprop="headline" class="item__header">Collection Object Null 처리</h2></a></header>
-          <div class="item__description"><div class="article__content" itemprop="description articleBody">2020-01-15 :: Collection Object Null 처리
+          <header><a href="/2020/01/17/%EB%8F%84%EB%A9%94%EC%9D%B8-%EA%B8%B0%EB%8A%A5%EB%93%A4-%EA%B5%AC%ED%98%84-%EC%99%84%EB%A3%8C-5-StudyGroupWordBook-%EB%8F%84%EB%A9%94%EC%9D%B8.html"><h2 itemprop="headline" class="item__header">도메인 기능들 구현 완료/5 Studygroupwordbook 도메인</h2></a></header>
+          <div class="item__description"><div class="article__content" itemprop="description articleBody">5. StudyGroupWordBook 도메인
 
-Collection은 맵핑할때나 객체를 받아올때나 null 때문에 문제가 많았다. (내가 잘 처리한 방법을 모르는건가??)
+그룹에서 사용하는 단어장이다. 유저 단어장과 기능은 동일 하다.
 
-그래서 일단은 내 프로젝트에서 약속으로 Entity에서 사용되는 Collection객체는 final로 정의하고
+추가, 수정, 삭제, 조회가 가능하다
 
-DTO에서는 final로 정의하지않고 맵핑할때 새로 만든 Collection 객체로 set하도록 하였다.
 
-null로 인해 Business로직에서 에러가 나지 않도록 좋은 방법을 생각해봐야겠다.</div><p><a href="/wordbook-project/2020/01/15/Collection-Object-Null-%EC%B2%98%EB%A6%AC.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=WordBookProject">WordBookProject</a>
-            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jan 15, 2020</span>
-            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-01-15T00:00:00+09:00">
-    <meta itemprop="keywords" content="WordBookProject"></div>
+  Create
+
+
+Request
+
+POST http://localhost:8080/api/v1/users/1/study-groups/6/wordbooks
+Body : 
+{
+    "name": "testWordBook"
+}
+
+
+Response
+
+status : Created(201)
+Body : 
+{
+    "id": 10,
+    "isUsing": true,
+    "name": "testWordBook",
+    "_links": {
+        "se...</div><p><a href="/2020/01/17/%EB%8F%84%EB%A9%94%EC%9D%B8-%EA%B8%B0%EB%8A%A5%EB%93%A4-%EA%B5%AC%ED%98%84-%EC%99%84%EB%A3%8C-5-StudyGroupWordBook-%EB%8F%84%EB%A9%94%EC%9D%B8.html">Read more</a></p></div><div class="article__info clearfix"><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Jan 17, 2020</span>
+            </li></ul></div><meta itemprop="author" content="Lee Chan Young"/><meta itemprop="datePublished" content="2020-01-17T00:00:00+09:00"></div>
       </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/wordbook-project/2020/01/13/%EC%BB%A8%ED%8A%B8%EB%A1%A4%EB%9F%AC%EC%9D%98-%EB%A9%94%EC%86%8C%EB%93%9C-%EB%A7%88%EB%8B%A4-%EB%B0%98%ED%99%98%EA%B0%92%EC%97%90-%EB%8C%80%ED%95%9C-%EC%83%9D%EA%B0%81.html"><h2 itemprop="headline" class="item__header">컨트롤러의 메소드 마다 반환값에 대한 생각</h2></a></header>
-          <div class="item__description"><div class="article__content" itemprop="description articleBody">2020-01-13 :: 컨트롤러의 메소드 마다 반환값에 대한 생각
+          <header><a href="/2020/01/17/%EB%8F%84%EB%A9%94%EC%9D%B8-%EA%B8%B0%EB%8A%A5%EB%93%A4-%EA%B5%AC%ED%98%84-%EC%99%84%EB%A3%8C-4-StudyGroup-%EB%8F%84%EB%A9%94%EC%9D%B8.html"><h2 itemprop="headline" class="item__header">도메인 기능들 구현 완료/4 Studygroup 도메인</h2></a></header>
+          <div class="item__description"><div class="article__content" itemprop="description articleBody">4. StudyGroup 도메인
 
-User 도메인 구현을 통해 생각해 본 것들
+개인 유저들이 모여서 그룹을 만드는 도메인이다.
 
-컨트롤러는 메소드마다 반환값이 존재할 것이다. RestApi에서는 반환되는 도메인은 현재 상태를 나타내는것이며 다음 상태로의 정보를 가지고 있을 것이다. 이러한 생각을 가지고 기본적인 CRUD에서 반환되는 상태들이 어떤 다음 상태를 가져야하는지 정리해보겠다.
+아직 그룹 참여 기능은 구현되지 않았다. 해당 기능을 구현하기 위해선 어떤 방식으로 그룹에 참여할지에 대한 설계가 필요할것 같다. 추후 회의를 통해서 정하도록 해야겠다.
 
-(다음 상태로 가는 종류는 프로젝트마다 다를것이다. 내가 진행하는 단어장 어플리케이션에서 다음 상태에 대한 생각은 지극히 내가 원하는대로 만든것이다.)
+추가, 수정, 삭제, 조회가 가능하다
 
-Create
 
-생성 메소드의 반환 상태는 현재 만든어진 나의 도메인 상태일 것이다. 예를 ...</div><p><a href="/wordbook-project/2020/01/13/%EC%BB%A8%ED%8A%B8%EB%A1%A4%EB%9F%AC%EC%9D%98-%EB%A9%94%EC%86%8C%EB%93%9C-%EB%A7%88%EB%8B%A4-%EB%B0%98%ED%99%98%EA%B0%92%EC%97%90-%EB%8C%80%ED%95%9C-%EC%83%9D%EA%B0%81.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=WordBookProject">WordBookProject</a>
-            </li><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=RestAPI">RestAPI</a>
-            </li><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=HATEOAS">HATEOAS</a>
-            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jan 13, 2020</span>
-            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-01-13T00:00:00+09:00">
-    <meta itemprop="keywords" content="WordBookProject,RestAPI,HATEOAS"></div>
+  Create
+
+
+Request
+
+POST http://localhost:8080/api/v1/users/1/study-groups
+Body : 
+{
+    "name": "testStudyGroup"
+}
+
+
+Response
+
+status : Created(201)
+Body : 
+{
+    "id": 6,
+    "nam...</div><p><a href="/2020/01/17/%EB%8F%84%EB%A9%94%EC%9D%B8-%EA%B8%B0%EB%8A%A5%EB%93%A4-%EA%B5%AC%ED%98%84-%EC%99%84%EB%A3%8C-4-StudyGroup-%EB%8F%84%EB%A9%94%EC%9D%B8.html">Read more</a></p></div><div class="article__info clearfix"><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Jan 17, 2020</span>
+            </li></ul></div><meta itemprop="author" content="Lee Chan Young"/><meta itemprop="datePublished" content="2020-01-17T00:00:00+09:00"></div>
       </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/wordbook-project/2020/01/13/Mapper-Test-Code-%EB%B0%8F-%EC%83%9D%EA%B0%81.html"><h2 itemprop="headline" class="item__header">Mapper Test Code 및 생각</h2></a></header>
-          <div class="item__description"><div class="article__content" itemprop="description articleBody">2020-01-13 :: Mapper Test Code 및 생각
+          <header><a href="/2020/01/17/%EB%8F%84%EB%A9%94%EC%9D%B8-%EA%B8%B0%EB%8A%A5%EB%93%A4-%EA%B5%AC%ED%98%84-%EC%99%84%EB%A3%8C-3-Word-Of-UserWordBook-%EB%8F%84%EB%A9%94%EC%9D%B8.html"><h2 itemprop="headline" class="item__header">도메인 기능들 구현 완료/3 Word Of Userwordbook 도메인</h2></a></header>
+          <div class="item__description"><div class="article__content" itemprop="description articleBody">3. Word Of UserWordBook 도메인
 
-하루 전에 생각했던 Mapper Test code를 작성해보았다. 커스텀한 맵핑 규칙에 대해 테스트를  동작 하였고 전체적인 맵핑 메소드를 테스트 하였다. 아래는 작성해본 코드이다.
+유저 개인 단어장의 단어들이다.
 
-테스트 코드 작성하면서 입력이 Null로 들어왔을때에 대한 생각인데 Null일때 에러를 내는것이 좋은지 유연하게 Blank 값을 넣어주는게 좋은지 생각해봐야겠다.
+추가, 수정, 조회, 삭제가 가능하다.
 
-또한 Jpa Entity 내 맵핑하는 변수가 Collection 객체일 경우를 생각해서 모두 final 변수로 두어 null값이 들어가지 않게 초기화하였다. 이 방법이 문제가 될만한 점이 있는지 생각해봐야겠...</div><p><a href="/wordbook-project/2020/01/13/Mapper-Test-Code-%EB%B0%8F-%EC%83%9D%EA%B0%81.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=WordBookProject">WordBookProject</a>
-            </li><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=TestCode">TestCode</a>
-            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jan 13, 2020</span>
-            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-01-13T00:00:00+09:00">
-    <meta itemprop="keywords" content="WordBookProject,TestCode"></div>
+
+  Create
+
+
+Request
+
+POST http://localhost:8080/api/v1/users/1/wordbooks/2/words
+
+Body : 
+{
+    "voca": "apple",
+    "meaning": "사과"
+}
+
+
+Response
+
+status : Created(201)
+Body : 
+{
+    "id": 3,
+    "voca": "apple",
+    "meaning": "사과",
+    "_links": {
+        "update_word": {
+ ...</div><p><a href="/2020/01/17/%EB%8F%84%EB%A9%94%EC%9D%B8-%EA%B8%B0%EB%8A%A5%EB%93%A4-%EA%B5%AC%ED%98%84-%EC%99%84%EB%A3%8C-3-Word-Of-UserWordBook-%EB%8F%84%EB%A9%94%EC%9D%B8.html">Read more</a></p></div><div class="article__info clearfix"><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Jan 17, 2020</span>
+            </li></ul></div><meta itemprop="author" content="Lee Chan Young"/><meta itemprop="datePublished" content="2020-01-17T00:00:00+09:00"></div>
       </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/wordbook-project/2020/01/12/%EC%84%A4%EA%B3%84-%EB%B0%8F-%EA%B5%AC%ED%98%84%EC%8B%9C-%EA%B0%81-%EB%8B%A8%EA%B3%84%EC%97%90%EC%84%9C-%EC%83%9D%EA%B0%81%ED%95%B4%EB%B4%90%EC%95%BC%ED%95%A0%EA%B2%83%EB%93%A4-%EC%A0%95%EB%A6%AC.html"><h2 itemprop="headline" class="item__header">설계 및 구현시 각 단계에서 생각해봐야할것들 정리</h2></a></header>
-          <div class="item__description"><div class="article__content" itemprop="description articleBody">2020-01-12 :: 설계 및 구현시 각 단계에서 생각해봐야할것들 정리
+          <header><a href="/2020/01/17/%EB%8F%84%EB%A9%94%EC%9D%B8-%EA%B8%B0%EB%8A%A5%EB%93%A4-%EA%B5%AC%ED%98%84-%EC%99%84%EB%A3%8C-2-UserWordBook-%EB%8F%84%EB%A9%94%EC%9D%B8.html"><h2 itemprop="headline" class="item__header">도메인 기능들 구현 완료/2 Userwordbook 도메인</h2></a></header>
+          <div class="item__description"><div class="article__content" itemprop="description articleBody">2. UserWordBook 도메인
 
-레이어및 컴포넌트 설계 구현시 생각해 봐야할 것들
+사용자 개인 단어장이다.
 
-컨트롤러 레이어
-
-
-  url 패턴 설계
-  현재 상태에서 갈 수 있는 다음 상태 설계
-  반환 DTO 구현 (hateoas 적용)
-  반환 header 구현
-  반환 body 구현
+추가, 수정, 삭제, 조회가 가능하다.
 
 
-서비스 레이어
+  Create
 
 
-  Mapper 구현
-  비즈니스 로직 구현
-  최대한 한 서비스는 한 동작만 하도록 구현
+Request
+
+POST http://localhost:8080/api/v1/users/1/wordbooks
+
+Body : 
+{
+    "name": "testWordBook"
+}
 
 
-레퍼지토리
+Response
 
-아직 직접 작성한 쿼리가 없음
-
-Mapper
-
-
-  맵핑이 안되는 필드가 없는지 확인
-  맵핑될 필요가 없다면 꼭 무시하는 맵핑 어노테이션을 달아주자
-  Collection에 대한 ...</div><p><a href="/wordbook-project/2020/01/12/%EC%84%A4%EA%B3%84-%EB%B0%8F-%EA%B5%AC%ED%98%84%EC%8B%9C-%EA%B0%81-%EB%8B%A8%EA%B3%84%EC%97%90%EC%84%9C-%EC%83%9D%EA%B0%81%ED%95%B4%EB%B4%90%EC%95%BC%ED%95%A0%EA%B2%83%EB%93%A4-%EC%A0%95%EB%A6%AC.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=WordBookProject">WordBookProject</a>
-            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jan 12, 2020</span>
-            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-01-12T00:00:00+09:00">
-    <meta itemprop="keywords" content="WordBookProject"></div>
+status : Created(201)
+Body : 
+{
+    "id": 2,
+    "isUsing": true,
+    "name": "testWordBook",
+    "_links": {
+        "self": {
+            "href": "http://localho...</div><p><a href="/2020/01/17/%EB%8F%84%EB%A9%94%EC%9D%B8-%EA%B8%B0%EB%8A%A5%EB%93%A4-%EA%B5%AC%ED%98%84-%EC%99%84%EB%A3%8C-2-UserWordBook-%EB%8F%84%EB%A9%94%EC%9D%B8.html">Read more</a></p></div><div class="article__info clearfix"><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Jan 17, 2020</span>
+            </li></ul></div><meta itemprop="author" content="Lee Chan Young"/><meta itemprop="datePublished" content="2020-01-17T00:00:00+09:00"></div>
       </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/wordbook-project/2020/01/11/%EB%8B%A8%EC%96%B4%EC%9E%A5-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%9E%AC%EA%B5%AC%EC%84%B1.html"><h2 itemprop="headline" class="item__header">단어장 어플리케이션 ERD 정리</h2></a></header>
-          <div class="item__description"><div class="article__content" itemprop="description articleBody">2020-01-11 :: 단어장 도메인 재구성
+          <header><a href="/2020/01/17/%EB%8F%84%EB%A9%94%EC%9D%B8-%EA%B8%B0%EB%8A%A5%EB%93%A4-%EA%B5%AC%ED%98%84-%EC%99%84%EB%A3%8C-1-User-%EB%8F%84%EB%A9%94%EC%9D%B8.html"><h2 itemprop="headline" class="item__header">도메인 기능들 구현 완료/1 User 도메인</h2></a></header>
+          <div class="item__description"><div class="article__content" itemprop="description articleBody">1. User 도메인
 
-기본에 설계된 도메인들의 관계를 머리로만 생각하니 점점 복잡해져서 좀더 명확히 하기 위해 ERD 작성.</div><p><a href="/wordbook-project/2020/01/11/%EB%8B%A8%EC%96%B4%EC%9E%A5-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%9E%AC%EA%B5%AC%EC%84%B1.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=WordBookProject">WordBookProject</a>
-            </li><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=ERD">ERD</a>
-            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jan 11, 2020</span>
-            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-01-11T00:00:00+09:00">
-    <meta itemprop="keywords" content="WordBookProject,ERD"></div>
-      </article></div></div><div class="layout--home"><div class="pagination"><p>16 post articles, 2 pages.</p>
+먼저 유저이다. 일단 아직 Spring security를 사용하지 않았기 때문에 세션이 존재하지는 않는다.
+
+추가, 수정, 조회가 가능하다.
+
+
+  create
+
+
+Request
+
+POST http://localhost:8080/api/v1/users
+
+Body : 
+{
+    "email": "testEmail@test.com",
+    "pw": "testPw",
+    "name": "testName123"
+}
+
+
+Response
+
+status : Created(201)
+Body : 
+{
+    "id": 1,
+    "name": "testName123",
+    "email": "t...</div><p><a href="/2020/01/17/%EB%8F%84%EB%A9%94%EC%9D%B8-%EA%B8%B0%EB%8A%A5%EB%93%A4-%EA%B5%AC%ED%98%84-%EC%99%84%EB%A3%8C-1-User-%EB%8F%84%EB%A9%94%EC%9D%B8.html">Read more</a></p></div><div class="article__info clearfix"><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Jan 17, 2020</span>
+            </li></ul></div><meta itemprop="author" content="Lee Chan Young"/><meta itemprop="datePublished" content="2020-01-17T00:00:00+09:00"></div>
+      </article></div></div><div class="layout--home"><div class="pagination"><p>22 post articles, 3 pages.</p>
     <div class="pagination__menu">
       <ul class="menu menu--nowrap"><li><a class="button button--secondary button--circle" href="/">
             <i class="fas fa-angle-left"></i>
@@ -470,9 +534,11 @@ Mapper
               <a class="button button--secondary button--circle" href="/"><span>1</span></a>
             </li><li>
               <div class="button button--primary button--circle focus"><span>2</span></div>
-            </li><li><div class="button button--secondary button--circle disabled">
+            </li><li>
+                  <a class="button button--secondary button--circle" href="/page3/"><span>3</span></a>
+                </li><li><a class="button button--secondary button--circle" href="/page3/">
             <i class="fas fa-angle-right"></i>
-          </div></li></ul>
+          </a></li></ul>
     </div>
   </div></div>
 
