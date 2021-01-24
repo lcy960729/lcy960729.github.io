@@ -279,6 +279,25 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 <!-- end custom main top snippet -->
 <article itemscope itemtype="http://schema.org/WebPage"><header style="display:none;"><h1>CY의 개발 블로그</h1></header><meta itemprop="headline" content="CY의 개발 블로그"><meta itemprop="author" content="Lee Chan Young"/><div class="js-article-content"><div class="layout--articles"><div class="article-list items items--divided"><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
+          <header><a href="/wordbook-project/2021/01/24/%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%BD%94%EB%93%9C-%EC%88%98%EC%A0%95-%EC%99%84%EB%A3%8C-%EB%B0%8F-%EB%B3%80%EA%B2%BD%EC%A0%90.html"><h2 itemprop="headline" class="item__header">테스트 코드 수정 완료 및 변경점</h2></a></header>
+          <div class="item__description"><div class="article__content" itemprop="description articleBody">2021-01-24 :: 테스트 코드 수정 완료 및 변경점
+
+테스트 코드 작성시 불편했던 점
+
+
+
+며칠 동안 많은 양의 테스트 코드들을 수정완료 했다.
+
+문제는 서비스레이어에서 테스트 작성시 아래 코드와 같은 관계를 가진 상태를 만들어 주어야했다. 처음 진행할때는 Entity 관계가 깊지 않아 테스트 코드 작성시 문제가 되지 않았는데 프로젝트를 진행함에 따라 깊어지는 도메인간의 관계를 작성하는것은 큰 불편함이 있었다. 이러한 상태를 매번 작성하는것이 무의미함과 동시에 중복된 코드가 대량 발생하고 테스트 코드 작성시 너무 많은 시간이 걸렸다. 이러한 문제를 해결하기위해 Factory패턴이라고 해야할까.. 상태를 미리...</div><p><a href="/wordbook-project/2021/01/24/%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%BD%94%EB%93%9C-%EC%88%98%EC%A0%95-%EC%99%84%EB%A3%8C-%EB%B0%8F-%EB%B3%80%EA%B2%BD%EC%A0%90.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=WordBookProject">WordBookProject</a>
+            </li><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=TestCode">TestCode</a>
+            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jan 24, 2021</span>
+            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2021-01-24T00:00:00+09:00">
+    <meta itemprop="keywords" content="WordBookProject,TestCode"></div>
+      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
           <header><a href="/wordbook-project/2021/01/18/%EC%9D%98%EC%A1%B4%ED%95%98%EB%8A%94-%EA%B0%9D%EC%B2%B4%EC%97%90-%EB%8C%80%ED%95%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%BD%94%EB%93%9C-%EA%B3%A0%EC%B0%B0.html"><h2 itemprop="headline" class="item__header">의존하는 객체에 대한 테스트 코드 고찰</h2></a></header>
           <div class="item__description"><div class="article__content" itemprop="description articleBody">2021-01-18 :: 의존하는 객체에 대한 테스트 코드 고찰
 
@@ -431,28 +450,6 @@ Mapper
             </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jan 11, 2021</span>
             </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2021-01-11T00:00:00+09:00">
     <meta itemprop="keywords" content="WordBookProject,ERD"></div>
-      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/wordbook-project/2020/12/29/Service-Layer-Validator-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EB%AC%B8%EC%A0%9C%EC%A0%90.html"><h2 itemprop="headline" class="item__header">Service Layer Validator 테스트 문제점</h2></a></header>
-          <div class="item__description"><div class="article__content" itemprop="description articleBody">2020-12-29 :: Service Layer Validator 테스트 문제점
-
-Spring Boot에서 spring validator는 컨트롤러에서만 동작을 한다. 이유로는 spring mvc에는 서비스 레이어라는것이 존재하지 않는다. 서비스 어노테이션은 그저 단순한 빈의 형태이며 컨트롤러 레이어에서 validator가 동작할 수 있는 이유는 Handler 메소드에서 사용할 인수를 처리하기 전에 유효성 검사를 수행하는 ModelAttributeMethodProcessor가 있기때문이다. 그렇기 때문에  validator가 서비스 레이어에서도 동작을 할수 있도록 하기위해 아래 코드와 같이 서비스 클래스 위에 @...</div><p><a href="/wordbook-project/2020/12/29/Service-Layer-Validator-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EB%AC%B8%EC%A0%9C%EC%A0%90.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=WordBookProject">WordBookProject</a>
-            </li><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=SpringBoot">SpringBoot</a>
-            </li><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=TestCode">TestCode</a>
-            </li><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=Junit">Junit</a>
-            </li><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=SpringBootDataJPA">SpringBootDataJPA</a>
-            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Dec 29, 2020</span>
-            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-12-29T00:00:00+09:00">
-    <meta itemprop="keywords" content="WordBookProject,SpringBoot,TestCode,Junit,SpringBootDataJPA"></div>
       </article></div></div><div class="layout--home"><div class="pagination"><p>17 post articles, 3 pages.</p>
     <div class="pagination__menu">
       <ul class="menu menu--nowrap"><li><div class="button button--secondary button--circle disabled">
