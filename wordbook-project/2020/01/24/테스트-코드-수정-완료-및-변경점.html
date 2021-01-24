@@ -1,10 +1,10 @@
 <!DOCTYPE html><html lang="en">
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>백준 - 2579번 : 계단 오르기 - CY의 개발 블로그</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>테스트 코드 수정 완료 및 변경점 - CY의 개발 블로그</title>
 
-<meta name="description" content="문제 설명백준 2579번 계단 오르기전체적인 문제 설명은 위에 링크에서 확인하고 중요한 조건들만 확인 해보겠다.  계단은 한 번에 한 계단 또는 두 계단씩 오를 수 있다.  연속된 세 개의 계단을 모두 밟을 수 없다.  마지막 도착 계단은 반드시 밟아야한다.  시작할때 첫번째 계단...">
-<link rel="canonical" href="https://lcy960729.github.io/algorithm/2020/07/03/baekjoon-2579.html"><link rel="alternate" type="application/rss+xml" title="CY의 개발 블로그" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
+<meta name="description" content="2021-01-24 :: 테스트 코드 수정 완료 및 변경점테스트 코드 작성시 불편했던 점며칠 동안 많은 양의 테스트 코드들을 수정완료 했다.문제는 서비스레이어에서 테스트 작성시 아래 코드와 같은 관계를 가진 상태를 만들어 주어야했다. 처음 진행할때는 Entity 관계가 깊지 않아 ...">
+<link rel="canonical" href="https://lcy960729.github.io/wordbook-project/2020/01/24/%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%BD%94%EB%93%9C-%EC%88%98%EC%A0%95-%EC%99%84%EB%A3%8C-%EB%B0%8F-%EB%B3%80%EA%B2%BD%EC%A0%90.html"><link rel="alternate" type="application/rss+xml" title="CY의 개발 블로그" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/assets/browserconfig.xml">
 
@@ -277,123 +277,177 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 <!-- end custom main top snippet -->
 <article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header>
-          <h1>백준 - 2579번 : 계단 오르기</h1>
+          <h1>테스트 코드 수정 완료 및 변경점</h1>
           <br>
           <h2 style="font-size: 20px;"></h2>
         </header><span class="split-space">&nbsp;</span>
           <a class="edit-on-github"
             title="Edit on Github"
-            href="https://github.com/lcy960729/blog.maker/tree/master/_posts/Algorithm/2020-07-03-baekjoon-2579.md">
-            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="백준 - 2579번 : 계단 오르기"><div class="article__info clearfix"><ul class="left-col menu"><li>
+            href="https://github.com/lcy960729/blog.maker/tree/master/_posts/WordBookProject/2020-01-24-테스트-코드-수정-완료-및-변경점.md">
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="테스트 코드 수정 완료 및 변경점"><div class="article__info clearfix"><ul class="left-col menu"><li>
               <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=DynamicProgramming">DynamicProgramming</a>
+                href="/archive.html?tag=WordBookProject">WordBookProject</a>
             </li><li>
               <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=baekjoon">baekjoon</a>
-            </li><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=algorithm">algorithm</a>
-            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jul 03, 2020</span>
-            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-07-03T00:00:00+09:00">
-    <meta itemprop="keywords" content="DynamicProgramming,baekjoon,algorithm"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+                href="/archive.html?tag=TestCode">TestCode</a>
+            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jan 24, 2020</span>
+            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-01-24T00:00:00+09:00">
+    <meta itemprop="keywords" content="WordBookProject,TestCode"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
-<div class="article__content" itemprop="articleBody"><h1 id="문제-설명">문제 설명</h1>
+<div class="article__content" itemprop="articleBody"><h1 id="2021-01-24--테스트-코드-수정-완료-및-변경점">2021-01-24 :: 테스트 코드 수정 완료 및 변경점</h1>
 
-<h2 id="백준-2579번-계단-오르기"><a href="https://www.acmicpc.net/problem/2579">백준 2579번 계단 오르기</a></h2>
+<h2 id="테스트-코드-작성시-불편했던-점">테스트 코드 작성시 불편했던 점</h2>
 
-<p>전체적인 문제 설명은 위에 링크에서 확인하고 중요한 조건들만 확인 해보겠다.</p>
+<p><img src="/assets/images/2020-01-24-테스트-코드-수정-완료-및-변경점/TestingResult.png" alt="TestingResult.png" /></p>
 
-<p><img src="https://www.acmicpc.net/upload/images/f62omMF2kQYD5rDct.png" alt="pic1" /></p>
+<p>며칠 동안 많은 양의 테스트 코드들을 수정완료 했다.</p>
 
-<ol>
-  <li>계단은 한 번에 한 계단 또는 두 계단씩 오를 수 있다.</li>
-  <li>연속된 세 개의 계단을 모두 밟을 수 없다.</li>
-  <li>마지막 도착 계단은 반드시 밟아야한다.</li>
-  <li>시작할때 첫번째 계단부터 밟을 필요는 없다. 두번째 계단부터 밟을 수도 있다.</li>
-  <li>계단을 밟으면 쓰여진 점수 얻게 된다. 얻을 수 있는 점수의 최대값을 구해야한다.</li>
-</ol>
+<p>문제는 서비스레이어에서 테스트 작성시 아래 코드와 같은 관계를 가진 상태를 만들어 주어야했다. 처음 진행할때는 Entity 관계가 깊지 않아 테스트 코드 작성시 문제가 되지 않았는데 프로젝트를 진행함에 따라 깊어지는 도메인간의 관계를 작성하는것은 큰 불편함이 있었다. 이러한 상태를 매번 작성하는것이 무의미함과 동시에 중복된 코드가 대량 발생하고 테스트 코드 작성시 너무 많은 시간이 걸렸다. 이러한 문제를 해결하기위해 Factory패턴이라고 해야할까.. 상태를 미리 만들어놓고 필요한 도메인들을 골라서 사용하기로 하였다.</p>
 
-<h2 id="입력">입력</h2>
+<h3 id="변경-전-코드">변경 전 코드</h3>
 
-<p>첫번째는 계단의 수, 두번째 줄은 계단의 쓰여진 점수가 주어진다.</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>		<span class="nd">@Test</span>
+    <span class="nd">@DisplayName</span><span class="o">(</span><span class="s">"일반 권한 사용자가 그룹 단어장의 DTO를 정상적으로 반환하는 테스트"</span><span class="o">)</span>
+    <span class="kt">void</span> <span class="nf">getDetailDTOByUserIdAndStudyGroupIdAndWordBookId1</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">//given</span>
+        <span class="nc">User</span> <span class="n">user</span> <span class="o">=</span> <span class="nc">User</span><span class="o">.</span><span class="na">builder</span><span class="o">()</span>
+                <span class="o">.</span><span class="na">id</span><span class="o">(</span><span class="mi">0L</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">name</span><span class="o">(</span><span class="s">"testName"</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">email</span><span class="o">(</span><span class="s">"testEmail@test.com"</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">pw</span><span class="o">(</span><span class="s">"testPw"</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">build</span><span class="o">();</span>
 
-<h2 id="제한-조건">제한 조건</h2>
+        <span class="nc">StudyGroup</span> <span class="n">studyGroup</span> <span class="o">=</span> <span class="nc">StudyGroup</span><span class="o">.</span><span class="na">builder</span><span class="o">()</span>
+                <span class="o">.</span><span class="na">id</span><span class="o">(</span><span class="mi">1L</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">isUsing</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">name</span><span class="o">(</span><span class="s">"testStudyGroupName"</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">build</span><span class="o">();</span>
 
-<p>제한 조건으로는 계단의 개수는 300이하의 자연수이고, 계단에 쓰여 있는 점수는 10000이하의 자연수이다.</p>
+        <span class="nc">Study</span> <span class="n">study</span> <span class="o">=</span> <span class="nc">Study</span><span class="o">.</span><span class="na">builder</span><span class="o">()</span>
+                <span class="o">.</span><span class="na">id</span><span class="o">(</span><span class="mi">3L</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">isUsing</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">user</span><span class="o">(</span><span class="n">user</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">studyGroup</span><span class="o">(</span><span class="n">studyGroup</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">studyGroupRole</span><span class="o">(</span><span class="nc">StudyGroupRole</span><span class="o">.</span><span class="na">NORMAL</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">build</span><span class="o">();</span>
 
-<hr />
-<h1 id="풀이-내용">풀이 내용</h1>
+        <span class="n">user</span><span class="o">.</span><span class="na">joinToStudy</span><span class="o">(</span><span class="n">study</span><span class="o">);</span>
+        <span class="n">studyGroup</span><span class="o">.</span><span class="na">addStudy</span><span class="o">(</span><span class="n">study</span><span class="o">);</span>
 
-<p>이번 문제는 재귀로 구현 하였다.
-dp는 도착 계단에서 부터 첫번째 계단으로 내려가며 구현 하였고<br />
-재귀가 끝날때마다 최대값을 memo배열에 저장하도록 했다.</p>
+        <span class="nc">StudyGroupWordBook</span> <span class="n">studyGroupWordBook</span> <span class="o">=</span> <span class="nc">StudyGroupWordBook</span><span class="o">.</span><span class="na">builder</span><span class="o">()</span>
+                <span class="o">.</span><span class="na">id</span><span class="o">(</span><span class="mi">4L</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">isUsing</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">name</span><span class="o">(</span><span class="s">"testWordBookName"</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">studyGroup</span><span class="o">(</span><span class="n">studyGroup</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">build</span><span class="o">();</span>
 
-<p>dp를 들여다 보면 4가지의 조건이 있다.</p>
+        <span class="n">studyGroup</span><span class="o">.</span><span class="na">addWordBook</span><span class="o">(</span><span class="n">studyGroupWordBook</span><span class="o">);</span>
 
-<ol>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">if (n==0)</code> 재귀가 마지막 바닥에 닿았을때, 재귀의 끝을 알려 주는 조건이다.<br />
-n == 0 이므로 맨 처음 밟은 계단이며 첫번째 계단의 점수를 반환 한다.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">if (n &lt; 0)</code> n &lt; 0 이전 계단에서 2칸을 건너 뛰어 첫번째 계단을 밟지 못했을때 이다. 0을 리턴하여 최댓값에 영향을 주지 않도록 구현 했다.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">if (memoValue != -1)</code> 동적 프로그래밍의 핵심이다. 이미 지금까지의 계단을 내려올때 최대값을 저장해두었기 때문에 값이 존재 할 경우 바로 저장한 값을 리턴한다.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">if (count == 1)</code> 연속된 계단을 두번 밟았을 때이다. 이 경우에는 다음 계단을 무조건 두칸 뛰어넘게 구현 하였다.<br />
-아닐 경우는 한칸 내려간 경우와 두칸 내려간 경우를 모두 구하여 최대값을 선택하였다.</p>
-  </li>
-</ol>
+        <span class="n">given</span><span class="o">(</span><span class="n">getStudyService</span><span class="o">.</span><span class="na">getEntityByFindByUserIdAndStudyGroupsId</span><span class="o">(</span><span class="n">anyLong</span><span class="o">(),</span> <span class="n">anyLong</span><span class="o">())).</span><span class="na">willReturn</span><span class="o">(</span><span class="n">study</span><span class="o">);</span>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include&lt;iostream&gt;
-#include&lt;algorithm&gt;
-#include&lt;cstring&gt;
-</span>
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+        <span class="nc">Long</span> <span class="n">userId</span> <span class="o">=</span> <span class="n">study</span><span class="o">.</span><span class="na">getUser</span><span class="o">().</span><span class="na">getId</span><span class="o">();</span>
+        <span class="nc">Long</span> <span class="n">studyGroupId</span> <span class="o">=</span> <span class="n">study</span><span class="o">.</span><span class="na">getStudyGroup</span><span class="o">().</span><span class="na">getId</span><span class="o">();</span>
+        <span class="nc">Long</span> <span class="n">wordBookId</span> <span class="o">=</span> <span class="n">studyGroupWordBook</span><span class="o">.</span><span class="na">getId</span><span class="o">();</span>
 
-<span class="kt">int</span> <span class="n">arr</span><span class="p">[</span><span class="mi">300</span><span class="p">];</span>
-<span class="kt">int</span> <span class="n">memo</span><span class="p">[</span><span class="mi">300</span><span class="p">][</span><span class="mi">2</span><span class="p">];</span>
+        <span class="c1">//when</span>
+        <span class="nc">WordBookDetailDTO</span> <span class="n">wordBookDetailDTO</span> <span class="o">=</span> <span class="n">getStudyGroupWordBookService</span><span class="o">.</span><span class="na">getDetailDTOByUserIdAndStudyGroupIdAndWordBookId</span><span class="o">(</span><span class="n">userId</span><span class="o">,</span> <span class="n">studyGroupId</span><span class="o">,</span> <span class="n">wordBookId</span><span class="o">);</span>
 
-<span class="kt">long</span> <span class="kt">long</span> <span class="nf">dp</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">int</span> <span class="n">count</span><span class="p">){</span>
-    <span class="kt">int</span> <span class="o">&amp;</span><span class="n">memoValue</span> <span class="o">=</span> <span class="n">memo</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">count</span><span class="p">];</span>
-
-    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">arr</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>
-
-    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
-        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-
-    <span class="k">if</span> <span class="p">(</span><span class="n">memoValue</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">){</span>
-        <span class="k">return</span> <span class="n">memoValue</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="kt">long</span> <span class="kt">long</span> <span class="n">ret</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">count</span> <span class="o">==</span> <span class="mi">1</span><span class="p">){</span>
-        <span class="n">ret</span> <span class="o">=</span> <span class="n">dp</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-        <span class="n">ret</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">dp</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">count</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">dp</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">));</span>
-    <span class="p">}</span>
-
-    <span class="n">memoValue</span> <span class="o">=</span> <span class="n">ret</span> <span class="o">+</span> <span class="n">arr</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>
-    <span class="k">return</span> <span class="n">memoValue</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
-    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
-    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
-    <span class="n">memset</span><span class="p">(</span><span class="n">memo</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span> <span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="n">memo</span><span class="p">));</span>
-
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
-        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-    <span class="p">}</span>
-
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">dp</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-<span class="p">}</span>
+        <span class="c1">//then</span>
+        <span class="n">assertThat</span><span class="o">(</span><span class="n">wordBookDetailDTO</span><span class="o">).</span><span class="na">isNotNull</span><span class="o">();</span>
+        <span class="n">assertThat</span><span class="o">(</span><span class="n">wordBookDetailDTO</span><span class="o">.</span><span class="na">getId</span><span class="o">()).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="n">wordBookId</span><span class="o">);</span>
+    <span class="o">}</span>
 </code></pre></div></div>
-</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2020-07-03T00:00:00+09:00"><!-- start custom article footer snippet -->
+
+<h2 id="수정-후">수정 후</h2>
+
+<p>DomainFactory라는 클래스를 만든 후 모든 Domain간의 관계가 형성된 상태를 만든다( 상태라는 말이 맞나??)</p>
+
+<p>이후 테스트 코드에서 필요한 도메인을 받아서 쓰도록 만들었다. 이렇게 만들어보니 테스트 코드 작성시 계속 해서 만들어야하는 entity들을 바로 꺼내서 테스트 돌려볼 수 있어서 테스트 코드 양도 줄어들고 작성 시간도 줄어들게 됐다.</p>
+
+<h3 id="domainfactory">DomainFactory</h3>
+
+<p>아래 코드 처럼 생성시 모든 관계를 형성하는 상태를 만든 후 getter를 이용하여 사용한다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Component</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">DomainFactory</span> <span class="o">{</span>
+
+    <span class="kd">private</span> <span class="kd">final</span> <span class="nc">User</span> <span class="n">userOfStudyGroupAdmin</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="nc">User</span> <span class="n">userOfStudyGroupNormal</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Study</span> <span class="n">studyOfStudyGroupAdmin</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Study</span> <span class="n">studyOfStudyGroupNormal</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="nc">StudyGroup</span> <span class="n">studyGroup</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="nc">StudyGroupWordBook</span> <span class="n">studyGroupWordBook</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="nc">UserWordBook</span> <span class="n">userWordBookOfAdminUser</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="nc">UserWordBook</span> <span class="n">userWordBook</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nf">DomainFactory</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">userOfStudyGroupAdmin</span> <span class="o">=</span> <span class="n">createUser</span><span class="o">(</span><span class="mi">0L</span><span class="o">);</span>
+        <span class="n">userOfStudyGroupNormal</span> <span class="o">=</span> <span class="n">createUser</span><span class="o">(</span><span class="mi">1L</span><span class="o">);</span>
+
+        <span class="n">studyGroup</span> <span class="o">=</span> <span class="n">createStudyGroup</span><span class="o">(</span><span class="mi">0L</span><span class="o">);</span>
+
+        <span class="n">studyOfStudyGroupAdmin</span> <span class="o">=</span> <span class="n">createStudyOfNormalUser</span><span class="o">(</span><span class="mi">0L</span><span class="o">,</span> <span class="n">studyGroup</span><span class="o">,</span> <span class="n">userOfStudyGroupNormal</span><span class="o">);</span>
+        <span class="n">userOfStudyGroupAdmin</span><span class="o">.</span><span class="na">joinToStudy</span><span class="o">(</span><span class="n">studyOfStudyGroupAdmin</span><span class="o">);</span>
+        <span class="n">studyGroup</span><span class="o">.</span><span class="na">addStudy</span><span class="o">(</span><span class="n">studyOfStudyGroupAdmin</span><span class="o">);</span>
+
+        <span class="n">studyOfStudyGroupNormal</span> <span class="o">=</span> <span class="n">createStudyOfAdminUser</span><span class="o">(</span><span class="mi">1L</span><span class="o">,</span> <span class="n">studyGroup</span><span class="o">,</span> <span class="n">userOfStudyGroupNormal</span><span class="o">);</span>
+        <span class="n">userOfStudyGroupNormal</span><span class="o">.</span><span class="na">joinToStudy</span><span class="o">(</span><span class="n">studyOfStudyGroupNormal</span><span class="o">);</span>
+        <span class="n">studyGroup</span><span class="o">.</span><span class="na">addStudy</span><span class="o">(</span><span class="n">studyOfStudyGroupNormal</span><span class="o">);</span>
+
+        <span class="n">studyGroupWordBook</span> <span class="o">=</span> <span class="n">createStudyGroupWordBook</span><span class="o">(</span><span class="mi">0L</span><span class="o">,</span> <span class="n">studyGroup</span><span class="o">);</span>
+        <span class="n">studyGroup</span><span class="o">.</span><span class="na">addWordBook</span><span class="o">(</span><span class="n">studyGroupWordBook</span><span class="o">);</span>
+
+        <span class="n">userWordBookOfAdminUser</span> <span class="o">=</span> <span class="n">createUserWordBook</span><span class="o">(</span><span class="mi">0L</span><span class="o">,</span> <span class="n">userOfStudyGroupAdmin</span><span class="o">);</span>
+        <span class="n">userOfStudyGroupAdmin</span><span class="o">.</span><span class="na">addWordBook</span><span class="o">(</span><span class="n">userWordBookOfAdminUser</span><span class="o">);</span>
+
+        <span class="n">userWordBook</span> <span class="o">=</span> <span class="n">createUserWordBook</span><span class="o">(</span><span class="mi">1L</span><span class="o">,</span> <span class="n">userOfStudyGroupNormal</span><span class="o">);</span>
+        <span class="n">userOfStudyGroupNormal</span><span class="o">.</span><span class="na">addWordBook</span><span class="o">(</span><span class="n">userWordBook</span><span class="o">);</span>
+
+        <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="mi">4</span><span class="o">;</span>
+        <span class="nc">LongStream</span><span class="o">.</span><span class="na">range</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">length</span><span class="o">).</span><span class="na">forEach</span><span class="o">(</span><span class="n">i</span> <span class="o">-&gt;</span> <span class="o">{</span>
+            <span class="n">studyGroupWordBook</span><span class="o">.</span><span class="na">addWord</span><span class="o">(</span><span class="n">createWord</span><span class="o">(</span><span class="n">i</span><span class="o">));</span>
+
+            <span class="n">userWordBookOfAdminUser</span><span class="o">.</span><span class="na">addWord</span><span class="o">(</span><span class="n">createWord</span><span class="o">(</span><span class="n">i</span><span class="o">));</span>
+            <span class="n">userWordBook</span><span class="o">.</span><span class="na">addWord</span><span class="o">(</span><span class="n">createWord</span><span class="o">(</span><span class="n">i</span><span class="o">));</span>
+        <span class="o">});</span>
+    <span class="o">}</span>
+
+<span class="c1">//이후는 getter 코드...</span>
+</code></pre></div></div>
+
+<h3 id="변경-후-코드">변경 후 코드</h3>
+
+<p>DomainFactory를 이용하여 작성한 테스트 코드를 보면 아래와 같이 변경 됐다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>		<span class="nd">@Test</span>
+    <span class="nd">@DisplayName</span><span class="o">(</span><span class="s">"일반 권한 사용자가 그룹 단어장의 DTO를 정상적으로 반환하는 테스트"</span><span class="o">)</span>
+    <span class="kt">void</span> <span class="nf">getDetailDTOByUserIdAndStudyGroupIdAndWordBookId</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">//given</span>
+        <span class="nc">Study</span> <span class="n">study</span> <span class="o">=</span> <span class="n">domainFactory</span><span class="o">.</span><span class="na">getStudyOfStudyGroupNormal</span><span class="o">();</span>
+        <span class="nc">StudyGroupWordBook</span> <span class="n">studyGroupWordBook</span> <span class="o">=</span> <span class="n">domainFactory</span><span class="o">.</span><span class="na">getStudyGroupWordBook</span><span class="o">();</span>
+
+        <span class="n">given</span><span class="o">(</span><span class="n">getStudyService</span><span class="o">.</span><span class="na">getEntityByFindByUserIdAndStudyGroupsId</span><span class="o">(</span><span class="n">anyLong</span><span class="o">(),</span> <span class="n">anyLong</span><span class="o">())).</span><span class="na">willReturn</span><span class="o">(</span><span class="n">study</span><span class="o">);</span>
+
+        <span class="nc">Long</span> <span class="n">userId</span> <span class="o">=</span> <span class="n">study</span><span class="o">.</span><span class="na">getUser</span><span class="o">().</span><span class="na">getId</span><span class="o">();</span>
+        <span class="nc">Long</span> <span class="n">studyGroupId</span> <span class="o">=</span> <span class="n">study</span><span class="o">.</span><span class="na">getStudyGroup</span><span class="o">().</span><span class="na">getId</span><span class="o">();</span>
+        <span class="nc">Long</span> <span class="n">wordBookId</span> <span class="o">=</span> <span class="n">studyGroupWordBook</span><span class="o">.</span><span class="na">getId</span><span class="o">();</span>
+
+        <span class="c1">//when</span>
+        <span class="nc">WordBookDetailDTO</span> <span class="n">wordBookDetailDTO</span> <span class="o">=</span> <span class="n">getStudyGroupWordBookService</span><span class="o">.</span><span class="na">getDetailDTOByUserIdAndStudyGroupIdAndWordBookId</span><span class="o">(</span><span class="n">userId</span><span class="o">,</span> <span class="n">studyGroupId</span><span class="o">,</span> <span class="n">wordBookId</span><span class="o">);</span>
+
+        <span class="c1">//then</span>
+        <span class="n">assertThat</span><span class="o">(</span><span class="n">wordBookDetailDTO</span><span class="o">).</span><span class="na">isNotNull</span><span class="o">();</span>
+        <span class="n">assertThat</span><span class="o">(</span><span class="n">wordBookDetailDTO</span><span class="o">.</span><span class="na">getId</span><span class="o">()).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="n">wordBookId</span><span class="o">);</span>
+    <span class="o">}</span>
+</code></pre></div></div>
+
+<p>코드가 훨씬 간결해지고 어떤 테스트 코드를 작성하던 원하는 도메인만 골라서 사용하면 된다. 훨씬 줄어든 코드량으로 빠르게 테스트 코드들을 수정할 수 있었다. 변경된 방식으로 테스트 코드를 작성하게 되면서 테스트 코드 수정에 부담감이 많이 사라지게 됐다.</p>
+
+<p>다음 진행은 spring security를 학습하여 로그인과 사용자 인증관련된 기능을 추가를 해보도록 하겠다.</p>
+
+<p>(이걸 해야 그룹에서 원하는 상대를 초대할때 내가 초대한 사용자가 맞는지 확인을 할 수 있을것 같다, 현재까지 구현한 유저 도메인이 통째로 변경될텐데… ㅜ)</p>
+</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2020-01-24T00:00:00+09:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
 <div class="article__subscribe"><div class="subscribe"><i class="fas fa-rss"></i> <a type="application/rss+xml" href="/feed.xml">Subscribe</a></div>
@@ -404,7 +458,7 @@ n == 0 이므로 맨 처음 밟은 계단이며 첫번째 계단의 점수를 �
       </a>
     </p>
   </div></div></footer>
-<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/wordbook-project/2020/01/24/%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%BD%94%EB%93%9C-%EC%88%98%EC%A0%95-%EC%99%84%EB%A3%8C-%EB%B0%8F-%EB%B3%80%EA%B2%BD%EC%A0%90.html">테스트 코드 수정 완료 및 변경점</a></div><div class="next"><span>NEXT</span><a href="/algorithm/2020/07/04/baekjoon-9095.html">백준 - 9095번 : 1, 2, 3 더하기</a></div></div></div>
+<div class="article__section-navigator clearfix"><div class="next"><span>NEXT</span><a href="/algorithm/2020/07/03/baekjoon-2579.html">백준 - 2579번 : 계단 오르기</a></div></div></div>
 
 </div>
 
@@ -447,7 +501,7 @@ n == 0 이므로 맨 처음 밟은 계단이며 첫번째 계단의 점수를 �
 				repo: 'lcy960729.github.io',
 				owner: 'lcy960729',
 				admin: ['lcy960729'],
-				id: 'algorithm-baekjoon-2579'
+				id: '테스트 코드 수정 완료 및 변경점'
 			});
 			gitalk.render('js-gitalk-container');
 		});

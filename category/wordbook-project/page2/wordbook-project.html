@@ -435,7 +435,26 @@ Spring Boot에서 컨트롤러 테스트를 위해 여러 방법을 찾아보았
             </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Dec 01, 2020</span>
             </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-12-01T00:00:00+09:00">
     <meta itemprop="keywords" content="WordBookProject,SRS"></div>
-      </article></div></div><div class="layout--home"><div class="pagination"><p>13 post articles, 2 pages.</p>
+      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
+          <header><a href="/wordbook-project/2020/01/24/%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%BD%94%EB%93%9C-%EC%88%98%EC%A0%95-%EC%99%84%EB%A3%8C-%EB%B0%8F-%EB%B3%80%EA%B2%BD%EC%A0%90.html"><h2 itemprop="headline" class="item__header">테스트 코드 수정 완료 및 변경점</h2></a></header>
+          <div class="item__description"><div class="article__content" itemprop="description articleBody">2021-01-24 :: 테스트 코드 수정 완료 및 변경점
+
+테스트 코드 작성시 불편했던 점
+
+
+
+며칠 동안 많은 양의 테스트 코드들을 수정완료 했다.
+
+문제는 서비스레이어에서 테스트 작성시 아래 코드와 같은 관계를 가진 상태를 만들어 주어야했다. 처음 진행할때는 Entity 관계가 깊지 않아 테스트 코드 작성시 문제가 되지 않았는데 프로젝트를 진행함에 따라 깊어지는 도메인간의 관계를 작성하는것은 큰 불편함이 있었다. 이러한 상태를 매번 작성하는것이 무의미함과 동시에 중복된 코드가 대량 발생하고 테스트 코드 작성시 너무 많은 시간이 걸렸다. 이러한 문제를 해결하기위해 Factory패턴이라고 해야할까.. 상태를 미리...</div><p><a href="/wordbook-project/2020/01/24/%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%BD%94%EB%93%9C-%EC%88%98%EC%A0%95-%EC%99%84%EB%A3%8C-%EB%B0%8F-%EB%B3%80%EA%B2%BD%EC%A0%90.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=WordBookProject">WordBookProject</a>
+            </li><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=TestCode">TestCode</a>
+            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jan 24, 2020</span>
+            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-01-24T00:00:00+09:00">
+    <meta itemprop="keywords" content="WordBookProject,TestCode"></div>
+      </article></div></div><div class="layout--home"><div class="pagination"><p>14 post articles, 2 pages.</p>
     <div class="pagination__menu">
       <ul class="menu menu--nowrap"><li><a class="button button--secondary button--circle" href="/category/wordbook-project.html">
             <i class="fas fa-angle-left"></i>
@@ -477,7 +496,7 @@ Spring Boot에서 컨트롤러 테스트를 위해 여러 방법을 찾아보았
       
       <li><a href="/category/wordbook-project.html" class="tag">
       <span class="term">wordbook-project</span>
-      <span class="count">(13)</span>
+      <span class="count">(14)</span>
       </a></li>
     
     <hr id="categories_underLine">
