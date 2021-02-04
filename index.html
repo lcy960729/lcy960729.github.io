@@ -310,6 +310,33 @@ HTTP 메시지는 요청 또는 응답을 나타낸다.
             </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2021-02-04T00:00:00+09:00">
     <meta itemprop="keywords" content="Web,HTTP"></div>
       </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
+          <header><a href="/spring-security/2021/02/04/Spring-Security%EB%9E%80.html"><h2 itemprop="headline" class="item__header">Spring Security의 기능 (최종 수정일 2021-02-04)</h2></a></header>
+          <div class="item__description"><div class="article__content" itemprop="description articleBody">참고 자료
+
+  스프링 시큐리티 레퍼런스
+https://docs.spring.io/spring-security/site/docs/5.4.2/reference/html5/
+
+
+이외 자료는 내용 중 링크 추가
+틀린 내용, 부족한 내용 꼭 지적 부탁드립니다!
+
+1. 스프링 시큐리티의 기능
+스프링 시큐리티는 인증, 권한 부여, 및 보호에 대한 종합적인 지원을 하며 단순하게 사용하기 위해 다른 라이브러리와의 통합을 제공한다.
+
+1.1. 인증 (Authentication)
+인증은 특정 리소스에 접근하려는 주체의 신원을 확인하는 것이다. 사용자를 인증하는 일반적인 방법은 사용자에게 이름과 비밀번호를 입력하도록 요구하는것이다. ...</div><p><a href="/spring-security/2021/02/04/Spring-Security%EB%9E%80.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=Web">Web</a>
+            </li><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=SpringSecurity">SpringSecurity</a>
+            </li><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=Spring">Spring</a>
+            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Feb 04, 2021</span>
+            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2021-02-04T00:00:00+09:00">
+    <meta itemprop="keywords" content="Web,SpringSecurity,Spring"></div>
+      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
           <header><a href="/wordbook-project/2021/01/24/%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%BD%94%EB%93%9C-%EC%88%98%EC%A0%95-%EC%99%84%EB%A3%8C-%EB%B0%8F-%EB%B3%80%EA%B2%BD%EC%A0%90.html"><h2 itemprop="headline" class="item__header">테스트 코드 수정 완료 및 변경점</h2></a></header>
           <div class="item__description"><div class="article__content" itemprop="description articleBody">2021-01-24 :: 테스트 코드 수정 완료 및 변경점
 
@@ -429,46 +456,7 @@ Create
             </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jan 13, 2021</span>
             </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2021-01-13T00:00:00+09:00">
     <meta itemprop="keywords" content="WordBookProject,TestCode"></div>
-      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/wordbook-project/2021/01/12/%EC%84%A4%EA%B3%84-%EB%B0%8F-%EA%B5%AC%ED%98%84%EC%8B%9C-%EA%B0%81-%EB%8B%A8%EA%B3%84%EC%97%90%EC%84%9C-%EC%83%9D%EA%B0%81%ED%95%B4%EB%B4%90%EC%95%BC%ED%95%A0%EA%B2%83%EB%93%A4-%EC%A0%95%EB%A6%AC.html"><h2 itemprop="headline" class="item__header">설계 및 구현시 각 단계에서 생각해봐야할것들 정리</h2></a></header>
-          <div class="item__description"><div class="article__content" itemprop="description articleBody">2021-01-12 :: 설계 및 구현시 각 단계에서 생각해봐야할것들 정리
-
-레이어및 컴포넌트 설계 구현시 생각해 봐야할 것들
-
-컨트롤러 레이어
-
-
-  url 패턴 설계
-  현재 상태에서 갈 수 있는 다음 상태 설계
-  반환 DTO 구현 (hateoas 적용)
-  반환 header 구현
-  반환 body 구현
-
-
-서비스 레이어
-
-
-  Mapper 구현
-  비즈니스 로직 구현
-  최대한 한 서비스는 한 동작만 하도록 구현
-
-
-레퍼지토리
-
-아직 직접 작성한 쿼리가 없음
-
-Mapper
-
-
-  맵핑이 안되는 필드가 없는지 확인
-  맵핑될 필요가 없다면 꼭 무시하는 맵핑 어노테이션을 달아주자
-  Collection에 대한 ...</div><p><a href="/wordbook-project/2021/01/12/%EC%84%A4%EA%B3%84-%EB%B0%8F-%EA%B5%AC%ED%98%84%EC%8B%9C-%EA%B0%81-%EB%8B%A8%EA%B3%84%EC%97%90%EC%84%9C-%EC%83%9D%EA%B0%81%ED%95%B4%EB%B4%90%EC%95%BC%ED%95%A0%EA%B2%83%EB%93%A4-%EC%A0%95%EB%A6%AC.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=WordBookProject">WordBookProject</a>
-            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jan 12, 2021</span>
-            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2021-01-12T00:00:00+09:00">
-    <meta itemprop="keywords" content="WordBookProject"></div>
-      </article></div></div><div class="layout--home"><div class="pagination"><p>18 post articles, 3 pages.</p>
+      </article></div></div><div class="layout--home"><div class="pagination"><p>19 post articles, 3 pages.</p>
     <div class="pagination__menu">
       <ul class="menu menu--nowrap"><li><div class="button button--secondary button--circle disabled">
             <i class="fas fa-angle-left"></i>
@@ -507,6 +495,12 @@ Mapper
       <li><a href="/category/algorithm.html" class="tag">
       <span class="term">algorithm</span>
       <span class="count">(3)</span>
+      </a></li>
+    
+      
+      <li><a href="/category/spring-security.html" class="tag">
+      <span class="term">spring-security</span>
+      <span class="count">(1)</span>
       </a></li>
     
       

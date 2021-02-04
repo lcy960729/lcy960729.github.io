@@ -281,6 +281,45 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 <!-- end custom main top snippet -->
 <article itemscope itemtype="http://schema.org/WebPage"><header style="display:none;"><h1>CY 개발 블로그 - 2</h1></header><meta itemprop="headline" content="CY 개발 블로그 - 2"><meta itemprop="author" content="Lee Chan Young"/><div class="js-article-content"><div class="layout--articles"><div class="article-list items items--divided"><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
+          <header><a href="/wordbook-project/2021/01/12/%EC%84%A4%EA%B3%84-%EB%B0%8F-%EA%B5%AC%ED%98%84%EC%8B%9C-%EA%B0%81-%EB%8B%A8%EA%B3%84%EC%97%90%EC%84%9C-%EC%83%9D%EA%B0%81%ED%95%B4%EB%B4%90%EC%95%BC%ED%95%A0%EA%B2%83%EB%93%A4-%EC%A0%95%EB%A6%AC.html"><h2 itemprop="headline" class="item__header">설계 및 구현시 각 단계에서 생각해봐야할것들 정리</h2></a></header>
+          <div class="item__description"><div class="article__content" itemprop="description articleBody">2021-01-12 :: 설계 및 구현시 각 단계에서 생각해봐야할것들 정리
+
+레이어및 컴포넌트 설계 구현시 생각해 봐야할 것들
+
+컨트롤러 레이어
+
+
+  url 패턴 설계
+  현재 상태에서 갈 수 있는 다음 상태 설계
+  반환 DTO 구현 (hateoas 적용)
+  반환 header 구현
+  반환 body 구현
+
+
+서비스 레이어
+
+
+  Mapper 구현
+  비즈니스 로직 구현
+  최대한 한 서비스는 한 동작만 하도록 구현
+
+
+레퍼지토리
+
+아직 직접 작성한 쿼리가 없음
+
+Mapper
+
+
+  맵핑이 안되는 필드가 없는지 확인
+  맵핑될 필요가 없다면 꼭 무시하는 맵핑 어노테이션을 달아주자
+  Collection에 대한 ...</div><p><a href="/wordbook-project/2021/01/12/%EC%84%A4%EA%B3%84-%EB%B0%8F-%EA%B5%AC%ED%98%84%EC%8B%9C-%EA%B0%81-%EB%8B%A8%EA%B3%84%EC%97%90%EC%84%9C-%EC%83%9D%EA%B0%81%ED%95%B4%EB%B4%90%EC%95%BC%ED%95%A0%EA%B2%83%EB%93%A4-%EC%A0%95%EB%A6%AC.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=WordBookProject">WordBookProject</a>
+            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jan 12, 2021</span>
+            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2021-01-12T00:00:00+09:00">
+    <meta itemprop="keywords" content="WordBookProject"></div>
+      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
           <header><a href="/wordbook-project/2021/01/11/%EB%8B%A8%EC%96%B4%EC%9E%A5-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%9E%AC%EA%B5%AC%EC%84%B1.html"><h2 itemprop="headline" class="item__header">단어장 어플리케이션 ERD 정리</h2></a></header>
           <div class="item__description"><div class="article__content" itemprop="description articleBody">2021-01-11 :: 단어장 도메인 재구성
 
@@ -468,36 +507,7 @@ Spring Boot에서 컨트롤러 테스트를 위해 여러 방법을 찾아보았
             </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Dec 01, 2020</span>
             </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-12-01T00:00:00+09:00">
     <meta itemprop="keywords" content="WordBookProject,SRS"></div>
-      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/algorithm/2020/07/22/baekjoon-1920.html"><h2 itemprop="headline" class="item__header">백준 - 1920번 : 수 찾기</h2></a></header>
-          <div class="item__description"><div class="article__content" itemprop="description articleBody">문제 설명
-수 찾기
-N개의 정수 A[1], A[2], …, A[N]이 주어져 있을 때, 이 안에 X라는 정수가 존재하는지 알아내는 프로그램을 작성하시오.
-
-입력
-
-첫째 줄에 자연수 N(1≤N≤100,000)이 주어진다. 다음 줄에는 N개의 정수 A[1], A[2], …, A[N]이 주어진다. 다음 줄에는 M(1≤M≤100,000)이 주어진다. 다음 줄에는 M개의 수들이 주어지는데, 이 수들이 A안에 존재하는지 알아내면 된다. 모든 정수의 범위는 -231 보다 크거나 같고 231보다 작다.
-
-출력
-
-M개의 줄에 답을 출력한다. 존재하면 1을, 존재하지 않으면 0을 출력한다.
-
-
-풀이 내용
-
-이분 탐색을 하기위해선 정...</div><p><a href="/algorithm/2020/07/22/baekjoon-1920.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=BinaraySearch">BinaraySearch</a>
-            </li><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=baekjoon">baekjoon</a>
-            </li><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=algorithm">algorithm</a>
-            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jul 22, 2020</span>
-            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-07-22T00:00:00+09:00">
-    <meta itemprop="keywords" content="BinaraySearch,baekjoon,algorithm"></div>
-      </article></div></div><div class="layout--home"><div class="pagination"><p>18 post articles, 3 pages.</p>
+      </article></div></div><div class="layout--home"><div class="pagination"><p>19 post articles, 3 pages.</p>
     <div class="pagination__menu">
       <ul class="menu menu--nowrap"><li><a class="button button--secondary button--circle" href="/">
             <i class="fas fa-angle-left"></i>
@@ -536,6 +546,12 @@ M개의 줄에 답을 출력한다. 존재하면 1을, 존재하지 않으면 0�
       <li><a href="/category/algorithm.html" class="tag">
       <span class="term">algorithm</span>
       <span class="count">(3)</span>
+      </a></li>
+    
+      
+      <li><a href="/category/spring-security.html" class="tag">
+      <span class="term">spring-security</span>
+      <span class="count">(1)</span>
       </a></li>
     
       
