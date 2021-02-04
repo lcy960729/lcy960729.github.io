@@ -391,23 +391,20 @@ Content-Type: application/json
 
 <p>단일 메시지 본문 내에서 하나 이상의 표현을 캡슐화한 여려 “multipart” 타입을 제공한다. 대부분 데이터 전송 ‘multipart/form-data’ 타입을 사용하는 경우가 많다. 멀티파트 타입은 미디어 타입 값의 일부로 경계 매개변수를 포함한다. 경계 매개 변수를 얘를 들어 보면  아래와 같다.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```html
-&lt;form action = "http://localhost/images"
-			enctype = "multipart/form-data"
-			method = "post"&gt;
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;form</span> <span class="na">action = </span><span class="s">"http://localhost/images"</span>
+      <span class="na">enctype = </span><span class="s">"multipart/form-data"</span>
+      <span class="na">method = </span><span class="s">"post"</span><span class="nt">&gt;</span>
 
-	&lt;input type="text" name = "imageName"&gt;&lt;br&gt;
-	&lt;input type="file" name = "image"&gt;&lt;br&gt;
-	&lt;input type="submit" name = "upload"&gt;&lt;br&gt;
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name = </span><span class="s">"imageName"</span><span class="nt">&gt;&lt;br&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">name = </span><span class="s">"image"</span><span class="nt">&gt;&lt;br&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">name = </span><span class="s">"upload"</span><span class="nt">&gt;&lt;br&gt;</span>
 
-&lt;/form&gt;
-```
+<span class="nt">&lt;/form&gt;</span>
 </code></pre></div></div>
 
 <p>위 처럼 폼을 만들어주고 Request 구문을 생성한것이 아래와 같다. 바운더리 변수가 만들어지고 form data의 타입마다 경계를 주어 구문을 분석한다. 메시지 본문은 그 자체로 프로토콜 요소이며 발신자는 본문 부분 사이의 줄 바꿈을 나타내기위해 CRLF만 생성해야한다.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```html
-POST /images HTTP/1.1
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST /images HTTP/1.1
 Host: localhost
 Content-Length: 228
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
@@ -421,7 +418,6 @@ Content-Disposition: form-data; name="file"
 
 123412341234
 ----WebKitFormBoundary7MA4YWxkTrZu0gW
-```
 </code></pre></div></div>
 
 <h4 id="3115-content-type">3.1.1.5 Content-Type</h4>
