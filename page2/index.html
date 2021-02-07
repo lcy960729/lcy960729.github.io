@@ -281,6 +281,23 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 <!-- end custom main top snippet -->
 <article itemscope itemtype="http://schema.org/WebPage"><header style="display:none;"><h1>CY 개발 블로그 - 2</h1></header><meta itemprop="headline" content="CY 개발 블로그 - 2"><meta itemprop="author" content="Lee Chan Young"/><div class="js-article-content"><div class="layout--articles"><div class="article-list items items--divided"><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
+          <header><a href="/wordbook-project/2021/01/13/Mapper-Test-Code-%EB%B0%8F-%EC%83%9D%EA%B0%81.html"><h2 itemprop="headline" class="item__header">Mapper Test Code 및 생각</h2></a></header>
+          <div class="item__description"><div class="article__content" itemprop="description articleBody">2021-01-13 :: Mapper Test Code 및 생각
+
+하루 전에 생각했던 Mapper Test code를 작성해보았다. 커스텀한 맵핑 규칙에 대해 테스트를  동작 하였고 전체적인 맵핑 메소드를 테스트 하였다. 아래는 작성해본 코드이다.
+
+테스트 코드 작성하면서 입력이 Null로 들어왔을때에 대한 생각인데 Null일때 에러를 내는것이 좋은지 유연하게 Blank 값을 넣어주는게 좋은지 생각해봐야겠다.
+
+또한 Jpa Entity 내 맵핑하는 변수가 Collection 객체일 경우를 생각해서 모두 final 변수로 두어 null값이 들어가지 않게 초기화하였다. 이 방법이 문제가 될만한 점이 있는지 생각해봐야겠...</div><p><a href="/wordbook-project/2021/01/13/Mapper-Test-Code-%EB%B0%8F-%EC%83%9D%EA%B0%81.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=WordBookProject">WordBookProject</a>
+            </li><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=TestCode">TestCode</a>
+            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jan 13, 2021</span>
+            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2021-01-13T00:00:00+09:00">
+    <meta itemprop="keywords" content="WordBookProject,TestCode"></div>
+      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
           <header><a href="/wordbook-project/2021/01/12/%EC%84%A4%EA%B3%84-%EB%B0%8F-%EA%B5%AC%ED%98%84%EC%8B%9C-%EA%B0%81-%EB%8B%A8%EA%B3%84%EC%97%90%EC%84%9C-%EC%83%9D%EA%B0%81%ED%95%B4%EB%B4%90%EC%95%BC%ED%95%A0%EA%B2%83%EB%93%A4-%EC%A0%95%EB%A6%AC.html"><h2 itemprop="headline" class="item__header">설계 및 구현시 각 단계에서 생각해봐야할것들 정리</h2></a></header>
           <div class="item__description"><div class="article__content" itemprop="description articleBody">2021-01-12 :: 설계 및 구현시 각 단계에서 생각해봐야할것들 정리
 
@@ -469,45 +486,7 @@ Spring Boot에서 컨트롤러 테스트를 위해 여러 방법을 찾아보았
             </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Dec 13, 2020</span>
             </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-12-13T00:00:00+09:00">
     <meta itemprop="keywords" content="WordBookProject,SpringBoot,TestCode,MVC,Junit,Mockito"></div>
-      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/wordbook-project/2020/12/01/%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD-%EB%B6%84%EC%84%9D-%EC%A0%95%EB%A6%AC.html"><h2 itemprop="headline" class="item__header">요구사항 분석 정리</h2></a></header>
-          <div class="item__description"><div class="article__content" itemprop="description articleBody">2020-12-01 :: 요구사항 분석 정리
-
-사용자 기능
-
-
-  개인 사용자
-    
-      개인 사용자는 개인 단어장들을 관리
-    
-  
-  그룹 사용자
-    
-      여러 개인 사용자들이 참여하여 단어장들을 관리
-      그룹 사용자가 테스트를 추가하면 참여한 모든 그룹이 테스트를 수행
-    
-  
-
-
-커뮤니티 기능
-
-
-  암기법 공유 (자신이 커스텀한 테스트 방식을 공유)
-    
-      암기법 공유시 테스트 설정만 공유할껀지 단어장 모두를 공유할 것인지?
-    
-  
-  단어장 공유 (자신이 등록한 단어장 공유)
-  커뮤니티의 모든 게시글은 추가, 수정, 삭제, 추천, 댓글 기능을 제...</div><p><a href="/wordbook-project/2020/12/01/%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD-%EB%B6%84%EC%84%9D-%EC%A0%95%EB%A6%AC.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=WordBookProject">WordBookProject</a>
-            </li><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=SRS">SRS</a>
-            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Dec 01, 2020</span>
-            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-12-01T00:00:00+09:00">
-    <meta itemprop="keywords" content="WordBookProject,SRS"></div>
-      </article></div></div><div class="layout--home"><div class="pagination"><p>19 post articles, 3 pages.</p>
+      </article></div></div><div class="layout--home"><div class="pagination"><p>20 post articles, 3 pages.</p>
     <div class="pagination__menu">
       <ul class="menu menu--nowrap"><li><a class="button button--secondary button--circle" href="/">
             <i class="fas fa-angle-left"></i>
@@ -551,7 +530,7 @@ Spring Boot에서 컨트롤러 테스트를 위해 여러 방법을 찾아보았
       
       <li><a href="/category/http.html" class="tag">
       <span class="term">http</span>
-      <span class="count">(1)</span>
+      <span class="count">(2)</span>
       </a></li>
     
       

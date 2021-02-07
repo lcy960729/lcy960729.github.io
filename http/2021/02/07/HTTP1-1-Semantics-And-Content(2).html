@@ -3,10 +3,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-<meta name="google-site-verification" content="MPabF1ekBC4HrQ2-rr10bAh-KHVKSCnuWYXiKbc2ICQ" /><title>java - CY 개발 블로그</title>
+<meta name="google-site-verification" content="MPabF1ekBC4HrQ2-rr10bAh-KHVKSCnuWYXiKbc2ICQ" /><title>HTTP 1.1 Reference - Semantics and Content (2) (최종 수정 날짜 : 2021-02-07) - CY 개발 블로그</title>
 
-<meta name="description" content="">
-<link rel="canonical" href="https://lcy960729.github.io/category/java.html"><link rel="alternate" type="application/rss+xml" title="CY 개발 블로그" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
+<meta name="description" content="참고 자료  이병록님이 번역하신 HTTP 1.1 Semantics and Content 번역본https://roka88.dev/106  MDN Web Docshttps://developer.mozilla.org/ko/docs/Web/HTTP이외 자료는 내용 중 링크 추가틀린 내용,...">
+<link rel="canonical" href="https://lcy960729.github.io/http/2021/02/07/HTTP1-1-Semantics-And-Content(2).html"><link rel="alternate" type="application/rss+xml" title="CY 개발 블로그" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/assets/browserconfig.xml">
 
@@ -256,7 +256,7 @@
 </head>
   <body>
     <div class="root" data-is-touch="false">
-      <div class="layout--page js-page-root"><div class="page__main js-page-main page__viewport cell cell--auto">
+      <div class="layout--page js-page-root"><div class="page__main js-page-main page__viewport has-aside cell cell--auto">
 
       <div class="page__main-inner"><div class="page__header d-print-none"><header class="header"><div class="main">
       <div class="header__title">
@@ -272,66 +272,194 @@
         <ul><li class="navigation__item"><a href="/">Home</a></li><li class="navigation__item"><a href="/archive.html">Archive</a></li><li class="navigation__item"><a href="/about.html">About</a></li><li><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></li></ul>
       </nav></div>
   </header>
-</div><!-- 카테고리 추가를 위해 page__center 추가 -->
-      <div class="page__center">
-        <div class="page__content"><div class ="main"><div class="grid grid--reverse">
+</div><div class="page__content"><div class ="main"><div class="grid grid--reverse">
 
-              <div class="col-aside d-print-none js-col-aside"></div>
+              <div class="col-aside d-print-none js-col-aside"><aside class="page__aside js-page-aside"><div class="toc-aside js-toc-root"></div></aside></div>
 
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/WebPage"><div class="article__header"><header>
-          <h1>java</h1>
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header>
+          <h1>HTTP 1.1 Reference - Semantics and Content (2) (최종 수정 날짜 : 2021-02-07)</h1>
           <br>
           <h2 style="font-size: 20px;"></h2>
-        </header></div><meta itemprop="headline" content="java"><meta itemprop="author" content="Lee Chan Young"/><div class="js-article-content"><div class="layout--articles"><div class="article-list items items--divided"></div></div><div class="layout--home"></div>
+        </header><span class="split-space">&nbsp;</span>
+          <a class="edit-on-github"
+            title="Edit on Github"
+            href="https://github.com/lcy960729/blog.maker/tree/master/_posts/HTTP/2021-02-07-HTTP1-1-Semantics-And-Content(2).md">
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="HTTP 1.1 Reference - Semantics and Content (2) (최종 수정 날짜 : 2021-02-07)"><div class="article__info clearfix"><ul class="left-col menu"><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=Web">Web</a>
+            </li><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=HTTP1.1">HTTP1.1</a>
+            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Feb 07, 2021</span>
+            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2021-02-07T00:00:00+09:00">
+    <meta itemprop="keywords" content="Web,HTTP1.1"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
-<script>/*(function () {
+<!-- end custom article top snippet -->
+<div class="article__content" itemprop="articleBody"><h1 id="참고-자료">참고 자료</h1>
+<ul>
+  <li>이병록님이 번역하신 HTTP 1.1 Semantics and Content 번역본<br />
+<a href="https://roka88.dev/106">https://roka88.dev/106</a></li>
+  <li>MDN Web Docs<br />
+<a href="https://developer.mozilla.org/ko/docs/Web/HTTP">https://developer.mozilla.org/ko/docs/Web/HTTP</a></li>
+</ul>
 
-})();*/
+<p>이외 자료는 내용 중 링크 추가</p>
+<h5 id="틀린-내용-부족한-내용-꼭-지적-부탁드립니다">틀린 내용, 부족한 내용 꼭 지적 부탁드립니다!</h5>
+
+<h1 id="1-request-methods">1. Request Methods</h1>
+<h2 id="11-overview">1.1 Overview</h2>
+<p>Request 메소드 토큰은 Request 요청에서 가장 큰의미를 나타내며 클라이언트가 요청을 한 목적과 성공적인 결과로 클라이언트가 기대하는것을 나타낸다.
+(GET 요청을 했다면 리소스를 가져오는 목적이였을 것이며, 반환 값으로는 해당 리소스를 원했을 것이다)
+Request 메소드의 의미론은 Request에 어떠한 헤더 필드가 있을 때, 추가된 의미론과 메소드가 충돌되지 않는 경우 더 적합할 수 있다. 예를 들어 클라이언트는 조건부 요청 헤더 필드를 보내 대상 리소스의 현재 상태를 조건으로 요청된 작업을 수행 할 수 있다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">method = token</code></p>
+
+<p>HTTP는 원래 분산 객체 시스템에 대한 인터페이스로 사용할 수 있도록 설계 되었다. 요청 메소드는 식별된 객체에 대해 정의된 메소드를 호출하는 것과 거의 동일한 방법으로 대상 리소스에 의미론을 적용하도록 구상 되었다. 메소드 토큰은 대소문자를 구분한다. 왜나하면 대소문자를 구분하는 객체 기반 시스템의 게이트웨이로 사용될 수 있기 때문이다.</p>
+
+<p>분산된 객체와 달리, HTTP의 표준화된 요청 메소드는 리소스에 특정하지 않는다. 적합한 인터페이스는 네트워크 기반 시스템[REST]에서 더 나은 가시성과 재사용을 제공하기 때문이다. 표준화된 메소드는 어떠한 리소스에 적용될때 같은 의미론을 가진다. 각 리소스는 이러한 의미론이 구현되는지, 허용되는지는 자체적으로 결정한다. (개발자가 해당 메소드를 구현하냐 마냐에 대한 얘기인듯.)</p>
+
+<p>다음 표에는 요약된 바와 같이 HTTP에서 일반적으로 사용되는 다수의 표준화된 메서드를 정의한다. 표준화된 메서드는 대문자 US-ASCII 문자로 정의된다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Method</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">GET</td>
+      <td style="text-align: left">대상 리소스의 현재 Representation을 전송</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">HEAD</td>
+      <td style="text-align: left">GET과 동일하나, status-line과 header부분만 전송</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">POST</td>
+      <td style="text-align: left">요청 페이로드에서 리소스의 구체적인 처리 수행</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">PUT</td>
+      <td style="text-align: left">대상 리소스의 모든 현재 Representation을 요청 페이로드로 대체</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">DELETE</td>
+      <td style="text-align: left">대상 리소스의 현재 Representation 모두 제거</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">CONNECT</td>
+      <td style="text-align: left">대상 리소스로 식별된 서버에 대한 터널 설립</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">OPTIONS</td>
+      <td style="text-align: left">대상 리소스에 대한 통신 옵션 설명</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">TRACE</td>
+      <td style="text-align: left">대상 리소스의 경로를 따라 메시지 루프백 테스트를 수행</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>모든 범용 서버는 GET 및 HEAD 메서드를 지원해야한다. 다른 메서드는 선택사항이다.</p>
+
+<p>이 명세 범위를 벗어난 추가 메서드는 HTTP에서 사용할 수 있도록 표준화되었다. 이러한 모든 메서드는 IANA에 의해 유지 되는 “Hypertext TransferProtocol (HTTP) Method Registry” 내에 등록되어야 한다.</p>
+
+<p>대상 리소스가 허용되는 메서드 집합은 Allow 헤더 필드에 나열할 수 있다. 그러나 허용된 메서드 집합은 동적으로 변할 수 있다. 서버에서 인식되지 않거나 구현되지 않은 요청 메서드가 수신되면 서버는 501(Not Implemented) 상태 코드로 응답해야 한다. 서버에서 구현은 되어 있지만 대상 리소스에 대해 사용 할 수 없는 메소드라면 서버는 405(Method Not Allowed) 상태 코드로 응답해야 한다.</p>
+
+<h2 id="42-common-method-properties">4.2. Common Method Properties</h2>
+<h3 id="421-safe-methods">4.2.1. Safe Methods</h3>
+<p>요청 메서드는 정의된 의미론이 읽기 전용인경우 ‘safe’로 간주한다. 예를 들어 리소스에 대해서 safe 한 method를 적용한 결과는 서버의 어떠한 상태변화에 대해서 요구하지도 기대하지도 않는다. 마찬가지로 safe method의 합리적인 사용은 서버에 어떠한 위협과 비정상적인 행위를 야기하지 않을것이다.</p>
+
+<p>이러한 safe methods는 완전한 읽기 전용이 아니거나, 호출하는 동안 부작용을 일으키는 행동을 구현하는것을 막지 않는다. 중요한 것은 클라이언트가 추가 행동을 요구하지 않았고 이에 대한 책임을 물을 수 없기 때문에 안전하게 구현을 해야한다. 예를 들어 대부분 서버는 메서드 관계없이 모든 응답이 완료될 때 로그파일에 액세스 하기 위해 요청 정보를 추가하며, 로그 저장소가 가득 차서 서버가 다운될 수 있더라도 안전하다고 간주된다. 마찬가지로 웹에서 광고를 선택하여 시작된 safe 요청은 종종 광고 계정에 요금을 청구하는 부작용을 낳을 것이다.</p>
+
+<p>이 명세에 의해 정의된 요청 메소드 중 GET, HEAD, OPTION, TRACE 메서드는 안전하다고 정의된다.</p>
+
+<p>안전한 메서드와 안전하지 않은 메서드를 구분하는 목적은 자동 검색 프로세스(spider)와 캐시 성능 최적화(pre-fetching)가 문제를 일으키질 않도록 하기 위함이다. 또한 잠재적으로 신뢰할 수 없는 콘텐츠를 처리할 때 안전하지 않은 메서드의 자동 사용에 적절한 제약 조건을 적용할 수 있도록 한다.</p>
+
+<p>사용자 에이전트는 사용자에게 잠재적 행동을 제시할 때 사용자가 요청하기 전에 안전하지 않은 메서드를 인지할 수 있도록 안전한 메서드와 안전하지 않은 메서드를 구분해야 한다.</p>
+
+<p>유효한 요청 URI 내의 매개변수가 action 선택의 영향을 미치도록 리소스를 구성할 때, action이 요청 메소드의 의미와 일치하는지 확인하는 것은 리소스 소유자의 책임이다. 예를 들어 웹 기반 콘텐츠 편집 소프트웨어는 “page?do=delete”와 같은 쿼리 매개변수 내의 작업을 사용하는 것이 일반적이다. 이러한 리소스의 목적이 안전하지 않은 작업을 수행하는 것이라면, 리소스 소유자는 안전한 요청 메소드를 사용하여 액세스할 때 해당 작업을 비활성화하거나 허용하지 않아야 한다. 그렇게 하지 않으면 자동화된 프로세스가 링크 유지보수, pre-fetching (어플리케이션의 성능 향상을 위해서 구동에 필요한 데이터를 메모리에 먼저 올려 놓는것.), 검색 인덱스 작성 등을 위해 모든 URI 참조에 대해 GET을 수행할 떄 적절하지 못한 부작용을 초래할 수 있다.</p>
+
+<h3 id="422-idempotent-methods">4.2.2 Idempotent Methods</h3>
+<p>요청 메서드는 해당 메서드를 여러번 요청했을때와 한번 요청했을때의 결과가 동일 한 경우, “idempotent”으로 간주된다(멱등성) 이 명세에 의해 정의된 요청 메서드 중 PUT, DELETE, 및 safe method는 멱등하다.</p>
+
+<p>안전함의 정의와 마찬가지로, 멱등의 속성은 사용자가 요청한 것에만 적용된다. 서버는 각 요청을 별도로 로깅하거나, 버전 기록을 유지하거나 또는 각각 멱등 요청에서 비 멱-등한 결과를 구현하는것은 자유롭다.</p>
+
+<p>멱등 메서드는 클라이언트가 서버의 응답을 읽기 전에 통신 장애가 발생하면 요청이 자동으로 반복될 수 있기 때문에 구별된다. 예를 들어 클라이언트가 PUT 요청을 보내고 응답이 수신되기 전에 기본 커넥션이 닫히면 클라이언트는 새로운 커넥션을 설정하고 멱등한 요청을 재시도할 수 있다. 응답은 다를수 있지만, 이전의 요청이 성공했더라도, 우리는 요청을 반복하는 것은 의도된 것과 같은 효과를 낸 다는것을 알고 있다.</p>
+
+<h3 id="423-cacheable-methods">4.2.3. Cacheable Methods</h3>
+<p>요청 메소드는 “cacheable”로 정의하여 향후 재사용에 대한 응답을 저장할 수 있다. 일반적으로 현재(아마 현재 상태와 의존하는 뜻인듯)와 권한 있는 응답에 의존하지 않는 safe 메서드는 캐시 가능으로 정의 된다. GET, HEAD 및 POST를 캐시 가능으로 정의하지만, 압도적으로 캐시구현은 GET와 HEAD만 지원한다. (POST는 safe method가 아니라고 했는데 뭐지?? 어떠한 상태 변화도 하지 않는 POST 요청은 괜찮다는건가?)</p>
+
+<h2 id="43-method-definitions">4.3. Method Definitions</h2>
+<h3 id="431-get">4.3.1 GET</h3>
+</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2021-02-07T00:00:00+09:00"><!-- start custom article footer snippet -->
+
+<!-- end custom article footer snippet -->
+<div class="article__subscribe"><div class="subscribe"><i class="fas fa-rss"></i> <a type="application/rss+xml" href="/feed.xml">Subscribe</a></div>
+</div><div class="article__license"><div class="license">
+    <p>This work is licensed under a <a itemprop="license" rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">Attribution-NonCommercial 4.0 International</a> license.
+      <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">
+        <img alt="Attribution-NonCommercial 4.0 International" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+      </a>
+    </p>
+  </div></div></footer>
+<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/http/2021/02/06/HTTP1-1-Semantics-And-Content(1).html">HTTP 1.1 Reference - Semantics and Content (1) (최종 수정 날짜 : 2021-02-06)</a></div><div class="next"><span>NEXT</span><a href="/spring-security/2021/02/07/Spring-Security%EC%9D%98-%EA%B8%B0%EB%8A%A5.html">Spring Security의 기능 (최종 수정 날짜 : 2021-02-07)</a></div></div></div>
+
+</div>
+
+<script>(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    $(function() {
+      var $this ,$scroll;
+      var $articleContent = $('.js-article-content');
+      var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+      var scroll = hasSidebar ? '.js-page-main' : 'html, body';
+      $scroll = $(scroll);
+
+      $articleContent.find('.highlight').each(function() {
+        $this = $(this);
+        $this.attr('data-lang', $this.find('code').attr('data-lang'));
+      });
+      $articleContent.find('h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]').each(function() {
+        $this = $(this);
+        $this.append($('<a class="anchor d-print-none" aria-hidden="true"></a>').html('<i class="fas fa-anchor"></i>'));
+      });
+      $articleContent.on('click', '.anchor', function() {
+        $scroll.scrollToAnchor('#' + $(this).parent().attr('id'), 400);
+      });
+    });
+  });
+})();
 </script>
-
-
-
-</div><section class="page__comments d-print-none"></section></article><!-- start custom main bottom snippet -->
+</div><section class="page__comments d-print-none"><!-- fix text color in the input textarea of gitalk -->
+	<style type="text/css">
+		.gitalk-wrapper .gt-header-textarea {
+			color: #333 !important;
+		}
+	</style><div class="gitalk-wrapper" id="js-gitalk-container"></div><script>
+		window.Lazyload.css('https://unpkg.com/gitalk@1.2.2/dist/gitalk.css');
+		window.Lazyload.js('https://unpkg.com/gitalk@1.2.2/dist/gitalk.min.js', function() {
+			var gitalk = new Gitalk({
+				clientID: '01d2e03b7c76897f67e8',
+				clientSecret: 'cd232f3cfd8f69557d94f96de97ea4a5c41c44df',
+				repo: 'lcy960729.github.io',
+				owner: 'lcy960729',
+				admin: ['lcy960729'],
+				id: 'HTTP 1.1 Reference - Semantics and Content (2)'
+			});
+			gitalk.render('js-gitalk-container');
+		});
+	</script></section></article><!-- start custom main bottom snippet -->
 
 <!-- end custom main bottom snippet -->
 </div>
-            </div></div><!-- 카테고리 추가를 위해 div와 category.html 추가 -->
-        </div>
-
-<header class="site-category" >
-  <ul class="entry-meta inline-list">
-    <h1>Categories</h1>
-    <hr>
-    
-      
-      <li><a href="/category/algorithm.html" class="tag">
-      <span class="term">algorithm</span>
-      <span class="count">(3)</span>
-      </a></li>
-    
-      
-      <li><a href="/category/http.html" class="tag">
-      <span class="term">http</span>
-      <span class="count">(2)</span>
-      </a></li>
-    
-      
-      <li><a href="/category/spring-security.html" class="tag">
-      <span class="term">spring-security</span>
-      <span class="count">(1)</span>
-      </a></li>
-    
-      
-      <li><a href="/category/wordbook-project.html" class="tag">
-      <span class="term">wordbook-project</span>
-      <span class="count">(14)</span>
-      </a></li>
-    
-    <hr id="categories_underLine">
-  </ul>
-</header></div><div class="page__footer d-print-none">
+            </div></div></div><div class="page__footer d-print-none">
 <footer class="footer py-4 js-page-footer">
   <div class="main"><div itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lee Chan Young"><meta itemprop="url" content="https://lcy960729.github.io/"><meta itemprop="description" content="Lee ChanYoung"><div class="footer__author-links"><div class="author-links">
@@ -802,6 +930,68 @@ window.Lazyload.js(SOURCES.jquery, function() {
 /*(function () {
 
 })();*/
+</script><script>
+  /* toc must before affix, since affix need to konw toc' height. */(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  var TOC_SELECTOR = window.TEXT_VARIABLES.site.toc.selectors;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $window = $(window);
+    var $articleContent = $('.js-article-content');
+    var $tocRoot = $('.js-toc-root'), $col2 = $('.js-col-aside');
+    var toc;
+    var tocDisabled = false;
+    var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+    var hasToc = $articleContent.find(TOC_SELECTOR).length > 0;
+
+    function disabled() {
+      return $col2.css('display') === 'none' || !hasToc;
+    }
+
+    tocDisabled = disabled();
+
+    toc = $tocRoot.toc({
+      selectors: TOC_SELECTOR,
+      container: $articleContent,
+      scrollTarget: hasSidebar ? '.js-page-main' : null,
+      scroller: hasSidebar ? '.js-page-main' : null,
+      disabled: tocDisabled
+    });
+
+    $window.on('resize', window.throttle(function() {
+      tocDisabled = disabled();
+      toc && toc.setOptions({
+        disabled: tocDisabled
+      });
+    }, 100));
+
+  });
+})();
+(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $window = $(window), $pageFooter = $('.js-page-footer');
+    var $pageAside = $('.js-page-aside');
+    var affix;
+    var tocDisabled = false;
+    var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+
+    affix = $pageAside.affix({
+      offsetBottom: $pageFooter.outerHeight(),
+      scrollTarget: hasSidebar ? '.js-page-main' : null,
+      scroller: hasSidebar ? '.js-page-main' : null,
+      scroll: hasSidebar ? $('.js-page-main').children() : null,
+      disabled: tocDisabled
+    });
+
+    $window.on('resize', window.throttle(function() {
+      affix && affix.setOptions({
+        disabled: tocDisabled
+      });
+    }, 100));
+
+    window.pageAsideAffix = affix;
+  });
+})();
 </script>
     </div>
     <script>(function () {
