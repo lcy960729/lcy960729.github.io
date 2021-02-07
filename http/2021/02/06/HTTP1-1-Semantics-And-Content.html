@@ -6,7 +6,7 @@
 <meta name="google-site-verification" content="MPabF1ekBC4HrQ2-rr10bAh-KHVKSCnuWYXiKbc2ICQ" /><title>HTTP 1.1 Reference - Semantics and Content (최종 수정 날짜 : 2021-02-06) - CY 개발 블로그</title>
 
 <meta name="description" content="참고 자료  이병록님이 번역하신 HTTP 1.1 Semantics and Content 번역본https://roka88.dev/106  MDN Web Docshttps://developer.mozilla.org/ko/docs/Web/HTTP이외 자료는 내용 중 링크 추가틀린 내용,...">
-<link rel="canonical" href="https://lcy960729.github.io/http/2021/02/04/HTTP1-1-Semantics-And-Content.html"><link rel="alternate" type="application/rss+xml" title="CY 개발 블로그" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
+<link rel="canonical" href="https://lcy960729.github.io/http/2021/02/06/HTTP1-1-Semantics-And-Content.html"><link rel="alternate" type="application/rss+xml" title="CY 개발 블로그" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/assets/browserconfig.xml">
 
@@ -285,15 +285,15 @@
         </header><span class="split-space">&nbsp;</span>
           <a class="edit-on-github"
             title="Edit on Github"
-            href="https://github.com/lcy960729/blog.maker/tree/master/_posts/HTTP/2021-02-04-HTTP1-1-Semantics-And-Content.md">
+            href="https://github.com/lcy960729/blog.maker/tree/master/_posts/HTTP/2021-02-06-HTTP1-1-Semantics-And-Content.md">
             <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="HTTP 1.1 Reference - Semantics and Content (최종 수정 날짜 : 2021-02-06)"><div class="article__info clearfix"><ul class="left-col menu"><li>
               <a class="button button--secondary button--pill button--sm"
                 href="/archive.html?tag=Web">Web</a>
             </li><li>
               <a class="button button--secondary button--pill button--sm"
                 href="/archive.html?tag=HTTP">HTTP</a>
-            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Feb 04, 2021</span>
-            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2021-02-04T00:00:00+09:00">
+            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Feb 06, 2021</span>
+            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2021-02-06T00:00:00+09:00">
     <meta itemprop="keywords" content="Web,HTTP"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
@@ -389,7 +389,7 @@ Content-Type: application/json
 
 <h4 id="3114-multipart-types--참고-내용--httpsqssdevtistorycom47">3.1.1.4. Multipart Types ( 참고 내용 : <a href="https://qssdev.tistory.com/47">https://qssdev.tistory.com/47</a>)</h4>
 
-<p>단일 메시지 본문 내에서 하나 이상의 표현을 캡슐화한 여려 “multipart” 타입을 제공한다. 대부분 데이터 전송 ‘multipart/form-data’ 타입을 사용하는 경우가 많다. 멀티파트 타입은 미디어 타입 값의 일부로 경계 매개변수를 포함한다. 경계 매개 변수를 얘를 들어 보면  아래와 같다.</p>
+<p>단일 메시지 본문 내에서 하나 이상의 표현을 캡슐화한 여려 “multipart” 타입을 제공한다. 대부분 데이터 전송 ‘multipart/form-data’ 타입을 사용하는 경우가 많다. 멀티파트 타입은 미디어 타입 값의 일부로 경계 매개변수를 포함한다. 경계 매개 변수를 예를 들어 보면  아래와 같다.</p>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;form</span> <span class="na">action = </span><span class="s">"http://localhost/images"</span>
       <span class="na">enctype = </span><span class="s">"multipart/form-data"</span>
@@ -534,12 +534,13 @@ Content-Location: /my-receipts/38
 
 <p>요청 메시지로 Content-Location을 전송하는 사용자는 헤더에 보낼 값인 URI는 사용자가 이전에 Representation의 내용을 획득한 곳을 의미한다. 즉 사용자는 원래 Representation의 리소스에 대한 이전 링크를 제공하는 것이다.</p>
 
-<p>요청 메시지에서 Content-Location 필드를 수신하는 서버는 정보를 Representation의 일부로 저장하기 위한 메타 데이터가 아닌 임시 요청 컨텍스트로 취급해야한다. 서버는 요청 처리를 안내하거나 소스 링크 또는 버전 메타데이터 내의 다른 용도로 저장하기 위해 이 컨텍스트를 사용할 수 있다. 단 서버는 요청 의미를 변경하기 위해 이러한 컨텍스트 정보를 사용해서는 안된다.</p>
-
-<p>예를 들어 클라이언트가 협상된 리소스에 대해 PUT (리디렉션 x) 요청을 하고 서버가 PUT 요청을 수락하는 경우, 해당 리소스의 새로운 상태는 해당 PUT에 제공된 하나의 Representation과 일치할 것으로 예상된다. Content-Location은 협상된 표현 중 하나만 업데이트할 수 있는 역방향 컨텐츠 선택 식별자의 형태로 사용될 수 없다. 사용자가 후자의 의미를 원했다면 PUT을 Content-Location URI에 직접 적용했을것이다.</p>
+<p>요청 메시지에서 Content-Location 필드를 수신하는 서버는 정보를 Representation의 일부로 저장하기 위한 메타 데이터가 아닌 임시 요청 컨텍스트로 취급해야한다. 서버는 요청 처리를 안내하거나 소스 링크 또는 버전 메타데이터 내의 다른 용도로 저장하기 위해 이 컨텍스트를 사용할 수 있다. 단 서버는 요청 의미를 변경하기 위해 이러한 컨텍스트 정보를 사용해서는 안된다.
+예를 들어 클라이언트가 협상된 리소스에 대해 PUT (리디렉션 x) 요청을 하고 서버가 PUT 요청을 수락하는 경우, 해당 리소스의 새로운 상태는 해당 PUT에 제공된 하나의 Representation과 일치할 것으로 예상된다. Content-Location은 협상된 표현 중 하나만 업데이트할 수 있는 역방향 컨텐츠 선택 식별자의 형태로 사용될 수 없다.
+사용자가 후자의 의미를 원했다면 PUT을 Content-Location URI에 직접 적용했을것이다.</p>
 
 <blockquote>
-  <p>솔직히 Content-Location 헤더의 역할과 의미가 잘 이해가 되지 않는다. 사용되는 예제도 잘 보이지 않을 뿐더러… 일단은 넘기는 걸로 (2021-02-06)</p>
+  <p>솔직히 Content-Location 헤더의 역할과 의미가 잘 이해가 되지 않는다. 사용되는 예제도 잘 보이지 않을 뿐더러… 일단은 넘기는 걸로 (2021-02-06)
+다시 생각해보니 PUT /URL 요청시 Content-Location은 변경되는 리소스를 가르키는 /URL이 되어야한다는 의미인거같다. 만약 PUT /URL 요청시 Content-Location을 /URLe 라는 하나의 표현에 대한 업데이트를 한다는것은 말이 안되기 때문이다. Representation이라는 것은 리소스를 여러 모습으로 표현한것이지 변경되는것은 해당하는 표현이 아니라 리소스이기 때문이다. (라고 이해 했지만 아직 잘 …)</p>
 </blockquote>
 
 <h2 id="32-representation-data">3.2. Representation Data</h2>
@@ -614,7 +615,7 @@ body : { 'name' : 'newUser' }
 <p><img src="/assets/images/http1-1SemanticsAndContent/ReactiveNegotiation.png" alt="Reactive Negotiation" /></p>
 
 <p>불행하게도, HTTP 표준은 그 과정을 쉽게 자동화하는 것을 지원하지 않고, 사용 가능한 리소스 중에서 선택하도록 허용하는 페이지의 형식을 명시하지 않고 있습니다. 게다가 서버 주도 협상으로의 회귀로, 이 방법은 스크립팅, 특히 자바스크립트 리다이렉션과 함께 거의 항상 사용됩니다: 협상 기준을 점검하고 난 뒤에, 스크립트는 리다이렉션을 실행합니다. 두번째 문제는 실제 리소스를 가져오는데 한 개 이상의 요청이 필요로 해서, 사용자에 대한 리소스 효용성이 떨어진다는 것입니다.</p>
-</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2021-02-04T00:00:00+09:00"><!-- start custom article footer snippet -->
+</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2021-02-06T00:00:00+09:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
 <div class="article__subscribe"><div class="subscribe"><i class="fas fa-rss"></i> <a type="application/rss+xml" href="/feed.xml">Subscribe</a></div>
@@ -625,7 +626,7 @@ body : { 'name' : 'newUser' }
       </a>
     </p>
   </div></div></footer>
-<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/wordbook-project/2021/01/24/%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%BD%94%EB%93%9C-%EC%88%98%EC%A0%95-%EC%99%84%EB%A3%8C-%EB%B0%8F-%EB%B3%80%EA%B2%BD%EC%A0%90.html">테스트 코드 수정 완료 및 변경점</a></div><div class="next"><span>NEXT</span><a href="/spring-security/2021/02/04/Spring-Security%EC%9D%98-%EA%B8%B0%EB%8A%A5.html">Spring Security의 기능 (최종 수정 날짜 : 2021-02-04)</a></div></div></div>
+<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/wordbook-project/2021/01/24/%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%BD%94%EB%93%9C-%EC%88%98%EC%A0%95-%EC%99%84%EB%A3%8C-%EB%B0%8F-%EB%B3%80%EA%B2%BD%EC%A0%90.html">테스트 코드 수정 완료 및 변경점</a></div><div class="next"><span>NEXT</span><a href="/spring-security/2021/02/06/Spring-Security%EC%9D%98-%EA%B8%B0%EB%8A%A5.html">Spring Security의 기능 (최종 수정 날짜 : 2021-02-06)</a></div></div></div>
 
 </div>
 
