@@ -281,6 +281,34 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 <!-- end custom main top snippet -->
 <article itemscope itemtype="http://schema.org/WebPage"><header style="display:none;"><h1>CY 개발 블로그 - 3</h1></header><meta itemprop="headline" content="CY 개발 블로그 - 3"><meta itemprop="author" content="Lee Chan Young"/><div class="js-article-content"><div class="layout--articles"><div class="article-list items items--divided"><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
+          <header><a href="/wordbook-project/2020/12/14/Spring-Boot-JPA-Test.html"><h2 itemprop="headline" class="item__header">Spring Boot JPA Test</h2></a></header>
+          <div class="item__description"><div class="article__content" itemprop="description articleBody">2020-12-14 :: Spring Boot JPA Test
+
+JPA를 테스트 하는 방법을 알아보겠다. 우리는 특정한 목적을 위해 쿼리를 작성할 일이 생기고 해당 쿼리가  문제 없이 올바르게 동작하는지 테스트할 필요가 있다. Springboot에서는 @DataJpaTest라는 어노테이션을 이용하여 JPA를 테스트 할수 있게 해준다.
+
+//레퍼지토리
+public interface UserRepository extends JpaRepository&lt;User, Long&gt; {
+
+    @Query("SELECT u FROM user u where u.id = :id")
+    Optional&lt;User&gt...</div><p><a href="/wordbook-project/2020/12/14/Spring-Boot-JPA-Test.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=WordBookProject">WordBookProject</a>
+            </li><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=SpringBoot">SpringBoot</a>
+            </li><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=TestCode">TestCode</a>
+            </li><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=Junit">Junit</a>
+            </li><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=SpringBootDataJPA">SpringBootDataJPA</a>
+            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Dec 14, 2020</span>
+            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-12-14T00:00:00+09:00">
+    <meta itemprop="keywords" content="WordBookProject,SpringBoot,TestCode,Junit,SpringBootDataJPA"></div>
+      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
           <header><a href="/wordbook-project/2020/12/13/Spring-Boot-Service-Test.html"><h2 itemprop="headline" class="item__header">Spring Boot Service Test</h2></a></header>
           <div class="item__description"><div class="article__content" itemprop="description articleBody">2020-12-13 :: Spring Boot Service Test
 
@@ -486,7 +514,7 @@ M개의 줄에 답을 출력한다. 존재하면 1을, 존재하지 않으면 0�
             </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jul 03, 2020</span>
             </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-07-03T00:00:00+09:00">
     <meta itemprop="keywords" content="DynamicProgramming,baekjoon,algorithm"></div>
-      </article></div></div><div class="layout--home"><div class="pagination"><p>22 post articles, 3 pages.</p>
+      </article></div></div><div class="layout--home"><div class="pagination"><p>23 post articles, 3 pages.</p>
     <div class="pagination__menu">
       <ul class="menu menu--nowrap"><li><a class="button button--secondary button--circle" href="/page2/">
             <i class="fas fa-angle-left"></i>
@@ -530,7 +558,7 @@ M개의 줄에 답을 출력한다. 존재하면 1을, 존재하지 않으면 0�
       
       <li><a href="/category/http.html" class="tag">
       <span class="term">http</span>
-      <span class="count">(4)</span>
+      <span class="count">(5)</span>
       </a></li>
     
       

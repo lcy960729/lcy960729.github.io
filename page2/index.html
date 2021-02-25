@@ -281,6 +281,35 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 <!-- end custom main top snippet -->
 <article itemscope itemtype="http://schema.org/WebPage"><header style="display:none;"><h1>CY 개발 블로그 - 2</h1></header><meta itemprop="headline" content="CY 개발 블로그 - 2"><meta itemprop="author" content="Lee Chan Young"/><div class="js-article-content"><div class="layout--articles"><div class="article-list items items--divided"><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
+          <header><a href="/wordbook-project/2021/01/17/%EB%8F%84%EB%A9%94%EC%9D%B8-%EA%B8%B0%EB%8A%A5%EB%93%A4-%EA%B5%AC%ED%98%84-%EC%99%84%EB%A3%8C.html"><h2 itemprop="headline" class="item__header">도메인 기능들 구현 완료</h2></a></header>
+          <div class="item__description"><div class="article__content" itemprop="description articleBody">2021-01-17 :: 도메인 기능들 구현 완료
+
+모든 도메인에 대해서 Create, Update, Get 메소드의 반환 값이 동일 함으로 Create 메소드의 반환값으로만 설명을 하겠다.
+
+
+1. User 도메인
+
+먼저 유저이다. 일단 아직 Spring security를 사용하지 않았기 때문에 세션이 존재하지는 않는다.
+
+추가, 수정, 조회가 가능하다.
+
+1. create
+
+Request
+
+POST http://localhost:8080/api/v1/users
+
+Body : 
+{
+    "email": "testEmail@test.com",
+    "pw": "testPw",
+    "name": "testNa...</div><p><a href="/wordbook-project/2021/01/17/%EB%8F%84%EB%A9%94%EC%9D%B8-%EA%B8%B0%EB%8A%A5%EB%93%A4-%EA%B5%AC%ED%98%84-%EC%99%84%EB%A3%8C.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=WordBookProject">WordBookProject</a>
+            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jan 17, 2021</span>
+            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2021-01-17T00:00:00+09:00">
+    <meta itemprop="keywords" content="WordBookProject"></div>
+      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
           <header><a href="/wordbook-project/2021/01/15/Collection-Object-Null-%EC%B2%98%EB%A6%AC.html"><h2 itemprop="headline" class="item__header">Collection Object Null 처리</h2></a></header>
           <div class="item__description"><div class="article__content" itemprop="description articleBody">2021-01-15 :: Collection Object Null 처리
 
@@ -433,35 +462,7 @@ publi...</div><p><a href="/wordbook-project/2020/12/16/Spring-Boot-Controller-La
             </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Dec 16, 2020</span>
             </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-12-16T00:00:00+09:00">
     <meta itemprop="keywords" content="WordBookProject,SpringBoot,Validation,ErrorHandling"></div>
-      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/wordbook-project/2020/12/14/Spring-Boot-JPA-Test.html"><h2 itemprop="headline" class="item__header">Spring Boot JPA Test</h2></a></header>
-          <div class="item__description"><div class="article__content" itemprop="description articleBody">2020-12-14 :: Spring Boot JPA Test
-
-JPA를 테스트 하는 방법을 알아보겠다. 우리는 특정한 목적을 위해 쿼리를 작성할 일이 생기고 해당 쿼리가  문제 없이 올바르게 동작하는지 테스트할 필요가 있다. Springboot에서는 @DataJpaTest라는 어노테이션을 이용하여 JPA를 테스트 할수 있게 해준다.
-
-//레퍼지토리
-public interface UserRepository extends JpaRepository&lt;User, Long&gt; {
-
-    @Query("SELECT u FROM user u where u.id = :id")
-    Optional&lt;User&gt...</div><p><a href="/wordbook-project/2020/12/14/Spring-Boot-JPA-Test.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=WordBookProject">WordBookProject</a>
-            </li><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=SpringBoot">SpringBoot</a>
-            </li><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=TestCode">TestCode</a>
-            </li><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=Junit">Junit</a>
-            </li><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=SpringBootDataJPA">SpringBootDataJPA</a>
-            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Dec 14, 2020</span>
-            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2020-12-14T00:00:00+09:00">
-    <meta itemprop="keywords" content="WordBookProject,SpringBoot,TestCode,Junit,SpringBootDataJPA"></div>
-      </article></div></div><div class="layout--home"><div class="pagination"><p>22 post articles, 3 pages.</p>
+      </article></div></div><div class="layout--home"><div class="pagination"><p>23 post articles, 3 pages.</p>
     <div class="pagination__menu">
       <ul class="menu menu--nowrap"><li><a class="button button--secondary button--circle" href="/">
             <i class="fas fa-angle-left"></i>
@@ -505,7 +506,7 @@ public interface UserRepository extends JpaRepository&lt;User, Long&gt; {
       
       <li><a href="/category/http.html" class="tag">
       <span class="term">http</span>
-      <span class="count">(4)</span>
+      <span class="count">(5)</span>
       </a></li>
     
       
