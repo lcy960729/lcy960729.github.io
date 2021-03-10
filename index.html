@@ -281,10 +281,34 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 <!-- end custom main top snippet -->
 <article itemscope itemtype="http://schema.org/WebPage"><header style="display:none;"><h1>CY 개발 블로그</h1></header><meta itemprop="headline" content="CY 개발 블로그"><meta itemprop="author" content="Lee Chan Young"/><div class="js-article-content"><div class="layout--articles"><div class="article-list items items--divided"><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/http/2021/03/08/HTTP1-1-Message-SyntaxAndRouting.html"><h2 itemprop="headline" class="item__header">HTTP 1.1 Reference - Message Syntax and Routing (1) (최종 수정 날짜 : 2021-03-08)</h2></a></header>
+          <header><a href="/http/2021/03/10/HTTP1-1-Message-SyntaxAndRouting(2).html"><h2 itemprop="headline" class="item__header">HTTP 1.1 Reference - Message Syntax and Routing (2) (최종 수정 날짜 : 2021-03-10)</h2></a></header>
           <div class="item__description"><div class="article__content" itemprop="description articleBody">참고 자료
 
-  이병록님이 번역하신 HTTP 1.1 Semantics and Content 번역본
+  이병록님이 번역하신 HTTP 1.1 Message Syntax and Routing 번역본
+https://roka88.dev/106
+  MDN Web Docs
+https://developer.mozilla.org/ko/docs/Web/HTTP
+
+
+이외 자료는 내용 중 링크 추가
+틀린 내용, 부족한 내용 꼭 지적 부탁드립니다!
+
+3. Message Format
+모든 HTTP/1.1 메시지는 인터넷 메시지 형식과 유사한 형식의 일련의 octest 시퀀스 뒤에 start-line으로 구성한다.
+0 또는 여러 헤더필드 (집합적으로 “헤더” 또는 “헤더 부문”이라고 함), 헤더 부문이 끝을 나타내는 빈줄 및...</div><p><a href="/http/2021/03/10/HTTP1-1-Message-SyntaxAndRouting(2).html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=Web">Web</a>
+            </li><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=HTTP1.1">HTTP1.1</a>
+            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Mar 10, 2021</span>
+            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2021-03-10T00:00:00+09:00">
+    <meta itemprop="keywords" content="Web,HTTP1.1"></div>
+      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
+          <header><a href="/http/2021/03/10/HTTP1-1-Message-SyntaxAndRouting(1).html"><h2 itemprop="headline" class="item__header">HTTP 1.1 Reference - Message Syntax and Routing (1) (최종 수정 날짜 : 2021-03-10)</h2></a></header>
+          <div class="item__description"><div class="article__content" itemprop="description articleBody">참고 자료
+
+  이병록님이 번역하신 HTTP 1.1 Message Syntax and Routing 번역본
 https://roka88.dev/106
   MDN Web Docs
 https://developer.mozilla.org/ko/docs/Web/HTTP
@@ -295,14 +319,14 @@ https://developer.mozilla.org/ko/docs/Web/HTTP
 
 1. Introduction
 HTTP는 정보 시스템을 위한 일반적인 인터페이스 프로토콜이다. HTTP는 제공되는 리소스 유형과 무관한 클라이언트에 균일한 인터페이스를 
-제공하여 서비스 구현 방법에 대한 세부 정보를 숨기도록 설계되었다. 마찬가지로, 서버는 각 클라이언트의 목적을 인식할...</div><p><a href="/http/2021/03/08/HTTP1-1-Message-SyntaxAndRouting.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
+제공하여 서비스 구현 방법에 대한 세부 정보를 숨기도록 설계되었다. 마찬가지로, 서버는 각 클라이언트의 목적...</div><p><a href="/http/2021/03/10/HTTP1-1-Message-SyntaxAndRouting(1).html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
               <a class="button button--secondary button--pill button--sm"
                 href="/archive.html?tag=Web">Web</a>
             </li><li>
               <a class="button button--secondary button--pill button--sm"
                 href="/archive.html?tag=HTTP1.1">HTTP1.1</a>
-            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Mar 08, 2021</span>
-            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2021-03-08T00:00:00+09:00">
+            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Mar 10, 2021</span>
+            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2021-03-10T00:00:00+09:00">
     <meta itemprop="keywords" content="Web,HTTP1.1"></div>
       </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
           <header><a href="/http/2021/02/24/HTTP1-1-Semantics-And-Content(5).html"><h2 itemprop="headline" class="item__header">HTTP 1.1 Reference - Semantics and Content (5) (최종 수정 날짜 : 2021-02-25)</h2></a></header>
@@ -461,26 +485,7 @@ HTTP 메시지는 요청 또는 응답을 나타낸다.
             </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Feb 06, 2021</span>
             </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2021-02-06T00:00:00+09:00">
     <meta itemprop="keywords" content="Web,HTTP1.1"></div>
-      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/wordbook-project/2021/01/24/%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%BD%94%EB%93%9C-%EC%88%98%EC%A0%95-%EC%99%84%EB%A3%8C-%EB%B0%8F-%EB%B3%80%EA%B2%BD%EC%A0%90.html"><h2 itemprop="headline" class="item__header">테스트 코드 수정 완료 및 변경점</h2></a></header>
-          <div class="item__description"><div class="article__content" itemprop="description articleBody">2021-01-24 :: 테스트 코드 수정 완료 및 변경점
-
-테스트 코드 작성시 불편했던 점
-
-
-
-며칠 동안 많은 양의 테스트 코드들을 수정완료 했다.
-
-문제는 서비스레이어에서 테스트 작성시 아래 코드와 같은 관계를 가진 상태를 만들어 주어야했다. 처음 진행할때는 Entity 관계가 깊지 않아 테스트 코드 작성시 문제가 되지 않았는데 프로젝트를 진행함에 따라 깊어지는 도메인간의 관계를 작성하는것은 큰 불편함이 있었다. 이러한 상태를 매번 작성하는것이 무의미함과 동시에 중복된 코드가 대량 발생하고 테스트 코드 작성시 너무 많은 시간이 걸렸다. 이러한 문제를 해결하기위해 Factory패턴이라고 해야할까.. 상태를 미리...</div><p><a href="/wordbook-project/2021/01/24/%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%BD%94%EB%93%9C-%EC%88%98%EC%A0%95-%EC%99%84%EB%A3%8C-%EB%B0%8F-%EB%B3%80%EA%B2%BD%EC%A0%90.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=WordBookProject">WordBookProject</a>
-            </li><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=TestCode">TestCode</a>
-            </li></ul><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>CY</span></li><li><i class="far fa-calendar-alt"></i> <span>Jan 24, 2021</span>
-            </li></ul></div><meta itemprop="author" content="CY"/><meta itemprop="datePublished" content="2021-01-24T00:00:00+09:00">
-    <meta itemprop="keywords" content="WordBookProject,TestCode"></div>
-      </article></div></div><div class="layout--home"><div class="pagination"><p>24 post articles, 3 pages.</p>
+      </article></div></div><div class="layout--home"><div class="pagination"><p>25 post articles, 4 pages.</p>
     <div class="pagination__menu">
       <ul class="menu menu--nowrap"><li><div class="button button--secondary button--circle disabled">
             <i class="fas fa-angle-left"></i>
@@ -490,6 +495,8 @@ HTTP 메시지는 요청 또는 응답을 나타낸다.
                   <a class="button button--secondary button--circle" href="/page2/"><span>2</span></a>
                 </li><li>
                   <a class="button button--secondary button--circle" href="/page3/"><span>3</span></a>
+                </li><li>
+                  <a class="button button--secondary button--circle" href="/page4/"><span>4</span></a>
                 </li><li><a class="button button--secondary button--circle" href="/page2/">
             <i class="fas fa-angle-right"></i>
           </a></li></ul>
@@ -524,7 +531,7 @@ HTTP 메시지는 요청 또는 응답을 나타낸다.
       
       <li><a href="/category/http.html" class="tag">
       <span class="term">http</span>
-      <span class="count">(6)</span>
+      <span class="count">(7)</span>
       </a></li>
     
       
